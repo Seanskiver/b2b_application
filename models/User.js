@@ -7,7 +7,6 @@ var dynamo = require('dynamodb'),
 AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
 dynamo.AWS.config.update({region: "us-east-1"});
 
-<<<<<<< HEAD
 var User = dynamo.define('users', {
   hashKey : 'userID',
   tableName: 'users',
