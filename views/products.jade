@@ -1,0 +1,9 @@
+extends layout
+
+block content
+    h3.
+        Products
+    ul
+        each products, i in ecom
+            li#product_list_item
+                #{products.product_name}

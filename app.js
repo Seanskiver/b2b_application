@@ -5,8 +5,11 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
+var mongo = require('mongodb');
+
 var index = require('./routes/index');
 var users = require('./routes/users');
+var port = 3000;
 
 var app = express();
 
@@ -26,6 +29,8 @@ app.use(require('node-sass-middleware')({
   indentedSyntax: true,
   sourceMap: true
 }));
+
+//Set Static Folder
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
@@ -47,6 +52,11 @@ app.use(function(err, req, res, next) {
   // render the error page
   res.status(err.status || 500);
   res.render('error');
+});
+
+app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
+  //var addr = server.address();
+  console.log('Server started on port '+port);
 });
 
 module.exports = app;
