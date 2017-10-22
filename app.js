@@ -1,15 +1,14 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+// var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var mongo = require('mongodb');
+// var mongo = require('mongodb');
 
 var index = require('./routes/index');
 var users = require('./routes/users');
-var port = 3000;
 
 var app = express();
 
@@ -56,7 +55,7 @@ app.use(function(err, req, res, next) {
 
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   //var addr = server.address();
-  console.log('Server started on port '+port);
+  console.log('Server started on port '+process.env.PORT);
 });
 
 module.exports = app;
