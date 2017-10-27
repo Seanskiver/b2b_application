@@ -1,6 +1,6 @@
 import React from 'react';
 //import { Table } from 'react-bootstrap';
-import {Form, FormControl, FormGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col} from 'react-bootstrap';
+import {Form, FormControl, FormGroup, InputGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col, DropdownButton, MenuItem, } from 'react-bootstrap';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -15,31 +15,30 @@ class HomePage extends React.Component {
                   <p>Buy And Sell Anything Or Find Local Businesses In Minutes</p>
                   
                  <form>
-                  <div class="form-row">
-                    <div class="col col-md-3">
-                      <select id="inputState" class="form-control" data-size="5">
-                        <option selected>All Categories</option>
-                        <option>1...</option>
-                        <option>2...</option>
-                        <option>3...</option>
-                        <option>4...</option>
-                        <option>5...</option>
-                      </select>
-                    </div>
-                    <div class="col col-md-3">
-                      <select id="inputState" class="form-control">
-                        <option selected>All Locations</option>
-                        <option>...</option>
-                      </select>
-                    </div>
-                    <div class="col col-md-3">
-                      <input type="text" class="form-control" placeholder="Enter Keyword"/>
-                    </div>
-                    <div class="col col-md-3">
-                    <button type="button" class="btn btn-primary btn-sm btn-block">Search</button>
-                      
-                    </div>
-                  </div>
+                      <div class="row">    
+                      <div class="col-xs-8 col-xs-offset-2">
+              		    <div class="input-group">
+                              <div class="input-group-btn search-panel">
+                                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                                  	<span id="search_concept">Filter by</span> <span class="caret"></span>
+                                  </button>
+                                  <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#contains">Contains</a></li>
+                                    <li><a href="#its_equal">It's equal</a></li>
+                                    <li><a href="#greather_than">Greather than ></a></li>
+                                    <li><a href="#less_than">Less than  </a></li>
+                                    <li class="divider"></li>
+                                    <li><a href="#all">Anything</a></li>
+                                  </ul>
+                              </div>
+                              <input type="hidden" name="search_param" value="all" id="search_param"/>         
+                              <input type="text" class="form-control" name="x" placeholder="Search term..."/>
+                              <span class="input-group-btn">
+                                  <button class="btn btn-default" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                              </span>
+                          </div>
+                      </div>
+              	</div>
                 </form>
                   </div>
                 </Jumbotron>
@@ -47,7 +46,7 @@ class HomePage extends React.Component {
                 
                 <Panel class="container">
                 <span>BROWSE BY <b>CATEGORY</b> 
-                <Link class="pull-right" to="/browse">VIEW MORE&nbsp;
+                <Link class="pull-right" to="/browse">MORE&nbsp;
                 <span class="glyphicon glyphicon-align-justify"></span>
                 </Link>
                 </span>
@@ -150,8 +149,6 @@ class HomePage extends React.Component {
         						</a>
         					</div>	
         					</div>
-        				
-        					
         					
         					<div class="clearfix"></div>
                 </div>

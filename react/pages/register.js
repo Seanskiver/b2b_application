@@ -3,7 +3,7 @@ import React from 'react';
 import {Form, FormControl, FormGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col} from 'react-bootstrap';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
-class signup extends React.Component {
+class signin extends React.Component {
     
     constructor(props) {
     super(props);
@@ -41,4 +41,4 @@ class signup extends React.Component {
   }
 }
 
-export default signup;
+export default signin;

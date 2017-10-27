@@ -1,38 +1,15 @@
-<!DOCTYPE html>
-<html>
-  <head>
+import React from 'react';
+//import { Table } from 'react-bootstrap';
+import {Form, FormControl, FormGroup, InputGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col, DropdownButton, MenuItem, } from 'react-bootstrap';
+import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
+
+class Footer extends React.Component {
+    render() {
     
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="description" content="">
-    
-    <title>{{title}}</title>
-    
-    <link rel='stylesheet' href='/css/style.css' />
-    <link rel='stylesheet' href='/css/style3.css' />
-    
-   {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>--}}
-    <!-- Latest compiled and minified CSS -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
-      <!-- Optional theme -->
-      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-      
-      
-  </head>
-  <body>
-    
-    <div class="wrapper">
-      
-      
-        {{{body}}}
-        
-   
-     </div>
-     
-   
-    <footer>
+        return (
+            <div className="footer">
+             
+                <footer>
 			<div class="w3-agileits-footer-top">
 				<div class="container">
 					<div class="wthree-foo-grids">
@@ -108,39 +85,12 @@
 		</div>
 		</footer>
 		
-		
-		 <div class="overlay"></div>
+            
+            
+            </div>
+           
+        )
+    }
+}
 
-          <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- jQuery CDN -->
-         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
-         <!-- Bootstrap Js CDN -->
-         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-         <!-- jQuery Nicescroll CDN -->
-         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.nicescroll/3.6.8-fix/jquery.nicescroll.min.js"></script>
-
-         <script type="text/javascript">
-             $(document).ready(function () {
-                 $("#sidebar").niceScroll({
-                     cursorcolor: '#53619d',
-                     cursorwidth: 4,
-                     cursorborder: 'none'
-                 });
-
-                 $('#dismiss, .overlay').on('click', function () {
-                    $('#sidebar').removeClass('active');
-                    $('.overlay').fadeOut();
-                 });
-
-                 $('#sidebarCollapse').on('click', function () {
-                     $('#sidebar').addClass('active');
-                     $('.overlay').fadeIn();
-                     $('.collapse.in').toggleClass('in');
-                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                 });
-             });
-         </script>
-         
-		
-  </body>
-</html>
+export default Footer;

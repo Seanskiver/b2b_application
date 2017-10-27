@@ -10,10 +10,10 @@ router.get('/', function(req, res, next) {
 });
 
 
-router.get('/signup', function(req, res, next) {
+/*router.get('/signup', function(req, res, next) {
   res.render('signup', {title: 'signup'});
   
-});
+});*/
 
 // Check if all required fields are entered
 router.post('/signup', function(req, res, next) {

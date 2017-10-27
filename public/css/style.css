@@ -325,7 +325,6 @@ ul.dropdown-menu {
   -webkit-animation: fadeInUp .2s ease-in;
   animation: fadeInUp .2s ease-in;
   min-width: 120px;
-  font-size: 1em;
   top: 125%;
   z-index: 99999; }
 
@@ -5811,14 +5810,5 @@ label {
   .modal-dialog {
     width: 300px; } }
     
-    #top-banner{
-      background:black;
-    }
-    
-    .top-banner-content{
-      padding:40px;
-      text-align:center;
-      color:white;
-    }
-
+   
 /*# sourceMappingURL=style.css.map */
