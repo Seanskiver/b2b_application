@@ -13,7 +13,7 @@ class NavBar extends React.Component {
                <nav class="nav">
                   <div class="container-fluid">
                     <div class="navbar-header">
-                      <button type="button" class="navbar-toggle btn-default btn-sm" data-toggle="collapse" id="sidebarCollapse">
+                      <button type="button" class="navbar-toggle btn-md" data-toggle="collapse" id="sidebarCollapse">
                         <span class="glyphicon glyphicon-align-justify"></span>                       
                       </button>
                       <a class="navbar-brand" href="#">WebSiteName</a>
@@ -31,6 +31,7 @@ class NavBar extends React.Component {
                         </li>
                         
                       <li class="dropdown"><Link to="/browse">Browse</Link></li>
+                      <li class="dropdown"><Link to="/postad">Post Ad</Link></li>
                       </ul>
                       <ul class="nav navbar-nav navbar-right">
                          <li><Link to="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</Link></li>

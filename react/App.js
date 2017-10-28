@@ -15,8 +15,9 @@ import {Form, FormControl, Button} from 'react-bootstrap'
 // Pages
 import HomePage from './pages/HomePage';
 import NavBar from './pages/NavBar';
-//import Footer from './pages/Footer';
 import browse from './pages/browse';
+import postad from './pages/postad';
+import single from './pages/single';
 import signin from './pages/signin';
 import signup from './pages/signup';
 
@@ -32,6 +33,8 @@ const App = () => (
           <NavBar/>
           <Route exact path="/" component={HomePage}/>
           <Route path="/browse" component={browse}/>
+          <Route path="/postad" component={postad}/>
+          <Route path="/single" component={single}/>
           <Route path="/signin" component={signin}/>
           <Route path="/signup" component={signup}/>
       </section>

@@ -37,6 +37,7 @@ class signup extends React.Component {
         <br />
         <input type="submit" value="Submit" />
       </form>
+      
     );
   }
 }
