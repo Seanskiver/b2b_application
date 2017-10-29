@@ -90,6 +90,10 @@
 
 	var _signup2 = _interopRequireDefault(_signup);
 
+	var _Footer = __webpack_require__(367);
+
+	var _Footer2 = _interopRequireDefault(_Footer);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	// let unsubscribe = store.subscribe(() =>
@@ -97,6 +101,11 @@
 	// )
 
 
+	// import store from './Store.js'
+
+	// // Components
+
+	// Pages
 	var App = function App() {
 	  return _react2.default.createElement(
 	    _reactRouterDom.HashRouter,
@@ -118,13 +127,6 @@
 	    )
 	  );
 	};
-
-	// import store from './Store.js'
-
-	// // Components
-
-	// Pages
-
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('react-app'));
 
@@ -47014,7 +47016,7 @@
 	            { className: 'top-banner', id: 'top-banner', style: { width: 'auto', height: 'auto' } },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'container top-banner-content', id: 'top-banner-content', bsStyle: 'align: center;' },
+	              { className: 'container top-banner-content', id: 'top-banner-content' },
 	              _react2.default.createElement(
 	                'h2',
 	                null,
@@ -47122,7 +47124,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true },
+	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'container' },
@@ -47217,273 +47219,457 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          _reactBootstrap.Panel,
-	          { className: 'container' },
+	          _reactBootstrap.Col,
+	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
 	          _react2.default.createElement(
-	            'span',
+	            _reactBootstrap.Grid,
 	            null,
-	            'BROWSE BY ',
 	            _react2.default.createElement(
-	              'b',
+	              _reactBootstrap.Row,
 	              null,
-	              'CATEGORY'
-	            ),
-	            _react2.default.createElement(
-	              _reactRouterDom.Link,
-	              { className: 'pull-right', to: '/browse' },
 	              _react2.default.createElement(
-	                'small',
-	                null,
-	                'MORE\xA0'
+	                _reactBootstrap.Col,
+	                { xs: 3, className: 'm-category' },
+	                _react2.default.createElement(_reactBootstrap.Image, { src: 'https://cdn4.iconfinder.com/data/icons/basic-ui-elements/700/06_menu_bullet-512.png', circle: true }),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'm-category-title' },
+	                  'More'
+	                )
 	              ),
-	              _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify' })
-	            )
-	          ),
-	          _react2.default.createElement('hr', null),
+	              _react2.default.createElement(
+	                _reactBootstrap.Col,
+	                { xs: 3, className: 'm-category' },
+	                _react2.default.createElement(_reactBootstrap.Image, { src: 'http://wfarm4.dataknet.com/static/resources/icons/set181/5be2d6ea.png', circle: true }),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'm-category-title' },
+	                  'Electronics'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactBootstrap.Col,
+	                { xs: 3, className: 'm-category' },
+	                _react2.default.createElement(_reactBootstrap.Image, { src: 'https://image.flaticon.com/icons/png/512/262/262198.png', circle: true }),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'm-category-title' },
+	                  'Fashion'
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactBootstrap.Col,
+	                { xs: 3, className: 'm-category-b' },
+	                _react2.default.createElement(_reactBootstrap.Image, { src: 'https://cdn4.iconfinder.com/data/icons/repairs-flat-icon-set/256/icon_furniture_flat-512.png', circle: true }),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'm-category-title' },
+	                  'Furnitures'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement('hr', null)
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Col,
+	          { xsHidden: true },
 	          _react2.default.createElement(
-	            'div',
-	            { className: 'b2bapp-categories' },
+	            _reactBootstrap.Panel,
+	            { className: 'container' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'BROWSE BY ',
+	              _react2.default.createElement(
+	                'b',
+	                null,
+	                'CATEGORY'
+	              ),
+	              _react2.default.createElement(
+	                _reactRouterDom.Link,
+	                { className: 'pull-right', to: '/browse' },
+	                _react2.default.createElement(
+	                  'small',
+	                  null,
+	                  'MORE\xA0'
+	                ),
+	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify' })
+	              )
+	            ),
+	            _react2.default.createElement('hr', null),
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'col-md-3' },
+	              { className: 'b2bapp-categories' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'focus-grid b2bapp-boder1' },
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder1' },
+	                  _react2.default.createElement(
+	                    _reactRouterDom.Link,
+	                    { to: '/single' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-mobile' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Mobiles'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder2' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab2' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-laptop' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          ' Electronics & Appliances'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder3' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab3' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-car' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Cars'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder5' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab5' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-wheelchair' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Furnitures'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder6' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab6' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-paw' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Pets'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder7' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab7' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-book' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Books, Sports & Hobbies'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder8' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab8' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-asterisk' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Fashion'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-3' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid b2bapp-boder9' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab9' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-gamepad' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Kids'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'clearfix' })
+	            )
+	          )
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Col,
+	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true, className: 'container' },
+	          _react2.default.createElement(
+	            _reactBootstrap.Panel,
+	            null,
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'POPULAR ',
+	              _react2.default.createElement(
+	                'b',
+	                null,
+	                'STORES'
+	              )
+	            ),
+	            _react2.default.createElement('hr', null),
+	            _react2.default.createElement(
+	              'div',
+	              null,
+	              _react2.default.createElement(
+	                _reactBootstrap.Media,
+	                null,
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Left,
+	                  null,
+	                  _react2.default.createElement('img', { width: 70, height: 70, src: 'http://www.guessthelogo.com/images/game-image/store-logo-game.gif', alt: 'placeholder thumbnail' })
+	                ),
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Body,
+	                  null,
+	                  _react2.default.createElement(
+	                    _reactBootstrap.Media.Heading,
+	                    { align: 'center' },
+	                    'Store 1 Name'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    { align: 'center' },
+	                    'Rating Here'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactBootstrap.Media,
+	                null,
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Left,
+	                  null,
+	                  _react2.default.createElement('img', { width: 70, height: 70, src: 'http://www.guessthelogo.com/images/game-image/store-logo-game.gif', alt: 'placeholder thumbnail' })
+	                ),
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Body,
+	                  null,
+	                  _react2.default.createElement(
+	                    _reactBootstrap.Media.Heading,
+	                    { align: 'center' },
+	                    'Store 2 Name'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    { align: 'center' },
+	                    'Rating Here'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactBootstrap.Media,
+	                null,
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Left,
+	                  null,
+	                  _react2.default.createElement('img', { width: 70, height: 70, src: 'http://www.guessthelogo.com/images/game-image/store-logo-game.gif', alt: 'placeholder thumbnail' })
+	                ),
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Body,
+	                  null,
+	                  _react2.default.createElement(
+	                    _reactBootstrap.Media.Heading,
+	                    { align: 'center' },
+	                    'Store 3 Name'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    { align: 'center' },
+	                    'Rating Here'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                _reactBootstrap.Media,
+	                null,
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Left,
+	                  null,
+	                  _react2.default.createElement('img', { width: 70, height: 70, src: 'http://www.guessthelogo.com/images/game-image/store-logo-game.gif', alt: 'placeholder thumbnail' })
+	                ),
+	                _react2.default.createElement(
+	                  _reactBootstrap.Media.Body,
+	                  null,
+	                  _react2.default.createElement(
+	                    _reactBootstrap.Media.Heading,
+	                    { align: 'center' },
+	                    'Store 4 Name'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    { align: 'center' },
+	                    'Rating Here'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'clearfix' }),
+	              _react2.default.createElement('hr', null),
+	              _react2.default.createElement(
+	                'span',
+	                null,
+	                'View More',
 	                _react2.default.createElement(
 	                  _reactRouterDom.Link,
-	                  { to: '/single' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-mobile' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Mobiles'
-	                      )
-	                    )
-	                  )
+	                  { className: 'pull-right', to: '/browse' },
+	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-right' })
 	                )
 	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder2' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab2' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-laptop' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        ' Electronics & Appliances'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder3' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab3' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-car' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Cars'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder5' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab5' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-wheelchair' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Furnitures'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder6' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab6' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-paw' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Pets'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder7' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab7' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-book' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Books, Sports & Hobbies'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder8' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab8' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-asterisk' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Fashion'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'col-md-3' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'focus-grid b2bapp-boder9' },
-	                _react2.default.createElement(
-	                  'a',
-	                  { className: 'btn-8', href: 'categories.html#parentVerticalTab9' },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'focus-border' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-layout' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-image' },
-	                        _react2.default.createElement('i', { className: 'fa fa-gamepad' })
-	                      ),
-	                      _react2.default.createElement(
-	                        'h4',
-	                        { className: 'clrchg' },
-	                        'Kids'
-	                      )
-	                    )
-	                  )
-	                )
-	              )
-	            ),
-	            _react2.default.createElement('div', { className: 'clearfix' })
+	            )
 	          )
 	        )
 	      );
@@ -48426,7 +48612,421 @@
 	exports.default = NavBar;
 
 /***/ }),
-/* 367 */,
+/* 367 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(106);
+
+	var _reactRouterDom = __webpack_require__(32);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import { Table } from 'react-bootstrap';
+
+
+	var Footer = function (_React$Component) {
+		_inherits(Footer, _React$Component);
+
+		function Footer() {
+			_classCallCheck(this, Footer);
+
+			return _possibleConstructorReturn(this, (Footer.__proto__ || Object.getPrototypeOf(Footer)).apply(this, arguments));
+		}
+
+		_createClass(Footer, [{
+			key: 'render',
+			value: function render() {
+
+				return _react2.default.createElement(
+					'div',
+					{ className: 'footer' },
+					_react2.default.createElement(
+						'footer',
+						null,
+						_react2.default.createElement(
+							'div',
+							{ className: 'w3-agileits-footer-top' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'container' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'wthree-foo-grids' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3 wthree-footer-grid' },
+										_react2.default.createElement(
+											'h4',
+											{ className: 'footer-head' },
+											'Who We Are'
+										),
+										_react2.default.createElement(
+											'p',
+											null,
+											'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.'
+										),
+										_react2.default.createElement(
+											'p',
+											null,
+											'The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using \'Content here.'
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3 wthree-footer-grid' },
+										_react2.default.createElement(
+											'h4',
+											{ className: 'footer-head' },
+											'Help'
+										),
+										_react2.default.createElement(
+											'ul',
+											null,
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'howitworks.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'How it Works'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'sitemap.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Sitemap'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'faq.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Faq'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'feedback.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Feedback'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'contact.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Contact'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'typography.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Short codes'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'icons.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Icons Page'
+												)
+											)
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3 wthree-footer-grid' },
+										_react2.default.createElement(
+											'h4',
+											{ className: 'footer-head' },
+											'Information'
+										),
+										_react2.default.createElement(
+											'ul',
+											null,
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'regions.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Locations Map'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'terms.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Terms of Use'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'popular-search.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Popular searches'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: 'privacy.html' },
+													_react2.default.createElement('i', { className: 'fa fa-long-arrow-right', 'aria-hidden': 'true' }),
+													'Privacy Policy'
+												)
+											)
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'col-md-3 wthree-footer-grid' },
+										_react2.default.createElement(
+											'h4',
+											{ className: 'footer-head' },
+											'Contact Us'
+										),
+										_react2.default.createElement(
+											'span',
+											{ className: 'hq' },
+											'Our headquarters'
+										),
+										_react2.default.createElement(
+											'address',
+											null,
+											_react2.default.createElement(
+												'ul',
+												{ className: 'location' },
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement('span', { className: 'glyphicon glyphicon-map-marker' })
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													'CENTER FOR FINANCIAL ASSISTANCE TO DEPOSED NIGERIAN ROYALTY'
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'clearfix' },
+												' '
+											),
+											_react2.default.createElement(
+												'ul',
+												{ className: 'location' },
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement('span', { className: 'glyphicon glyphicon-earphone' })
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													'+0 561 111 235'
+												)
+											),
+											_react2.default.createElement(
+												'div',
+												{ className: 'clearfix' },
+												' '
+											),
+											_react2.default.createElement(
+												'ul',
+												{ className: 'location' },
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement('span', { className: 'glyphicon glyphicon-envelope' })
+												),
+												_react2.default.createElement(
+													'li',
+													null,
+													_react2.default.createElement(
+														'a',
+														{ href: 'mailto:info@example.com' },
+														'mail@example.com'
+													)
+												)
+											)
+										)
+									),
+									_react2.default.createElement('div', { className: 'clearfix' })
+								)
+							)
+						),
+						_react2.default.createElement(
+							'div',
+							{ className: 'agileits-footer-bottom text-center' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'container' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'w3-footer-logo' },
+									_react2.default.createElement(
+										'h1',
+										null,
+										_react2.default.createElement(
+											'a',
+											{ href: 'index.html' },
+											_react2.default.createElement(
+												'span',
+												null,
+												'B2B'
+											),
+											'App'
+										)
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'w3-footer-social-icons' },
+									_react2.default.createElement(
+										'ul',
+										null,
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ className: 'facebook', href: '#' },
+												_react2.default.createElement('i', { className: 'fa fa-facebook', 'aria-hidden': 'true' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'Facebook'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ className: 'twitter', href: '#' },
+												_react2.default.createElement('i', { className: 'fa fa-twitter', 'aria-hidden': 'true' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'Twitter'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ className: 'flickr', href: '#' },
+												_react2.default.createElement('i', { className: 'fa fa-flickr', 'aria-hidden': 'true' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'Flickr'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ className: 'googleplus', href: '#' },
+												_react2.default.createElement('i', { className: 'fa fa-google-plus', 'aria-hidden': 'true' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'Google+'
+												)
+											)
+										),
+										_react2.default.createElement(
+											'li',
+											null,
+											_react2.default.createElement(
+												'a',
+												{ className: 'dribbble', href: '#' },
+												_react2.default.createElement('i', { className: 'fa fa-dribbble', 'aria-hidden': 'true' }),
+												_react2.default.createElement(
+													'span',
+													null,
+													'Dribbble'
+												)
+											)
+										)
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'copyrights' },
+									_react2.default.createElement(
+										'p',
+										null,
+										' \xA9 2017 B2B App. All Rights Reserved'
+									)
+								),
+								_react2.default.createElement('div', { className: 'clearfix' })
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return Footer;
+	}(_react2.default.Component);
+
+	exports.default = Footer;
+
+/***/ }),
 /* 368 */,
 /* 369 */,
 /* 370 */

@@ -8,6 +8,7 @@ import { Provider } from 'react-redux';
 
 import {Form, FormControl, Button} from 'react-bootstrap'
 
+
 // import store from './Store.js'
 
 // // Components
@@ -20,6 +21,7 @@ import postad from './pages/postad';
 import single from './pages/single';
 import signin from './pages/signin';
 import signup from './pages/signup';
+import Footer from './pages/Footer';
 
 // let unsubscribe = store.subscribe(() =>
 //   console.log(store.getState())

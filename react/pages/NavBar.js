@@ -1,6 +1,6 @@
 import React from 'react';
 //import { Table } from 'react-bootstrap';
-import {Form, FormControl, FormGroup, InputGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col, DropdownButton, MenuItem, } from 'react-bootstrap';
+import {Form, FormControl, FormGroup, InputGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col, DropdownButton, MenuItem,Navbar, NavItem, Nav } from 'react-bootstrap';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 class NavBar extends React.Component {
@@ -8,14 +8,15 @@ class NavBar extends React.Component {
     
         return (
             <div className="nav">
-             
+            
               {/*Top nav bar*/}
                <nav class="nav">
                   <div class="container-fluid">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle btn-md" data-toggle="collapse" id="sidebarCollapse">
-                        <span class="glyphicon glyphicon-align-justify"></span>                       
+                        <span class="glyphicon glyphicon-align-justify"></span>  
                       </button>
+                    
                       <a class="navbar-brand" href="#">WebSiteName</a>
                     </div>
                     <div class="collapse navbar-collapse" id="myNavbar">
@@ -40,6 +41,7 @@ class NavBar extends React.Component {
                     </div>
                   </div>
                 </nav>
+                
             
             
             {/*Side nav for mobile*/}
