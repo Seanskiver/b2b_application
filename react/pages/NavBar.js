@@ -10,7 +10,7 @@ class NavBar extends React.Component {
             <div className="nav">
             
               {/*Top nav bar*/}
-               <nav class="nav">
+               <nav class="nav" id="top-nav-bar">
                   <div class="container-fluid">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle btn-md" data-toggle="collapse" id="sidebarCollapse">

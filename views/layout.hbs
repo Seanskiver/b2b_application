@@ -12,6 +12,15 @@
     <link rel='stylesheet' href='/css/flexslider.css' />
     <link rel='stylesheet' href='/css/style3.css' />
     
+    
+    <link rel="stylesheet" href="/css/font-awesome.min.css" /><!-- fontawesome-CSS -->
+    <link rel="stylesheet" href="/css/flexslider.css" type="text/css" media="screen" /><!-- flexslider-CSS -->
+    <!--fonts-->
+	<link href='//fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css'>
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!--//fonts-->	
+    
+    
    {{!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.css" />
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.13/semantic.min.js"></script>--}}
@@ -19,10 +28,11 @@
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap.min.css">
       <!-- Optional theme -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/latest/css/bootstrap-theme.min.css">
-      <script src="/js/main.js"></script>
+      
+      {{!--added--}}
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   </head>
-  <body>
+  <body style="background: #fafafa;">
     <div class="overlay"></div>
     <div class="wrapper">
     
@@ -32,7 +42,7 @@
      </div>
      
    
-    <footer class="hidden-xs">
+   <footer class="hidden-xs">
 			<div class="w3-agileits-footer-top">
 				<div class="container">
 					<div class="wthree-foo-grids">
@@ -141,6 +151,79 @@
              });
          </script>
          {{!--// Script for side bar--}}
+         
+         
+         
+         
+         
+         
+         
+    {{!--Added JS For Testing--}}
+    
+    
+	
+	{{!--Script for trending ads slider--}}
+		<script type="text/javascript" src="/js/jquery.flexisel.js"></script><!-- flexisel-js -->	
+					<script type="text/javascript">
+						 $(window).load(function() {
+							$("#felexiselSlider").flexisel({
+								visibleItems:1,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 5000,    		
+								pauseOnHover: true,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems:1
+									}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems:1
+									},
+									tablet: { 
+										changePoint:768,
+										visibleItems:1
+									}
+								}
+							});
+							
+						});
+			</script>
+					   
+					   
+					   	<script type="text/javascript">
+						 $(window).load(function() {
+							$("#felexiselSlider-mobile").flexisel({
+								visibleItems:1,
+								animationSpeed: 1000,
+								autoPlay: true,
+								autoPlaySpeed: 5000,    		
+								pauseOnHover: true,
+								enableResponsiveBreakpoints: true,
+								responsiveBreakpoints: { 
+									portrait: { 
+										changePoint:480,
+										visibleItems:1
+									}, 
+									landscape: { 
+										changePoint:640,
+										visibleItems:1
+									},
+									tablet: { 
+										changePoint:768,
+										visibleItems:1
+									}
+								}
+							});
+							
+						});
+					</script>
+	{{!--//Script for trending ads slider--}}
+					   
+					   
+         
 		
   </body>
 </html>

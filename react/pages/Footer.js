@@ -9,7 +9,7 @@ class Footer extends React.Component {
         return (
             <div className="footer">
              
-                <footer>
+           <footer id="footer">
 			<div class="w3-agileits-footer-top">
 				<div class="container">
 					<div class="wthree-foo-grids">
@@ -17,7 +17,7 @@ class Footer extends React.Component {
 							<h4 class="footer-head">Who We Are</h4>
 							<p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
 							<p>The point of using Lorem Ipsum is that it has a more-or-less normal letters, as opposed to using 'Content here.</p>
-						</div>
+						</div> 
 						<div class="col-md-3 wthree-footer-grid">
 							<h4 class="footer-head">Help</h4>
 							<ul>
