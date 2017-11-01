@@ -13,7 +13,7 @@ class NavBar extends React.Component {
                <nav class="nav" id="top-nav-bar">
                   <div class="container-fluid">
                     <div class="navbar-header">
-                      <button type="button" class="navbar-toggle btn-md" data-toggle="collapse" id="sidebarCollapse">
+                      <button type="button" class="navbar-toggle btn-lg" data-toggle="collapse" id="sidebarCollapse">
                        <i class="fa fa-bars" aria-hidden="true"></i>
                       </button>
                     
