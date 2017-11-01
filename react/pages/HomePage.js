@@ -1,6 +1,6 @@
 import React from 'react';
 //import { Table } from 'react-bootstrap';
-import {Form, FormControl, FormGroup, InputGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col, DropdownButton, MenuItem, Grid, Thumbnail, Row, Image, Media } from 'react-bootstrap';
+import {Form, FormControl, FormGroup, InputGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col, DropdownButton, MenuItem, Grid, Thumbnail, Row, Image, Media, Tabs, Tab } from 'react-bootstrap';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 class HomePage extends React.Component {
@@ -15,11 +15,10 @@ class HomePage extends React.Component {
                   <h2>FIND CLASSIFIED ADS</h2>
                   
                   <p>Buy And Sell Anything Or Find Local Businesses In Minutes</p>
-                 
-                 <form>
+                 <form id="form-cantainer">
                       <div class="row">    
                       <div class="col-xs-8 col-xs-offset-2">
-              		    <div class="input-group">
+              		    <div class="input-group" id="form-cantainer-input">
                               <div class="input-group-btn search-panel">
                                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
                                   	<span id="search_concept">Filter by</span> <span class="caret"></span>
@@ -124,7 +123,7 @@ class HomePage extends React.Component {
                 <Col xsHidden>
                 <Panel class="container">
                 <span>BROWSE BY <b>CATEGORY</b> 
-                <Link class="pull-right" to="/browse"><small>MORE&nbsp;</small>
+                <Link class="pull-right" id="panel-link" to="/browse"><small>MORE&nbsp;</small>
                 <span class="glyphicon glyphicon-align-justify"></span>
                 </Link>
                 </span>
@@ -290,7 +289,7 @@ class HomePage extends React.Component {
                    
         					<div class="clearfix"></div>
         					<hr/>
-        				<Link to="/browse">	
+        				<Link id="link" to="/browse">	
         				<span>View More
                 <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </span>
@@ -339,7 +338,7 @@ class HomePage extends React.Component {
                     
         					<div class="clearfix"></div>
         					<hr/>
-        				<Link to="/browse">	
+        				<Link id="link" to="/browse">	
         				<span>View More
                 <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </span>
@@ -354,7 +353,7 @@ class HomePage extends React.Component {
                 <Panel class="container">
                 <span>TRENDING <b>PRODUCTS</b> 
                 <Col xsHidden>
-                <Link class="pull-right" to="/browse"><small>MORE&nbsp;</small>
+                <Link class="pull-right" id="panel-link" to="/browse"><small>MORE&nbsp;</small>
                 <span class="glyphicon glyphicon-align-justify"></span>
                 </Link>
                  </Col>
@@ -497,7 +496,7 @@ class HomePage extends React.Component {
         			 <Col smHidden mdHidden lgHidden xlHidden>
         				<div class="clearfix"></div>
         					<hr/>
-        				<Link to="/browse">	
+        				<Link id="link" to="/browse">	
         				<span>View More
                 <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </span>
@@ -507,13 +506,43 @@ class HomePage extends React.Component {
         			</Panel>
         			
         			
-        			
-        			
-        			
+        				{/*Display tabs on large screens only*/}
+        			<Col xsHidden>
+        			<Panel class="container">
+               <div  id="exTab3">	
+                  <ul class="nav nav-pills" id="nav-pills">
+                  			<li class="active">
+                          <a  href="#1b" data-toggle="tab"><i class="fa fa-briefcase" aria-hidden="true"></i> TOP BUSINESSES </a>
+                  			</li>
+                  			<li><a href="#2b" data-toggle="tab"><i class="fa fa-tags" aria-hidden="true"></i> TOP CATEGORIES</a>
+                  			</li>
+                  			<li><a href="#3b" data-toggle="tab"><i class="fa fa-align-justify" aria-hidden="true"></i> TOP PRODUCTS</a>
+                  			</li>
+                  		</ul>
+                  
+                  			<div class="tab-content clearfix">
+                  			  <div class="tab-pane active" id="1b">
+                            <p>Some businesses goes here</p>
+                            
+                            
+                  				</div>
+                  				<div class="tab-pane" id="2b">
+                            <p>Some categories goes here</p>
+                  				</div>
+                          <div class="tab-pane" id="3b">
+                            <p>Some products goes here</p>
+                  				</div>
+                           
+                  			</div>
+                    </div>
+                    
+        			</Panel>
+        			</Col>
+        				{/*//Display tabs on large screens only*/}
         			
             </div>
         );
     }
-}
+} 
 
 export default HomePage;

@@ -14,7 +14,7 @@ class NavBar extends React.Component {
                   <div class="container-fluid">
                     <div class="navbar-header">
                       <button type="button" class="navbar-toggle btn-md" data-toggle="collapse" id="sidebarCollapse">
-                        <span class="glyphicon glyphicon-align-justify"></span>  
+                       <i class="fa fa-bars" aria-hidden="true"></i>
                       </button>
                     
                       <a class="navbar-brand" href="#">WebSiteName</a>
