@@ -47032,90 +47032,57 @@
 	                { id: 'form-cantainer' },
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'row' },
+	                  { className: 'form-row', id: 'form-cantainer-input' },
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'col-xs-8 col-xs-offset-2' },
+	                    { className: 'form-group col-md-3 col-sm-3 col-lg-3' },
 	                    _react2.default.createElement(
 	                      'div',
-	                      { className: 'input-group', id: 'form-cantainer-input' },
+	                      { className: 'input-group mb-2 mr-sm-2 mb-sm-0' },
 	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'input-group-btn search-panel' },
+	                        'select',
+	                        { id: 'inputState', className: 'form-control' },
 	                        _react2.default.createElement(
-	                          'button',
-	                          { type: 'button', className: 'btn btn-default dropdown-toggle', 'data-toggle': 'dropdown' },
-	                          _react2.default.createElement(
-	                            'span',
-	                            { id: 'search_concept' },
-	                            'Filter by'
-	                          ),
-	                          ' ',
-	                          _react2.default.createElement('span', { className: 'caret' })
+	                          'option',
+	                          { selected: true },
+	                          'All Categories '
 	                        ),
 	                        _react2.default.createElement(
-	                          'ul',
-	                          { className: 'dropdown-menu', role: 'menu' },
-	                          _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                              'a',
-	                              { href: '#contains' },
-	                              'Contains'
-	                            )
-	                          ),
-	                          _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                              'a',
-	                              { href: '#its_equal' },
-	                              'It\'s equal'
-	                            )
-	                          ),
-	                          _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                              'a',
-	                              { href: '#greather_than' },
-	                              'Greather than >'
-	                            )
-	                          ),
-	                          _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                              'a',
-	                              { href: '#less_than' },
-	                              'Less than  '
-	                            )
-	                          ),
-	                          _react2.default.createElement('li', { className: 'divider' }),
-	                          _react2.default.createElement(
-	                            'li',
-	                            null,
-	                            _react2.default.createElement(
-	                              'a',
-	                              { href: '#all' },
-	                              'Anything'
-	                            )
-	                          )
+	                          'option',
+	                          null,
+	                          'category 1'
+	                        ),
+	                        _react2.default.createElement(
+	                          'option',
+	                          null,
+	                          'category 2'
 	                        )
 	                      ),
-	                      _react2.default.createElement('input', { type: 'hidden', name: 'search_param', value: 'all', id: 'search_param' }),
-	                      _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'x', placeholder: 'Search term...' }),
 	                      _react2.default.createElement(
-	                        'span',
-	                        { className: 'input-group-btn' },
-	                        _react2.default.createElement(
-	                          'button',
-	                          { className: 'btn btn-default', type: 'button' },
-	                          _react2.default.createElement('span', { className: 'glyphicon glyphicon-search' })
-	                        )
+	                        'div',
+	                        { className: 'input-group-addon', id: 'search-icon' },
+	                        _react2.default.createElement('i', { className: 'fa fa-align-justify', 'aria-hidden': 'true' })
 	                      )
 	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'form-group col-md-7 col-sm-7 col-lg-7' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'input-group mb-2 mr-sm-2 mb-sm-0' },
+	                      _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'inputCity', placeholder: 'Enter Keyword' }),
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'input-group-addon', id: 'search-icon' },
+	                        _react2.default.createElement('i', { className: 'fa fa-clone', 'aria-hidden': 'true' })
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'form-group col-md-2 col-sm-2 col-lg-2' },
+	                    _react2.default.createElement('input', { type: 'submit', className: 'form-control btn btn-primary', value: 'Search', id: 'submit' })
 	                  )
 	                )
 	              )
@@ -48284,18 +48251,240 @@
 	                  'div',
 	                  { className: 'tab-pane active', id: '1b' },
 	                  _react2.default.createElement(
-	                    'p',
+	                    _reactBootstrap.Row,
 	                    null,
-	                    'Some businesses goes here'
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.mommysavesbig.com/printable-coupons/wp-content/uploads/2017/05/target-1.jpg', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 1'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 2'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://image.flaticon.com/icons/svg/25/25345.svg', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 3'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 4'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 5'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 6'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 7'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Store 8'
+	                        )
+	                      )
+	                    )
 	                  )
 	                ),
 	                _react2.default.createElement(
 	                  'div',
 	                  { className: 'tab-pane', id: '2b' },
 	                  _react2.default.createElement(
-	                    'p',
+	                    _reactBootstrap.Row,
 	                    null,
-	                    'Some categories goes here'
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Cars'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Electronics'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.officedepot.com/resource/image/139030/portrait_ratio1x1/250/250/b3a57d3f915ab5b0b3a68e4c6811ce91/ql/in-store-pickup-cart.jpg', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Category 1'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Category 2'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Category 3'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Category 4'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://d30y9cdsu7xlg0.cloudfront.net/png/337564-200.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Fashion'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.shareicon.net/data/2016/07/10/119365_seater_512x512.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Furnitures'
+	                        )
+	                      )
+	                    )
 	                  )
 	                ),
 	                _react2.default.createElement(
@@ -48304,7 +48493,7 @@
 	                  _react2.default.createElement(
 	                    'p',
 	                    null,
-	                    'Some products goes here'
+	                    'Content goes here.'
 	                  )
 	                )
 	              )

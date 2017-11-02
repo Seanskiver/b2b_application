@@ -15,7 +15,9 @@ class HomePage extends React.Component {
                   <h2>FIND CLASSIFIED ADS</h2>
                   
                   <p>Buy And Sell Anything Or Find Local Businesses In Minutes</p>
-                 <form id="form-cantainer">
+                  
+                  
+             {  /*  <form id="form-cantainer">
                       <div class="row">    
                       <div class="col-xs-8 col-xs-offset-2">
               		    <div class="input-group" id="form-cantainer-input">
@@ -40,8 +42,33 @@ class HomePage extends React.Component {
                           </div>
                       </div>
               	</div>
-                </form>
+                </form>*/}
                 
+                
+            <form id="form-cantainer">
+                <div class="form-row" id="form-cantainer-input">
+                   <div class="form-group col-md-3 col-sm-3 col-lg-3">
+                    <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <select id="inputState" class="form-control">
+                      <option selected>All Categories </option>
+                      <option>category 1</option>
+                      <option>category 2</option>
+                    </select>
+                    <div class="input-group-addon" id="search-icon"><i class="fa fa-align-justify" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-7 col-sm-7 col-lg-7">
+                  <div class="input-group mb-2 mr-sm-2 mb-sm-0">
+                    <input type="text" class="form-control" id="inputCity" placeholder="Enter Keyword"/>
+                    <div class="input-group-addon" id="search-icon"><i class="fa fa-clone" aria-hidden="true"></i></div>
+                    </div>
+                  </div>
+                  <div class="form-group col-md-2 col-sm-2 col-lg-2">
+                    <input type="submit" class="form-control btn btn-primary" value="Search" id="submit"/>
+                  </div>
+                </div>
+              
+              </form>
                   </div>
                  
                   
@@ -521,17 +548,95 @@ class HomePage extends React.Component {
                   		</ul>
                   
                   			<div class="tab-content clearfix">
+                  			{/*TOP BUSINESSES TAB*/}
                   			  <div class="tab-pane active" id="1b">
-                            <p>Some businesses goes here</p>
-                            
-                            
+                            <Row>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="http://www.mommysavesbig.com/printable-coupons/wp-content/uploads/2017/05/target-1.jpg" thumbnail />
+                                <p><b>Store 1</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png" thumbnail />
+                                <p><b>Store 2</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://image.flaticon.com/icons/svg/25/25345.svg" thumbnail />
+                                <p><b>Store 3</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png" thumbnail />
+                                <p><b>Store 4</b></p>
+                              </Col>
+                              
+                               <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png" thumbnail />
+                                <p><b>Store 5</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png" thumbnail />
+                                <p><b>Store 6</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png" thumbnail />
+                                <p><b>Store 7</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png" thumbnail />
+                                <p><b>Store 8</b></p>
+                              </Col>
+                              
+                            </Row>
                   				</div>
+                  					{/*//TOP BUSINESSES TAB*/}
+                  				
+                  					{/*TOP CATEGORIES TAB*/}
                   				<div class="tab-pane" id="2b">
-                            <p>Some categories goes here</p>
+                  				  <Row>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" thumbnail />
+                                <p><b>Cars</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png" thumbnail />
+                                <p><b>Electronics</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://www.officedepot.com/resource/image/139030/portrait_ratio1x1/250/250/b3a57d3f915ab5b0b3a68e4c6811ce91/ql/in-store-pickup-cart.jpg" thumbnail />
+                                <p><b>Category 1</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" thumbnail />
+                                <p><b>Category 2</b></p>
+                              </Col>
+                              
+                               <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png" thumbnail />
+                                <p><b>Category 3</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" thumbnail />
+                                <p><b>Category 4</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/337564-200.png" thumbnail />
+                                <p><b>Fashion</b></p>
+                              </Col>
+                              <Col xs={6} md={3} sm={4} id="tap-col">
+                                <Image id="tab-images" src="https://www.shareicon.net/data/2016/07/10/119365_seater_512x512.png" thumbnail />
+                                <p><b>Furnitures</b></p>
+                              </Col>
+                              
+                            </Row>
+                  				
                   				</div>
+                  				{/*//TOP CATEGORIES TAB*/}
+                  				
+                  				
+                  				{/*TOP PRODUCTS TAB*/}
                           <div class="tab-pane" id="3b">
-                            <p>Some products goes here</p>
+                            <p>Content goes here.</p>	
                   				</div>
+                  				{/*//TOP PRODUCTS TAB*/}
                            
                   			</div>
                     </div>
