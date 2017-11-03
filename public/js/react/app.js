@@ -117,6 +117,7 @@
 	        'section',
 	        { id: 'appContainer', className: '' },
 	        _react2.default.createElement(_NavBar2.default, null),
+	        _react2.default.createElement('br', null),
 	        _react2.default.createElement(_reactRouterDom.Route, { exact: true, path: '/', component: _HomePage2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/browse', component: _browse2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/postad', component: _postad2.default }),
@@ -47013,76 +47014,923 @@
 	          { xsHidden: true },
 	          _react2.default.createElement(
 	            _reactBootstrap.Jumbotron,
-	            { className: 'top-banner', id: 'top-banner', style: { width: 'auto', height: 'auto' } },
+	            { className: 'top-banner', id: 'top-banner', style: { height: 'auto' } },
 	            _react2.default.createElement(
-	              'div',
-	              { className: 'container top-banner-content', id: 'top-banner-content' },
+	              _reactBootstrap.Row,
+	              { className: 'show-grid1', id: 'top-ban-grids' },
 	              _react2.default.createElement(
-	                'h2',
-	                null,
-	                'FIND CLASSIFIED ADS'
+	                _reactBootstrap.Col,
+	                { smHidden: true, md: 2, id: 'banner-side-grids' },
+	                _react2.default.createElement(
+	                  'h4',
+	                  null,
+	                  _react2.default.createElement('i', { className: 'fa fa-list', 'aria-hidden': 'true' }),
+	                  ' TOP MARKETS'
+	                ),
+	                _react2.default.createElement(
+	                  'ul',
+	                  { className: 'list-group' },
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'Sports'
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'Food & Beverage'
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'Books'
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'Automobile & Appliance'
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'Home Appliance'
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'Furniture'
+	                  ),
+	                  _react2.default.createElement(
+	                    'li',
+	                    { className: 'list-group-item' },
+	                    'More ',
+	                    _react2.default.createElement('i', { className: 'fa fa-angle-right pull-right', 'aria-hidden': 'true' })
+	                  )
+	                )
 	              ),
 	              _react2.default.createElement(
-	                'p',
-	                null,
-	                'Buy And Sell Anything Or Find Local Businesses In Minutes'
-	              ),
-	              _react2.default.createElement(
-	                'form',
-	                { id: 'form-cantainer' },
+	                _reactBootstrap.Col,
+	                { sm: 12, md: 10 },
 	                _react2.default.createElement(
 	                  'div',
-	                  { className: 'form-row', id: 'form-cantainer-input' },
+	                  { className: 'container top-banner-content', id: 'top-banner-content' },
 	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-3 col-sm-3 col-lg-3' },
+	                    'h2',
+	                    null,
+	                    'FIND CLASSIFIED ADS'
+	                  ),
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Buy And Sell Anything Or Find Local Businesses In Minutes'
+	                  ),
+	                  _react2.default.createElement(
+	                    'form',
+	                    { id: 'form-cantainer' },
 	                    _react2.default.createElement(
 	                      'div',
-	                      { className: 'input-group mb-2 mr-sm-2 mb-sm-0' },
+	                      { className: 'form-row', id: 'form-cantainer-input' },
 	                      _react2.default.createElement(
-	                        'select',
-	                        { id: 'inputState', className: 'form-control' },
+	                        'div',
+	                        { className: 'form-group col-md-3 col-sm-3 col-lg-3' },
 	                        _react2.default.createElement(
-	                          'option',
-	                          { selected: true },
-	                          'All Categories '
-	                        ),
-	                        _react2.default.createElement(
-	                          'option',
-	                          null,
-	                          'category 1'
-	                        ),
-	                        _react2.default.createElement(
-	                          'option',
-	                          null,
-	                          'category 2'
+	                          'div',
+	                          { className: 'input-group mb-2 mr-sm-2 mb-sm-0' },
+	                          _react2.default.createElement(
+	                            'select',
+	                            { id: 'inputState', className: 'form-control' },
+	                            _react2.default.createElement(
+	                              'option',
+	                              { selected: true },
+	                              'All Categories '
+	                            ),
+	                            _react2.default.createElement(
+	                              'option',
+	                              null,
+	                              'category 1'
+	                            ),
+	                            _react2.default.createElement(
+	                              'option',
+	                              null,
+	                              'category 2'
+	                            )
+	                          ),
+	                          _react2.default.createElement(
+	                            'div',
+	                            { className: 'input-group-addon', id: 'search-icon' },
+	                            _react2.default.createElement('i', { className: 'fa fa-align-justify', 'aria-hidden': 'true' })
+	                          )
 	                        )
 	                      ),
 	                      _react2.default.createElement(
 	                        'div',
-	                        { className: 'input-group-addon', id: 'search-icon' },
-	                        _react2.default.createElement('i', { className: 'fa fa-align-justify', 'aria-hidden': 'true' })
-	                      )
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-7 col-sm-7 col-lg-7' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'input-group mb-2 mr-sm-2 mb-sm-0' },
-	                      _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'inputCity', placeholder: 'Enter Keyword' }),
+	                        { className: 'form-group col-md-7 col-sm-7 col-lg-7' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'input-group mb-2 mr-sm-2 mb-sm-0' },
+	                          _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'inputCity', placeholder: 'Enter Keyword' }),
+	                          _react2.default.createElement(
+	                            'div',
+	                            { className: 'input-group-addon', id: 'search-icon' },
+	                            _react2.default.createElement('i', { className: 'fa fa-clone', 'aria-hidden': 'true' })
+	                          )
+	                        )
+	                      ),
 	                      _react2.default.createElement(
 	                        'div',
-	                        { className: 'input-group-addon', id: 'search-icon' },
-	                        _react2.default.createElement('i', { className: 'fa fa-clone', 'aria-hidden': 'true' })
+	                        { className: 'form-group col-md-2 col-sm-2 col-lg-2' },
+	                        _react2.default.createElement('input', { type: 'submit', className: 'form-control btn btn-primary', value: 'Search', id: 'submit' })
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Col,
+	          { xsHidden: true },
+	          _react2.default.createElement(
+	            _reactBootstrap.Panel,
+	            { className: 'container1', id: 'custom-container' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'BROWSE BY ',
+	              _react2.default.createElement(
+	                'b',
+	                null,
+	                'CATEGORY'
+	              ),
+	              _react2.default.createElement(
+	                _reactRouterDom.Link,
+	                { className: 'pull-right', id: 'panel-link', to: '/browse' },
+	                _react2.default.createElement(
+	                  'small',
+	                  null,
+	                  'MORE\xA0'
+	                ),
+	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify' })
+	              )
+	            ),
+	            _react2.default.createElement('hr', null),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'b2bapp-categories' },
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-2' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-mobile' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Mobiles'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-2' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab2' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-laptop' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          ' Electronics & Appliances'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-2' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab3' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-car' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Cars'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-2' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab5' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-wheelchair' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Furnitures'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-2' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab7' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-book' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Books, Sports & Hobbies'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'col-md-2' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'focus-grid' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab8' },
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'focus-border' },
+	                      _react2.default.createElement(
+	                        'div',
+	                        { className: 'focus-layout' },
+	                        _react2.default.createElement(
+	                          'div',
+	                          { className: 'focus-image' },
+	                          _react2.default.createElement('i', { className: 'fa fa-asterisk' })
+	                        ),
+	                        _react2.default.createElement(
+	                          'h4',
+	                          { className: 'clrchg' },
+	                          'Fashion'
+	                        )
+	                      )
+	                    )
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement('div', { className: 'clearfix' })
+	            )
+	          ),
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Col,
+	          { xsHidden: true },
+	          _react2.default.createElement(
+	            _reactBootstrap.Panel,
+	            { className: 'container1', id: 'custom-container' },
+	            _react2.default.createElement(
+	              'span',
+	              null,
+	              'TRENDING ',
+	              _react2.default.createElement(
+	                'b',
+	                null,
+	                'PRODUCTS'
+	              ),
+	              _react2.default.createElement(
+	                _reactBootstrap.Col,
+	                { xsHidden: true },
+	                _react2.default.createElement(
+	                  _reactRouterDom.Link,
+	                  { className: 'pull-right', id: 'panel-link', to: '/browse' },
+	                  _react2.default.createElement(
+	                    'small',
+	                    null,
+	                    'MORE\xA0'
+	                  ),
+	                  _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify' })
+	                )
+	              )
+	            ),
+	            _react2.default.createElement('hr', null),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'agile-trend-ads' },
+	              _react2.default.createElement(
+	                'ul',
+	                { id: 'felexiselSlider' },
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://stat.homeshop18.com/homeshop18/images/productImages/338/samsung-guru-e1200-mobile-phone-large_a68c67293ae8ecba99b8395694101cce.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 450'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'There are many variations of passages'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '1 hour ago'
 	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'form-group col-md-2 col-sm-2 col-lg-2' },
-	                    _react2.default.createElement('input', { type: 'submit', className: 'form-control btn btn-primary', value: 'Search', id: 'submit' })
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://www.lg.com/us/images/cell-phones/MD05796989/md05795769-350x350.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 399'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'Lorem Ipsum is simply dummy'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '3 hour ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://image.priceprice.k-img.com/global/images/product/mobilephones/Cherry_Mobile_Flare_P1/Cherry_Mobile_Flare_P1_L_1.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 199'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'It is a long established fact that a reader'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '8 hour ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://teja10.kuikr.com/o1/20161227/ak_1754001356-1482799919.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 159'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'passage of Lorem Ipsum you need to be'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '19 hour ago'
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://www.slickwraps.com/media/catalog/category/s5_3.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 1599'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'There are many variations of passages'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '1 hour ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://img.c.huaweistatic.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/y6-2017/y6-2017-listimage-black.png', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 1099'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'passage of Lorem Ipsum you need to be'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '1 day ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://5.imimg.com/data5/OH/VT/MY-37954860/1110-nokia-mobile-phone-500x500.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 109'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'It is a long established fact that a reader'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '9 hour ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://www.t-mobile.com/content/dam/t-mobile/en-p/cell-phones/others/alcactel-go-flip/alcactel-go-flip-midnight-blue-open-1-2x.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 189'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'Lorem Ipsum is simply dummy'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '3 hour ago'
+	                      )
+	                    )
+	                  )
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('br', null)
+	        ),
+	        _react2.default.createElement(
+	          _reactBootstrap.Col,
+	          { xsHidden: true },
+	          _react2.default.createElement(
+	            _reactBootstrap.Panel,
+	            { className: 'container1', id: 'custom-container' },
+	            _react2.default.createElement(
+	              'div',
+	              { id: 'exTab3' },
+	              _react2.default.createElement(
+	                'ul',
+	                { className: 'nav nav-pills', id: 'nav-pills' },
+	                _react2.default.createElement(
+	                  'li',
+	                  { className: 'active' },
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#1b', 'data-toggle': 'tab' },
+	                    _react2.default.createElement('i', { className: 'fa fa-briefcase', 'aria-hidden': 'true' }),
+	                    ' TOP BUSINESSES '
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#2b', 'data-toggle': 'tab' },
+	                    _react2.default.createElement('i', { className: 'fa fa-tags', 'aria-hidden': 'true' }),
+	                    ' TOP CATEGORIES'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'li',
+	                  null,
+	                  _react2.default.createElement(
+	                    'a',
+	                    { href: '#3b', 'data-toggle': 'tab' },
+	                    _react2.default.createElement('i', { className: 'fa fa-align-justify', 'aria-hidden': 'true' }),
+	                    ' TOP PRODUCTS'
+	                  )
+	                )
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'tab-content clearfix' },
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'tab-pane active', id: '1b' },
+	                  _react2.default.createElement(
+	                    _reactBootstrap.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAbNAAAAJDk1OWYwZWE1LTgzOTItNGZjMy04YWQ0LWVkNWIzNWE2NGNjNw.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'BFCS'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://d3pcsg2wjq9izr.cloudfront.net/files/32356/images/LOGO-400.jpg', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Adi Associates'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.fordaq.com/dcl-390000-380756/SIBA--SA.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'SIBA'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAmfAAAAJDc4MmY1OWMyLWIyMWEtNDdkZC04YTdjLTEzNDhlZGE4YTg0Mg.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'SnNOG'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAdbAAAAJGQ0OTE1ZjE1LWRiYTUtNDYyNi04ZWYwLTQ4MmQ1YmI4YjI4Mw.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Hawodia'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/media/AAEAAQAAAAAAAAh6AAAAJDQ1MDJlNjBmLWEwNTUtNDc5Ni1hYjk0LWY4MTIxMWQ3ZTRjZg.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Wari'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAbzAAAAJDdiMzQxZTMyLTY5MWItNGM2Ny1iMDQyLWI0NWEzYzRjMDhlYg.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'SCL'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.foodbytesworld.com/wp-content/uploads/2016/10/logo_biotech-services-senegal.jpg', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'BioTech'
+	                        )
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'tab-pane', id: '2b' },
+	                  _react2.default.createElement(
+	                    _reactBootstrap.Row,
+	                    null,
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.firsttechfed.com/-/media/FirstTech-Web/Products/Product-Single-Column-List/New-Auto-Loans-icon.png?h=680&w=680&la=en&hash=D7EEE23784F7BA8DB0B55AC385FC8FB8CD676F3B', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Automobile'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Electronics'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.familydollar.com/content/dam/familydollar/interface/products/category-icons/Food-&-Beverage.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Food & Beverage'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS30jxaBMzkvP8pdkdintkEs75zY_VoWqDqDvr-hIxkIWeLS1l5Pw', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Home Appliances'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://counciloftime.com/App_Themes/main/Mobile-Icon-White-on-Black.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Mobile Phones'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://n6-img-fp.akamaized.net/free-icon/soccer-ball-variant_318-49974.jpg?size=338c&ext=jpg', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Sports & Entertainment'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://24213-presscdn.pagely.netdna-cdn.com/wp-content/uploads/2016/05/Fashion-Category-Icon.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Fashion'
+	                        )
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      _reactBootstrap.Col,
+	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
+	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.shareicon.net/data/2016/07/10/119365_seater_512x512.png', thumbnail: true }),
+	                      _react2.default.createElement(
+	                        'p',
+	                        null,
+	                        _react2.default.createElement(
+	                          'b',
+	                          null,
+	                          'Furnitures'
+	                        )
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'tab-pane', id: '3b' },
+	                  _react2.default.createElement(
+	                    'p',
+	                    null,
+	                    'Content goes here.'
 	                  )
 	                )
 	              )
@@ -47236,280 +48084,6 @@
 	              )
 	            ),
 	            _react2.default.createElement('hr', null)
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _reactBootstrap.Col,
-	          { xsHidden: true },
-	          _react2.default.createElement(
-	            _reactBootstrap.Panel,
-	            { className: 'container' },
-	            _react2.default.createElement(
-	              'span',
-	              null,
-	              'BROWSE BY ',
-	              _react2.default.createElement(
-	                'b',
-	                null,
-	                'CATEGORY'
-	              ),
-	              _react2.default.createElement(
-	                _reactRouterDom.Link,
-	                { className: 'pull-right', id: 'panel-link', to: '/browse' },
-	                _react2.default.createElement(
-	                  'small',
-	                  null,
-	                  'MORE\xA0'
-	                ),
-	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify' })
-	              )
-	            ),
-	            _react2.default.createElement('hr', null),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'b2bapp-categories' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder1' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-mobile' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Mobiles'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder2' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab2' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-laptop' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          ' Electronics & Appliances'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder3' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab3' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-car' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Cars'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder5' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab5' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-wheelchair' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Furnitures'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder7' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab7' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-book' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Books, Sports & Hobbies'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder8' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab8' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-asterisk' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Fashion'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder9' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab9' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-gamepad' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Kids'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'col-md-3' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'focus-grid w3layouts-boder10' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { className: 'btn-8', href: 'categories.html#parentVerticalTab10' },
-	                    _react2.default.createElement(
-	                      'div',
-	                      { className: 'focus-border' },
-	                      _react2.default.createElement(
-	                        'div',
-	                        { className: 'focus-layout' },
-	                        _react2.default.createElement(
-	                          'div',
-	                          { className: 'focus-image' },
-	                          _react2.default.createElement('i', { className: 'fa fa-shield' })
-	                        ),
-	                        _react2.default.createElement(
-	                          'h4',
-	                          { className: 'clrchg' },
-	                          'Services'
-	                        )
-	                      )
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement('div', { className: 'clearfix' })
-	            )
 	          )
 	        ),
 	        _react2.default.createElement(
@@ -47801,392 +48375,262 @@
 	          )
 	        ),
 	        _react2.default.createElement(
-	          _reactBootstrap.Panel,
-	          { className: 'container' },
+	          _reactBootstrap.Col,
+	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
 	          _react2.default.createElement(
-	            'span',
-	            null,
-	            'TRENDING ',
+	            _reactBootstrap.Panel,
+	            { className: 'container' },
 	            _react2.default.createElement(
-	              'b',
+	              'span',
 	              null,
-	              'PRODUCTS'
+	              'TRENDING ',
+	              _react2.default.createElement(
+	                'b',
+	                null,
+	                'PRODUCTS'
+	              )
 	            ),
+	            _react2.default.createElement('hr', null),
 	            _react2.default.createElement(
-	              _reactBootstrap.Col,
-	              { xsHidden: true },
+	              'div',
+	              { className: 'agile-trend-ads' },
 	              _react2.default.createElement(
-	                _reactRouterDom.Link,
-	                { className: 'pull-right', id: 'panel-link', to: '/browse' },
+	                'ul',
+	                { id: 'felexiselSlider-mobile' },
 	                _react2.default.createElement(
-	                  'small',
+	                  'li',
 	                  null,
-	                  'MORE\xA0'
-	                ),
-	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-align-justify' })
-	              )
-	            )
-	          ),
-	          _react2.default.createElement('hr', null),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'agile-trend-ads' },
-	            _react2.default.createElement(
-	              'ul',
-	              { id: 'felexiselSlider' },
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
 	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://stat.homeshop18.com/homeshop18/images/productImages/338/samsung-guru-e1200-mobile-phone-large_a68c67293ae8ecba99b8395694101cce.jpg', alt: '' }),
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
 	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 450'
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://stat.homeshop18.com/homeshop18/images/productImages/338/samsung-guru-e1200-mobile-phone-large_a68c67293ae8ecba99b8395694101cce.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 450'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'There are many variations of passages'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '1 hour ago'
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'slider-ad-info' },
+	                    { className: 'col-md-3 biseller-column' },
 	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'There are many variations of passages'
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://www.lg.com/us/images/cell-phones/MD05796989/md05795769-350x350.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 399'
+	                      )
 	                    ),
 	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '1 hour ago'
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'Lorem Ipsum is simply dummy'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '3 hour ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://image.priceprice.k-img.com/global/images/product/mobilephones/Cherry_Mobile_Flare_P1/Cherry_Mobile_Flare_P1_L_1.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 199'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'It is a long established fact that a reader'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '8 hour ago'
+	                      )
+	                    )
+	                  ),
+	                  _react2.default.createElement(
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
+	                    _react2.default.createElement(
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://teja10.kuikr.com/o1/20161227/ak_1754001356-1482799919.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 159'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'passage of Lorem Ipsum you need to be'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '19 hour ago'
+	                      )
 	                    )
 	                  )
 	                ),
 	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
+	                  'li',
+	                  null,
 	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://www.lg.com/us/images/cell-phones/MD05796989/md05795769-350x350.jpg', alt: '' }),
+	                    'div',
+	                    { className: 'col-md-3 biseller-column' },
 	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 399'
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://www.slickwraps.com/media/catalog/category/s5_3.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 1599'
+	                      )
+	                    ),
+	                    _react2.default.createElement(
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'There are many variations of passages'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '1 hour ago'
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'slider-ad-info' },
+	                    { className: 'col-md-3 biseller-column' },
 	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'Lorem Ipsum is simply dummy'
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://img.c.huaweistatic.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/y6-2017/y6-2017-listimage-black.png', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 1099'
+	                      )
 	                    ),
 	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '3 hour ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://image.priceprice.k-img.com/global/images/product/mobilephones/Cherry_Mobile_Flare_P1/Cherry_Mobile_Flare_P1_L_1.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 199'
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'passage of Lorem Ipsum you need to be'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '1 day ago'
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'slider-ad-info' },
+	                    { className: 'col-md-3 biseller-column' },
 	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'It is a long established fact that a reader'
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://5.imimg.com/data5/OH/VT/MY-37954860/1110-nokia-mobile-phone-500x500.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 109'
+	                      )
 	                    ),
 	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '8 hour ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://teja10.kuikr.com/o1/20161227/ak_1754001356-1482799919.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 159'
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'It is a long established fact that a reader'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '9 hour ago'
+	                      )
 	                    )
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'slider-ad-info' },
+	                    { className: 'col-md-3 biseller-column' },
 	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'passage of Lorem Ipsum you need to be'
+	                      'a',
+	                      { href: 'single.html' },
+	                      _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://www.t-mobile.com/content/dam/t-mobile/en-p/cell-phones/others/alcactel-go-flip/alcactel-go-flip-midnight-blue-open-1-2x.jpg', alt: '' }),
+	                      _react2.default.createElement(
+	                        'span',
+	                        { className: 'price' },
+	                        '$ 189'
+	                      )
 	                    ),
 	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '19 hour ago'
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://www.slickwraps.com/media/catalog/category/s5_3.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 1599'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'There are many variations of passages'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '1 hour ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'http://img.c.huaweistatic.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/y6-2017/y6-2017-listimage-black.png', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 1099'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'passage of Lorem Ipsum you need to be'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '1 day ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://5.imimg.com/data5/OH/VT/MY-37954860/1110-nokia-mobile-phone-500x500.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 109'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'It is a long established fact that a reader'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '9 hour ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://www.t-mobile.com/content/dam/t-mobile/en-p/cell-phones/others/alcactel-go-flip/alcactel-go-flip-midnight-blue-open-1-2x.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 189'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'Lorem Ipsum is simply dummy'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '3 hour ago'
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'li',
-	                null,
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdLhKG-FZ1cMSIj2eHqUpiGyHMb_4wpz_-B-x_gyvAYm3U6ssG', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 2599'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'Lorem Ipsum is simply dummy'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '3 hour ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://s3-ap-southeast-2.amazonaws.com/wc-prod-pim/JPEG_1000x1000/TE117808_.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 3999'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'It is a long established fact that a reader'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '9 hour ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://multimedia.bbycastatic.ca/multimedia/products/500x500/105/10538/10538804.jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 2699'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'passage of Lorem Ipsum you need to be'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '1 day ago'
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'col-md-3 biseller-column' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: 'single.html' },
-	                    _react2.default.createElement('img', { id: 'felexiselSlider-img', src: 'https://assets.gadgets360cdn.com/shop/assets/products/vivo-v7-4-gb-ram-64-gb.jpeg?output-quality=65&output-format=jpg', alt: '' }),
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'price' },
-	                      '$ 899'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'slider-ad-info' },
-	                    _react2.default.createElement(
-	                      'h5',
-	                      null,
-	                      'There are many variations of passages'
-	                    ),
-	                    _react2.default.createElement(
-	                      'span',
-	                      null,
-	                      '1 hour ago'
+	                      'div',
+	                      { className: 'slider-ad-info' },
+	                      _react2.default.createElement(
+	                        'h5',
+	                        null,
+	                        'Lorem Ipsum is simply dummy'
+	                      ),
+	                      _react2.default.createElement(
+	                        'span',
+	                        null,
+	                        '3 hour ago'
+	                      )
 	                    )
 	                  )
 	                )
 	              )
-	            )
-	          ),
-	          _react2.default.createElement(
-	            _reactBootstrap.Col,
-	            { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
+	            ),
 	            _react2.default.createElement('div', { className: 'clearfix' }),
 	            _react2.default.createElement('hr', null),
 	            _react2.default.createElement(
@@ -48197,305 +48641,6 @@
 	                null,
 	                'View More',
 	                _react2.default.createElement('span', { className: 'glyphicon glyphicon-chevron-right pull-right' })
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _reactBootstrap.Col,
-	          { xsHidden: true },
-	          _react2.default.createElement(
-	            _reactBootstrap.Panel,
-	            { className: 'container' },
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'exTab3' },
-	              _react2.default.createElement(
-	                'ul',
-	                { className: 'nav nav-pills', id: 'nav-pills' },
-	                _react2.default.createElement(
-	                  'li',
-	                  { className: 'active' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: '#1b', 'data-toggle': 'tab' },
-	                    _react2.default.createElement('i', { className: 'fa fa-briefcase', 'aria-hidden': 'true' }),
-	                    ' TOP BUSINESSES '
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'li',
-	                  null,
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: '#2b', 'data-toggle': 'tab' },
-	                    _react2.default.createElement('i', { className: 'fa fa-tags', 'aria-hidden': 'true' }),
-	                    ' TOP CATEGORIES'
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'li',
-	                  null,
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: '#3b', 'data-toggle': 'tab' },
-	                    _react2.default.createElement('i', { className: 'fa fa-align-justify', 'aria-hidden': 'true' }),
-	                    ' TOP PRODUCTS'
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'tab-content clearfix' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'tab-pane active', id: '1b' },
-	                  _react2.default.createElement(
-	                    _reactBootstrap.Row,
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAbNAAAAJDk1OWYwZWE1LTgzOTItNGZjMy04YWQ0LWVkNWIzNWE2NGNjNw.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'BFCS'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://d3pcsg2wjq9izr.cloudfront.net/files/32356/images/LOGO-400.jpg', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Adi Associates'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.fordaq.com/dcl-390000-380756/SIBA--SA.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'SIBA'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAmfAAAAJDc4MmY1OWMyLWIyMWEtNDdkZC04YTdjLTEzNDhlZGE4YTg0Mg.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'SnNOG'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAdbAAAAJGQ0OTE1ZjE1LWRiYTUtNDYyNi04ZWYwLTQ4MmQ1YmI4YjI4Mw.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Hawodia'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/media/AAEAAQAAAAAAAAh6AAAAJDQ1MDJlNjBmLWEwNTUtNDc5Ni1hYjk0LWY4MTIxMWQ3ZTRjZg.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Wari'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAbzAAAAJDdiMzQxZTMyLTY5MWItNGM2Ny1iMDQyLWI0NWEzYzRjMDhlYg.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'SCL'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://www.foodbytesworld.com/wp-content/uploads/2016/10/logo_biotech-services-senegal.jpg', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'BioTech'
-	                        )
-	                      )
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'tab-pane', id: '2b' },
-	                  _react2.default.createElement(
-	                    _reactBootstrap.Row,
-	                    null,
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.firsttechfed.com/-/media/FirstTech-Web/Products/Product-Single-Column-List/New-Auto-Loans-icon.png?h=680&w=680&la=en&hash=D7EEE23784F7BA8DB0B55AC385FC8FB8CD676F3B', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Automobile'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Electronics'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.familydollar.com/content/dam/familydollar/interface/products/category-icons/Food-&-Beverage.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Food & Beverage'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS30jxaBMzkvP8pdkdintkEs75zY_VoWqDqDvr-hIxkIWeLS1l5Pw', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Home Appliances'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://counciloftime.com/App_Themes/main/Mobile-Icon-White-on-Black.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Mobile Phones'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://n6-img-fp.akamaized.net/free-icon/soccer-ball-variant_318-49974.jpg?size=338c&ext=jpg', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Sports & Entertainment'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'http://24213-presscdn.pagely.netdna-cdn.com/wp-content/uploads/2016/05/Fashion-Category-Icon.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Fashion'
-	                        )
-	                      )
-	                    ),
-	                    _react2.default.createElement(
-	                      _reactBootstrap.Col,
-	                      { xs: 6, md: 3, sm: 4, id: 'tap-col' },
-	                      _react2.default.createElement(_reactBootstrap.Image, { id: 'tab-images', src: 'https://www.shareicon.net/data/2016/07/10/119365_seater_512x512.png', thumbnail: true }),
-	                      _react2.default.createElement(
-	                        'p',
-	                        null,
-	                        _react2.default.createElement(
-	                          'b',
-	                          null,
-	                          'Furnitures'
-	                        )
-	                      )
-	                    )
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'tab-pane', id: '3b' },
-	                  _react2.default.createElement(
-	                    'p',
-	                    null,
-	                    'Content goes here.'
-	                  )
-	                )
 	              )
 	            )
 	          )
@@ -49182,20 +49327,12 @@
 	                                { className: 'nav navbar-nav' },
 	                                _react2.default.createElement(
 	                                    'li',
-	                                    { className: 'active' },
-	                                    _react2.default.createElement(
-	                                        _reactRouterDom.Link,
-	                                        { to: '/' },
-	                                        'Home'
-	                                    )
-	                                ),
-	                                _react2.default.createElement(
-	                                    'li',
 	                                    { className: 'dropdown' },
 	                                    _react2.default.createElement(
 	                                        'a',
 	                                        { className: 'dropdown-toggle', 'data-toggle': 'dropdown', href: '#' },
-	                                        'Page 1 ',
+	                                        _react2.default.createElement('i', { className: 'fa fa-list', 'aria-hidden': 'true' }),
+	                                        ' Categories ',
 	                                        _react2.default.createElement('span', { className: 'caret' })
 	                                    ),
 	                                    _react2.default.createElement(

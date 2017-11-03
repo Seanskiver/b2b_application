@@ -131,7 +131,10 @@
 
  #top-banner{
      /* background:LightGray;*/
-     background-image: url("http://www.mulierchile.com/light-blue-background-hd/light-blue-background-hd-010.jpg");
+    background-image: url("http://www.mulierchile.com/light-blue-background-hd/light-blue-background-hd-010.jpg");
+    padding:0 15px 0 15px;
+    width:80%;
+    margin: auto;
     }
     
     .top-banner-content{
@@ -148,7 +151,7 @@
 #form-cantainer{
     background:black;
     height:70px;
-   background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 0, 0, 0.2);
 }
 
 #form-cantainer-input{
@@ -169,6 +172,16 @@ select {
    background: url("custom image") no-repeat right center;
 }
 
+#banner-side-grids{
+  background:white;
+  height:100%;
+}
+
+
+#custom-container{
+    width:80%;
+    margin: auto;
+}
 
 /* ---------------------------------------------------
     SLIDER

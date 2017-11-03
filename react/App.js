@@ -33,6 +33,7 @@ const App = () => (
     <div style={{height: "100%"}}>
       <section id="appContainer" className="">
           <NavBar/>
+          <br/>
           <Route exact path="/" component={HomePage}/>
           <Route path="/browse" component={browse}/>
           <Route path="/postad" component={postad}/>
