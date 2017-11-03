@@ -552,37 +552,37 @@ class HomePage extends React.Component {
                   			  <div class="tab-pane active" id="1b">
                             <Row>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="http://www.mommysavesbig.com/printable-coupons/wp-content/uploads/2017/05/target-1.jpg" thumbnail />
-                                <p><b>Store 1</b></p>
+                                <Image id="tab-images" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAbNAAAAJDk1OWYwZWE1LTgzOTItNGZjMy04YWQ0LWVkNWIzNWE2NGNjNw.png" thumbnail />
+                                <p><b>BFCS</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png" thumbnail />
-                                <p><b>Store 2</b></p>
+                                <Image id="tab-images" src="https://d3pcsg2wjq9izr.cloudfront.net/files/32356/images/LOGO-400.jpg" thumbnail />
+                                <p><b>Adi Associates</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://image.flaticon.com/icons/svg/25/25345.svg" thumbnail />
-                                <p><b>Store 3</b></p>
+                                <Image id="tab-images" src="http://www.fordaq.com/dcl-390000-380756/SIBA--SA.png" thumbnail />
+                                <p><b>SIBA</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png" thumbnail />
-                                <p><b>Store 4</b></p>
+                                <Image id="tab-images" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAmfAAAAJDc4MmY1OWMyLWIyMWEtNDdkZC04YTdjLTEzNDhlZGE4YTg0Mg.png" thumbnail />
+                                <p><b>SnNOG</b></p>
                               </Col>
                               
                                <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png" thumbnail />
-                                <p><b>Store 5</b></p>
+                                <Image id="tab-images" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAdbAAAAJGQ0OTE1ZjE1LWRiYTUtNDYyNi04ZWYwLTQ4MmQ1YmI4YjI4Mw.png" thumbnail />
+                                <p><b>Hawodia</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png" thumbnail />
-                                <p><b>Store 6</b></p>
+                                <Image id="tab-images" src="https://media.licdn.com/media/AAEAAQAAAAAAAAh6AAAAJDQ1MDJlNjBmLWEwNTUtNDc5Ni1hYjk0LWY4MTIxMWQ3ZTRjZg.png" thumbnail />
+                                <p><b>Wari</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://smartcityalliance.ca/site/assets/files/1067/cisco-systems.png" thumbnail />
-                                <p><b>Store 7</b></p>
+                                <Image id="tab-images" src="https://media.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAbzAAAAJDdiMzQxZTMyLTY5MWItNGM2Ny1iMDQyLWI0NWEzYzRjMDhlYg.png" thumbnail />
+                                <p><b>SCL</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="http://www.clker.com/cliparts/A/E/g/X/s/x/store-md.png" thumbnail />
-                                <p><b>Store 8</b></p>
+                                <Image id="tab-images" src="http://www.foodbytesworld.com/wp-content/uploads/2016/10/logo_biotech-services-senegal.jpg" thumbnail />
+                                <p><b>BioTech</b></p>
                               </Col>
                               
                             </Row>
@@ -593,32 +593,32 @@ class HomePage extends React.Component {
                   				<div class="tab-pane" id="2b">
                   				  <Row>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" thumbnail />
-                                <p><b>Cars</b></p>
+                                <Image id="tab-images" src="https://www.firsttechfed.com/-/media/FirstTech-Web/Products/Product-Single-Column-List/New-Auto-Loans-icon.png?h=680&w=680&la=en&hash=D7EEE23784F7BA8DB0B55AC385FC8FB8CD676F3B" thumbnail />
+                                <p><b>Automobile</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
                                 <Image id="tab-images" src="http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png" thumbnail />
                                 <p><b>Electronics</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://www.officedepot.com/resource/image/139030/portrait_ratio1x1/250/250/b3a57d3f915ab5b0b3a68e4c6811ce91/ql/in-store-pickup-cart.jpg" thumbnail />
-                                <p><b>Category 1</b></p>
+                                <Image id="tab-images" src="https://www.familydollar.com/content/dam/familydollar/interface/products/category-icons/Food-&-Beverage.png" thumbnail />
+                                <p><b>Food & Beverage</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" thumbnail />
-                                <p><b>Category 2</b></p>
+                                <Image id="tab-images" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS30jxaBMzkvP8pdkdintkEs75zY_VoWqDqDvr-hIxkIWeLS1l5Pw" thumbnail />
+                                <p><b>Home Appliances</b></p>
                               </Col>
                               
                                <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="http://icons.iconarchive.com/icons/designbolts/free-multimedia/1024/iMac-icon.png" thumbnail />
-                                <p><b>Category 3</b></p>
+                                <Image id="tab-images" src="http://counciloftime.com/App_Themes/main/Mobile-Icon-White-on-Black.png" thumbnail />
+                                <p><b>Mobile Phones</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/996-200.png" thumbnail />
-                                <p><b>Category 4</b></p>
+                                <Image id="tab-images" src="https://n6-img-fp.akamaized.net/free-icon/soccer-ball-variant_318-49974.jpg?size=338c&ext=jpg" thumbnail />
+                                <p><b>Sports & Entertainment</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
-                                <Image id="tab-images" src="https://d30y9cdsu7xlg0.cloudfront.net/png/337564-200.png" thumbnail />
+                                <Image id="tab-images" src="http://24213-presscdn.pagely.netdna-cdn.com/wp-content/uploads/2016/05/Fashion-Category-Icon.png" thumbnail />
                                 <p><b>Fashion</b></p>
                               </Col>
                               <Col xs={6} md={3} sm={4} id="tap-col">
