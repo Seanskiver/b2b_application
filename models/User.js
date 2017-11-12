@@ -6,14 +6,23 @@ var dynamo = require('dynamodb'),
 
 // AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
 
+
 AWS.config.update({
-  accessKeyId: 'AKIAJC6LPGATSOJTV45Q',
-  secretAccessKey: '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',
+  accessKeyId: 'AKIAIJXJW267L4IRFU6Q',
+  secretAccessKey: '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',
   region: "us-east-1"
-})
+});
+
+module.exports.userSchema = Joi.object().keys({
+  email: Joi.string().email().required(),
+  password: Joi.string().min(8).max(255).required(),
+  firstName: Joi.string().required(),
+  lastName: Joi.string().required(),
+  phone: Joi.string().optional()  
+});
 
 
-var User = dynamo.define('users', {
+module.exports.dbUser = dynamo.define('users', {
   hashKey : 'userID',
   tableName: 'users',
   timestamps: true,
@@ -27,6 +36,17 @@ var User = dynamo.define('users', {
   }
 });
 
-
-module.exports = User
-
+module.exports.create = function(user, callback) {
+  module.exports.dbUser.create({
+    email: user.email,
+    password: user.password,
+    firstName: user.firstName,
+    lastName: user.lastName
+  }, function(err, user) {
+    if (err) {
+      return callback(err, null);
+    } else {
+      return callback(null, user)
+    } 
+  });  
+}
