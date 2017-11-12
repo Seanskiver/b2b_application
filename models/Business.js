@@ -2,10 +2,10 @@
 
 var dynamo = require('dynamodb'),
     Joi    = require('joi'),
-    AWS    = dynamo.AWS;
+    AWS    = dynamo.AWS,
+    config = require('../config.json');
 
-AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
-dynamo.AWS.config.update({region: "us-east-1"});
+    AWS.config.update(config.aws);
 
 var Business = dynamo.define('businesses', {
   hashKey : 'businessID',
@@ -17,8 +17,15 @@ var Business = dynamo.define('businesses', {
     name: Joi.string(),
     address: Joi.string(),
     phone: Joi.string().optional(),
-    email: Joi.string().email().optional()
+    email: Joi.string().email().optional(),
+    password: Joi.string(),
+    country: Joi.string(),
+    city: Joi.string(),
+    type: Joi.string(),
+    category: Joi.string()
   }
 });
+
+ // username, email, password, location (country, city), company type (supplier, buyer, both), first name, last name, company name, phone number.
 
 module.exports = Business;

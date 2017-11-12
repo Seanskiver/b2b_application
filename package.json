@@ -13,6 +13,7 @@
     "body-parser": "~1.15.2",
     "bootstrap": "^3.3.7",
     "connect-dynamodb-session": "^1.1.0",
+    "connect-flash": "^0.1.1",
     "cookie-parser": "~1.4.3",
     "cors": "^2.8.1",
     "debug": "~2.2.0",
@@ -41,7 +42,6 @@
     "webpack": "^1.13.3"
   },
   "devDependencies": {
-    "@angular/cli": "^1.4.7",
     "babel-core": "^6.18.2",
     "babel-helper-builder-binary-assignment-operator-visitor": "^6.24.1",
     "babel-helper-explode-assignable-expression": "^6.24.1",

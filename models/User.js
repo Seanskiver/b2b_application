@@ -2,15 +2,10 @@
 
 var dynamo = require('dynamodb'),
     Joi    = require('joi'),
-    AWS    = dynamo.AWS;
+    AWS    = dynamo.AWS,
+    config = require('../config.json')
 
-// AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
-
-AWS.config.update({
-  accessKeyId: 'AKIAJC6LPGATSOJTV45Q',
-  secretAccessKey: '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',
-  region: "us-east-1"
-})
+AWS.config.update(config.aws)
 
 
 var User = dynamo.define('users', {
@@ -29,4 +24,3 @@ var User = dynamo.define('users', {
 
 
 module.exports = User
-
