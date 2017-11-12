@@ -86,9 +86,9 @@
 
 	var _signin2 = _interopRequireDefault(_signin);
 
-	var _signup = __webpack_require__(365);
+	var _Signup = __webpack_require__(374);
 
-	var _signup2 = _interopRequireDefault(_signup);
+	var _Signup2 = _interopRequireDefault(_Signup);
 
 	var _Footer = __webpack_require__(367);
 
@@ -123,7 +123,7 @@
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/postad', component: _postad2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/single', component: _single2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signin', component: _signin2.default }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _signup2.default })
+	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _Signup2.default })
 	      )
 	    )
 	  );
@@ -47939,7 +47939,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
+	          { smHidden: true, mdHidden: true, lgHidden: true },
 	          _react2.default.createElement(
 	            'div',
 	            { className: 'container' },
@@ -48035,7 +48035,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
+	          { smHidden: true, mdHidden: true, lgHidden: true },
 	          _react2.default.createElement(
 	            _reactBootstrap.Grid,
 	            null,
@@ -48088,7 +48088,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true, className: 'container2' },
+	          { smHidden: true, mdHidden: true, lgHidden: true, className: 'container2' },
 	          _react2.default.createElement(
 	            _reactBootstrap.Panel,
 	            null,
@@ -48215,7 +48215,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true, className: 'container1' },
+	          { smHidden: true, mdHidden: true, lgHidden: true, className: 'container1' },
 	          _react2.default.createElement(
 	            _reactBootstrap.Panel,
 	            null,
@@ -48376,7 +48376,7 @@
 	        ),
 	        _react2.default.createElement(
 	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true, xlHidden: true },
+	          { smHidden: true, mdHidden: true, lgHidden: true },
 	          _react2.default.createElement(
 	            _reactBootstrap.Panel,
 	            { className: 'container' },
@@ -49140,24 +49140,61 @@
 	    key: 'render',
 	    value: function render() {
 	      return _react2.default.createElement(
-	        'form',
-	        { onSubmit: this.handleSubmit },
+	        'div',
+	        { className: 'loggingIn', id: 'custom-container' },
 	        _react2.default.createElement(
-	          'label',
+	          'form',
 	          null,
-	          'Username:',
-	          _react2.default.createElement('input', { type: 'text', value: this.state.value, onChange: this.handleChange })
-	        ),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'label',
-	          null,
-	          'Password:',
-	          _react2.default.createElement('input', { type: 'password' })
-	        ),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
-	      );
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'userName' },
+	                'User Name'
+	              ),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'userName', placeholder: 'User Name' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'inputPassword4' },
+	                'Password'
+	              ),
+	              _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword4', placeholder: 'Password' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group col-md-12' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'submit', className: 'btn btn-primary pull-right' },
+	              'Sign In'
+	            )
+	          )
+	        )
+	      )
+
+	      /*      <form onSubmit={this.handleSubmit}>
+	              <label>
+	                Username:
+	                <input type="text" value={this.state.value} onChange={this.handleChange} />
+	              </label>
+	              <br />
+	              <label>
+	                Password:
+	                <input type="password" />
+	              </label>
+	              <br />
+	              <input type="submit" value="Submit" />
+	            </form>*/
+	      ;
 	    }
 	  }]);
 
@@ -49168,92 +49205,7 @@
 
 /***/ }),
 /* 364 */,
-/* 365 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactBootstrap = __webpack_require__(106);
-
-	var _reactRouterDom = __webpack_require__(32);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import { Table } from 'react-bootstrap';
-
-
-	var signup = function (_React$Component) {
-	  _inherits(signup, _React$Component);
-
-	  function signup(props) {
-	    _classCallCheck(this, signup);
-
-	    var _this = _possibleConstructorReturn(this, (signup.__proto__ || Object.getPrototypeOf(signup)).call(this, props));
-
-	    _this.state = { value: '' };
-
-	    _this.handleChange = _this.handleChange.bind(_this);
-	    _this.handleSubmit = _this.handleSubmit.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(signup, [{
-	    key: 'handleChange',
-	    value: function handleChange(event) {
-	      this.setState({ value: event.target.value });
-	    }
-	  }, {
-	    key: 'handleSubmit',
-	    value: function handleSubmit(event) {
-	      alert('A name was submitted: ' + this.state.value);
-	      event.preventDefault();
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'form',
-	        { onSubmit: this.handleSubmit },
-	        _react2.default.createElement(
-	          'label',
-	          null,
-	          'Username:',
-	          _react2.default.createElement('input', { type: 'text', value: this.state.value, onChange: this.handleChange })
-	        ),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement(
-	          'label',
-	          null,
-	          'Password:',
-	          _react2.default.createElement('input', { type: 'password' })
-	        ),
-	        _react2.default.createElement('br', null),
-	        _react2.default.createElement('input', { type: 'submit', value: 'Submit' })
-	      );
-	    }
-	  }]);
-
-	  return signup;
-	}(_react2.default.Component);
-
-	exports.default = signup;
-
-/***/ }),
+/* 365 */,
 /* 366 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -60787,6 +60739,277 @@
 	}(_react2.default.Component);
 
 	exports.default = single;
+
+/***/ }),
+/* 374 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(106);
+
+	var _reactRouterDom = __webpack_require__(32);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+	//import { Table } from 'react-bootstrap';
+
+
+	var Signup = function (_React$Component) {
+	  _inherits(Signup, _React$Component);
+
+	  function Signup(props) {
+	    _classCallCheck(this, Signup);
+
+	    var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this, props));
+
+	    _this.state = { value: '' };
+
+	    _this.handleChange = _this.handleChange.bind(_this);
+	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    return _this;
+	  }
+
+	  _createClass(Signup, [{
+	    key: 'handleChange',
+	    value: function handleChange(event) {
+	      this.setState({ value: event.target.value });
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(event) {
+	      alert('A name was submitted: ' + this.state.value);
+	      event.preventDefault();
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'register', id: 'custom-container' },
+	        _react2.default.createElement(
+	          'form',
+	          { onSubmit: this.handleSubmit },
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'firstName' },
+	                'First Name'
+	              ),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'firstName', name: 'firstName', placeholder: 'First Name' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'lastName' },
+	                'Last Name'
+	              ),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'lastName', name: 'lastName', placeholder: 'Last Name' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'userName' },
+	                'User Name'
+	              ),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'userName', name: 'userName', placeholder: 'User Name' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-3' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'email' },
+	                'Email'
+	              ),
+	              _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'email', name: 'email', placeholder: 'Email' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-3' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'phone' },
+	                'Phone'
+	              ),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Phone' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'inputPassword4' },
+	                'Password'
+	              ),
+	              _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword4', name: 'password', placeholder: 'Password' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'inputPassword4' },
+	                'Confirm Password'
+	              ),
+	              _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword4', placeholder: 'Confirm Password' })
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'companyName' },
+	                'Company Name'
+	              ),
+	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'companyName', name: 'companyName', placeholder: 'Company Name' })
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'email' },
+	                'Type'
+	              ),
+	              _react2.default.createElement(
+	                'select',
+	                { className: 'form-control', id: 'exampleFormControlSelect1' },
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'Supplier' },
+	                  'Supplier'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'Buyer' },
+	                  'Buyer'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  { value: 'Both' },
+	                  'Both'
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-row' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'email' },
+	                'Country'
+	              ),
+	              _react2.default.createElement(
+	                'select',
+	                { className: 'form-control', id: 'exampleFormControlSelect1', name: 'country' },
+	                _react2.default.createElement(
+	                  'option',
+	                  null,
+	                  'Country 1'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  null,
+	                  'Country 2'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  null,
+	                  'Country 3'
+	                )
+	              )
+	            ),
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'form-group col-md-6' },
+	              _react2.default.createElement(
+	                'label',
+	                { htmlFor: 'email' },
+	                'City'
+	              ),
+	              _react2.default.createElement(
+	                'select',
+	                { className: 'form-control', id: 'exampleFormControlSelect1', name: 'city' },
+	                _react2.default.createElement(
+	                  'option',
+	                  null,
+	                  'City 1'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  null,
+	                  'City 2'
+	                ),
+	                _react2.default.createElement(
+	                  'option',
+	                  null,
+	                  'City 3'
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'form-group col-md-12' },
+	            _react2.default.createElement(
+	              'button',
+	              { type: 'submit', className: 'btn btn-primary' },
+	              'Sign Up'
+	            )
+	          )
+	        ),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null),
+	        _react2.default.createElement('br', null)
+	      );
+	    }
+	  }]);
+
+	  return Signup;
+	}(_react2.default.Component);
+
+	exports.default = Signup;
 
 /***/ })
 /******/ ]);

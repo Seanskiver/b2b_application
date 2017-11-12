@@ -2,7 +2,6 @@ import React from 'react';
 //import { Table } from 'react-bootstrap';
 import {Form, FormControl, FormGroup, ControlLabel, Button, Table, Carousel, Jumbotron, Panel, Col} from 'react-bootstrap';
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
-
 class signin extends React.Component {
     
     constructor(props) {
@@ -24,7 +23,32 @@ class signin extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
+      <div className="loggingIn"  id="custom-container">
+              
+              <form>
+              
+                
+                <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="userName">User Name</label>
+                    <input type="text" class="form-control" id="userName" placeholder="User Name"/>
+                  </div>
+             
+                  <div class="form-group col-md-6">
+                    <label for="inputPassword4">Password</label>
+                    <input type="password" class="form-control" id="inputPassword4" placeholder="Password"/>
+                  </div>
+                </div>
+                
+                 <div class="form-group col-md-12">
+                <button type="submit" class="btn btn-primary pull-right">Sign In</button>
+                </div>
+              
+              </form>
+              
+      </div>
+      
+/*      <form onSubmit={this.handleSubmit}>
         <label>
           Username:
           <input type="text" value={this.state.value} onChange={this.handleChange} />
@@ -36,7 +60,7 @@ class signin extends React.Component {
         </label>
         <br />
         <input type="submit" value="Submit" />
-      </form>
+      </form>*/
     );
   }
 }

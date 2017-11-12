@@ -12,21 +12,20 @@ AWS.config.update({
   region: "us-east-1"
 })
 
+module.exports.userSchema = Joi.object().keys({
+    userID: dynamo.types.uuid(),
+    email: Joi.string().email().required(),
+    password: Joi.string().min(8).max(255).required(),
+    firstName: Joi.string().optional(),
+    lastName: Joi.string().optional(),
+    phone: Joi.string().optional()  
+});
 
-var User = dynamo.define('users', {
+module.exports.User = dynamo.define('users', {
   hashKey : 'userID',
   tableName: 'users',
   timestamps: true,
-  schema : {
-    userID: dynamo.types.uuid(),
-    email: Joi.string().email(),
-    password: Joi.string(),
-    firstName: Joi.string().optional(),
-    lastName: Joi.string().optional(),
-    phone: Joi.string().optional()
-  }
+  schema : module.exports.userSchema
 });
 
-
-module.exports = User
 

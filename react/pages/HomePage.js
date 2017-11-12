@@ -86,16 +86,6 @@ class HomePage extends React.Component {
                   </Col> 
                 
                
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
                 
                 {/*Display categories on larger screen only*/}
                 <Col xsHidden>
@@ -424,7 +414,7 @@ class HomePage extends React.Component {
 {/************************************************************ MOBILE SECTION *******************************************************/
 /***********************************************************************************************************************************/}
               {/*Display banner on mobile only*/}
-        			<Col smHidden mdHidden lgHidden xlHidden>
+        			<Col smHidden mdHidden lgHidden>
                 <div class="container">
                  <form>
                       <div class="row">    
@@ -471,7 +461,7 @@ class HomePage extends React.Component {
                 
                 
                 {/*Display categories on mobile only*/}
-                <Col smHidden mdHidden lgHidden xlHidden>
+                <Col smHidden mdHidden lgHidden>
                 <Grid>
                   <Row>
                     <Col xs={3} class="m-category">
@@ -499,7 +489,7 @@ class HomePage extends React.Component {
                 
                    
                 {/*Display popular stores on mobile only*/}
-                <Col smHidden mdHidden lgHidden xlHidden class="container2">
+                <Col smHidden mdHidden lgHidden class="container2">
                 <Panel>
                 <span>POPULAR <b>STORES</b> 
                 
@@ -563,7 +553,7 @@ class HomePage extends React.Component {
                 
                 
                 {/*Display for you products on mobile only*/}
-                <Col smHidden mdHidden lgHidden xlHidden class="container1">
+                <Col smHidden mdHidden lgHidden class="container1">
                 <Panel>
                 <span>FOR <b>YOU</b></span>
                 <br/><br/>
@@ -612,7 +602,7 @@ class HomePage extends React.Component {
               
               
               {/*Display trending products on mobile only*/}
-        			 <Col smHidden mdHidden lgHidden xlHidden>
+        			 <Col smHidden mdHidden lgHidden>
         			 	{/* <!-- trending products for mobile -->	*/}	
                 <Panel class="container">
                 <span>TRENDING <b>PRODUCTS</b> 
@@ -725,7 +715,7 @@ class HomePage extends React.Component {
                 
                 
 {/************************************************************ //MOBILE SECTION *******************************************************/
-/***********************************************************************************************************************************/}
+/*************************************************************************************************************************************/}
 
         				
         				
