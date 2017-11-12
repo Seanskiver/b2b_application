@@ -7,49 +7,23 @@ var dbUser = User.dbUser;
 var userSchema = User.userSchema;
 var Joi = require('Joi');
 var bcrypt = require('bcrypt');
-var hashing = require('../lib/userHash');
+
 
 /* GET users listing. */
-router.get('/', function(req, res, next) {
-  res.send('respond with a resource');
-});
-
-
-/*router.get('/signup', function(req, res, next) {
-  res.render('signup', {title: 'signup'});
-  
-});*/
-
-// Check if all required fields are entered
-router.get('/signup', function(req, res, next) {
-  res.render('signup2', {title: 'signup'});
-});
-
-
-// Check that user doesn't already exist
-// router.post('/signup', function(req, res, next) {
-//   dbUser.scan()
-//   .where('email').equals(req.body.email)
-//   .exec(function(err, user) {
-//     console.log(err);
-//     if (typeof user == 'undefined') {
-//       next();
-//     }
-//     console.log(user);
-//     if (user.Count > 0) {
-//       res.end('user account already exists');
-//     } else {
-//       next();
-//     }
-//   });
+// router.get('/', function(req, res, next) {
+//   res.send('respond with a resource');
 // });
 
+
+router.get('/signup', function(req, res, next) {
+   res.render('signup', {title: 'signup'});
+});
 
 // Validate form inputs
 router.post('/signup', function(req, res, next) {
   // check passwords match 
   if (req.body.password !== req.body.password_confirm) {
-    res.end("passwords do not match");
+    return res.json({err: true, message:"Passwords do not match"});
   }
 
   var input = {
@@ -62,38 +36,49 @@ router.post('/signup', function(req, res, next) {
   Joi.validate(input, userSchema, function(err, value) {
     if (err) {
       // console.log(err.details[0].message);
-      res.end(err.details[0].message);
+      errorObject = {
+        err: true,
+        message: err.details
+      }
+      return res.json(errorObject);
     } else {
       // console.log(value);
       req.user = value;
-      next();
+      next('route');
     }
   });  
 })
 
+
+// Check that user doesn't already exist
+router.post('/signup', function(req, res, next) {
+  User.userExists(req.body.email, function(err, exists) {
+    if (err) {
+      console.log(err);
+      res.end('error finding user');
+    } 
+    
+    if (exists == true) {
+      return res.json({err: true, message: 'A user with that email alredy exists'});
+    } else {
+      next('route');
+    }
+  })
+});
 
 
 
 router.post('/signup', function(req, res, next) {
   var user = req.user;
   // Create user hash
-  hashing.hashUser(user.password, function(err, hash) {
+  User.create(user, function(err, result) {
     if (err) {
       console.log(err);
-      res.end('error creating user. Please try again later');
-    } else {
-      // Assign hashed password to user object
-      user.password = hash;
-      // Create user in DB
-      User.create(user, function(err, result) {
-        if (err) {
-          console.log(err)
-        } else {
-          console.log(result);
-          res.end('hashed user created');
-        }
-      });
+      return res.json({err: true, message: 'error creating user'});
+      return;
     }
+    console.log(result);
+    res.json({err: false, message: 'success!'});
   })
 });
 

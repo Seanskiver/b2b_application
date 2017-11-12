@@ -2,8 +2,9 @@
 
 var dynamo = require('dynamodb'),
     Joi    = require('joi'),
-    AWS    = dynamo.AWS;
-
+    AWS    = dynamo.AWS,
+    hashing = require('../lib/userHash')
+;
 // AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
 
 
@@ -37,16 +38,40 @@ module.exports.dbUser = dynamo.define('users', {
 });
 
 module.exports.create = function(user, callback) {
-  module.exports.dbUser.create({
-    email: user.email,
-    password: user.password,
-    firstName: user.firstName,
-    lastName: user.lastName
-  }, function(err, user) {
+  hashing.hashUser(user.password, function(err, hash) {
+    if (err) {
+      return callback(err, null)
+    }
+    // Set user password = hash
+    user.password = hash;
+    // Create user
+    module.exports.dbUser.create({
+      email: user.email.toLowerCase(),
+      password: user.password,
+      firstName: user.firstName,
+      lastName: user.lastName
+    }, function(err, user) {
+      if (err) {
+        return callback(err, null);
+      } else {
+        return callback(null, user)
+      } 
+    });  
+  })
+}
+
+module.exports.userExists = function(email, callback) {
+  module.exports.dbUser.scan()
+  .where('email').equals(email.toLowerCase())
+  .exec(function(err, user) {
     if (err) {
       return callback(err, null);
+    }
+
+    if (user.Count > 0) {
+      return callback(null, true);
     } else {
-      return callback(null, user)
-    } 
-  });  
+      return callback(null, false);
+    }
+  });
 }
