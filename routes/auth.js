@@ -10,7 +10,7 @@ var User = require('../models/User');
 router.get('/login', function(req, res) {
     
 });
-
+      
 
 router.post('/register', function(req, res) {
     User.create(req.body, function (err, user) {

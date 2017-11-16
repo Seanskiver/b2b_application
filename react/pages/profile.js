@@ -1,7 +1,7 @@
 import React from 'react';
 import $ from 'jquery';
 
-class single extends React.Component {
+class profile extends React.Component {
     
     render() {
         return (
@@ -10,7 +10,7 @@ class single extends React.Component {
 		<div class="container">
 			<div class="product-desc">
 				<div class="col-md-7 product-view">
-					<h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry!!</h2>
+					<h2>Lorem Ipsum is simply dummy text of the printing and typesetting industry</h2>
 					<p> <i class="glyphicon glyphicon-map-marker"></i><a href="#">state</a>, <a href="#">city</a>| Added at 06:55 pm, Ad ID: 987654321</p>
 					<div class="flexslider">
 						<ul class="slides">
@@ -86,4 +86,4 @@ class single extends React.Component {
     }
 }
 
-export default single;
+export default profile;

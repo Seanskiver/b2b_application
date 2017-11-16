@@ -25,7 +25,7 @@ class postad extends React.Component {
         return (
         <div class="submit-ad main-grid-border">
 		<div class="container">
-			<h2 class="w3-head">Post an Ad</h2>
+			<h2 class="w3-head">Post an Ad!</h2>
 			<div class="post-ad-form">
 				<form onSubmit={this.handleSubmit}>
 					<label>Select Category <span>*</span></label>

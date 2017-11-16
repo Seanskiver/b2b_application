@@ -33,7 +33,6 @@ app.use(require('node-sass-middleware')({
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
-app.use('/signup', index);
 app.use('/users', users);
 
 // catch 404 and forward to error handler

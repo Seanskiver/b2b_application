@@ -67,7 +67,8 @@ router.post('/signup', function(req, res, next) {
     password: req.body.password,
     pasword_confirm: req.body.password_confirm,
     firstName: req.body.firsName,
-    lastName: req.body.lastName
+    lastName: req.body.lastName,
+    userName: req.body.userName
   }, function(err, user) {
     if (err) {
       console.log('ERROR: ');
