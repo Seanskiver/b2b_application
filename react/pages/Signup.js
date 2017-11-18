@@ -36,8 +36,10 @@ class Signup extends React.Component {
    
     }
   
+
+    //handlesubmit
     handleSubmit(event) {
-     
+
       event.preventDefault();
       
        $.ajax({
