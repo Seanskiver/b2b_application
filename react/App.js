@@ -21,7 +21,7 @@ import postad from './pages/postad';
 import single from './pages/single';
 import profile from './pages/profile';
 import signin from './pages/signin';
-import Signup from './pages/signup';
+import Signup from './pages/Signup';
 import Footer from './pages/Footer';
 
 // let unsubscribe = store.subscribe(() =>
