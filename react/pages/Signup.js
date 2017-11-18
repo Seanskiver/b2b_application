@@ -36,7 +36,6 @@ class Signup extends React.Component {
    
     }
   
-
     //handlesubmit
     handleSubmit(event) {
 
@@ -44,7 +43,7 @@ class Signup extends React.Component {
       
        $.ajax({
             type: 'post',
-            url: '/signup',
+            url: '/users/signup',
             data: {
                 '_token': $('input[name=_token]').val(),
                 firstName: this.state.firstName,
@@ -61,7 +60,7 @@ class Signup extends React.Component {
                
             },
             success: function(data) {
-               alert('Form was submited: ' + this.state.lastName);
+              alert('Form was submited:');
               location.reload();
             }
         });

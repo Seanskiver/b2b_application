@@ -82,15 +82,19 @@
 
 	var _single2 = _interopRequireDefault(_single);
 
-	var _signin = __webpack_require__(367);
+	var _profile = __webpack_require__(367);
+
+	var _profile2 = _interopRequireDefault(_profile);
+
+	var _signin = __webpack_require__(368);
 
 	var _signin2 = _interopRequireDefault(_signin);
 
-	var _Signup = __webpack_require__(368);
+	var _Signup = __webpack_require__(369);
 
 	var _Signup2 = _interopRequireDefault(_Signup);
 
-	var _Footer = __webpack_require__(369);
+	var _Footer = __webpack_require__(370);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
@@ -101,11 +105,6 @@
 	// )
 
 
-	// import store from './Store.js'
-
-	// // Components
-
-	// Pages
 	var App = function App() {
 	  return _react2.default.createElement(
 	    _reactRouterDom.HashRouter,
@@ -122,12 +121,20 @@
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/browse', component: _browse2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/postad', component: _postad2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/single', component: _single2.default }),
+	        _react2.default.createElement(_reactRouterDom.Route, { path: '/profile', component: _profile2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signin', component: _signin2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _Signup2.default })
 	      )
 	    )
 	  );
 	};
+
+	// import store from './Store.js'
+
+	// // Components
+
+	// Pages
+
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('react-app'));
 
@@ -49469,7 +49476,7 @@
 						_react2.default.createElement(
 							'h2',
 							{ className: 'w3-head' },
-							'Post an Ad'
+							'Post an Ad!'
 						),
 						_react2.default.createElement(
 							'div',
@@ -49647,7 +49654,7 @@
 									_react2.default.createElement(
 										'h2',
 										null,
-										'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+										'Lorem Ipsum is simply dummy text of the printing and typesetting industry!!'
 									),
 									_react2.default.createElement(
 										'p',
@@ -60204,6 +60211,355 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
+		value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _jquery = __webpack_require__(366);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var profile = function (_React$Component) {
+		_inherits(profile, _React$Component);
+
+		function profile() {
+			_classCallCheck(this, profile);
+
+			return _possibleConstructorReturn(this, (profile.__proto__ || Object.getPrototypeOf(profile)).apply(this, arguments));
+		}
+
+		_createClass(profile, [{
+			key: 'render',
+			value: function render() {
+				return _react2.default.createElement(
+					'div',
+					null,
+					_react2.default.createElement(
+						'div',
+						{ className: 'single-page main-grid-border' },
+						_react2.default.createElement(
+							'div',
+							{ className: 'container' },
+							_react2.default.createElement(
+								'div',
+								{ className: 'product-desc' },
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-7 product-view' },
+									_react2.default.createElement(
+										'h2',
+										null,
+										'Lorem Ipsum is simply dummy text of the printing and typesetting industry'
+									),
+									_react2.default.createElement(
+										'p',
+										null,
+										' ',
+										_react2.default.createElement('i', { className: 'glyphicon glyphicon-map-marker' }),
+										_react2.default.createElement(
+											'a',
+											{ href: '#' },
+											'state'
+										),
+										', ',
+										_react2.default.createElement(
+											'a',
+											{ href: '#' },
+											'city'
+										),
+										'| Added at 06:55 pm, Ad ID: 987654321'
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'flexslider' },
+										_react2.default.createElement(
+											'ul',
+											{ className: 'slides' },
+											_react2.default.createElement(
+												'li',
+												{ 'data-thumb': 'images/ss1.jpg' },
+												_react2.default.createElement('img', { src: 'images/ss1.jpg' })
+											),
+											_react2.default.createElement(
+												'li',
+												{ 'data-thumb': 'images/ss2.jpg' },
+												_react2.default.createElement('img', { src: 'images/ss2.jpg' })
+											),
+											_react2.default.createElement(
+												'li',
+												{ 'data-thumb': 'images/ss3.jpg' },
+												_react2.default.createElement('img', { src: 'images/ss3.jpg' })
+											),
+											_react2.default.createElement(
+												'li',
+												{ 'data-thumb': 'images/ss4.jpg' },
+												_react2.default.createElement('img', { src: 'images/ss4.jpg' })
+											)
+										)
+									),
+									_react2.default.createElement('script', { defer: true, src: 'js/jquery.flexslider.js' }),
+									_react2.default.createElement(
+										'div',
+										{ className: 'product-details' },
+										_react2.default.createElement(
+											'h4',
+											null,
+											_react2.default.createElement(
+												'span',
+												{ className: 'w3layouts-agileinfo' },
+												'Brand '
+											),
+											' : ',
+											_react2.default.createElement(
+												'a',
+												{ href: '#' },
+												'Company name'
+											),
+											_react2.default.createElement('div', { className: 'clearfix' })
+										),
+										_react2.default.createElement(
+											'h4',
+											null,
+											_react2.default.createElement(
+												'span',
+												{ className: 'w3layouts-agileinfo' },
+												'Views '
+											),
+											' : ',
+											_react2.default.createElement(
+												'strong',
+												null,
+												'150'
+											)
+										),
+										_react2.default.createElement(
+											'h4',
+											null,
+											_react2.default.createElement(
+												'span',
+												{ className: 'w3layouts-agileinfo' },
+												'Fuel '
+											),
+											' : Petrol'
+										),
+										_react2.default.createElement(
+											'h4',
+											null,
+											_react2.default.createElement(
+												'span',
+												{ className: 'w3layouts-agileinfo' },
+												'Summary'
+											),
+											' :',
+											_react2.default.createElement(
+												'p',
+												null,
+												'It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using \'Content here, content here\', making it look like readable English.'
+											),
+											_react2.default.createElement('div', { className: 'clearfix' })
+										)
+									)
+								),
+								_react2.default.createElement(
+									'div',
+									{ className: 'col-md-5 product-details-grid' },
+									_react2.default.createElement(
+										'div',
+										{ className: 'item-price' },
+										_react2.default.createElement(
+											'div',
+											{ className: 'product-price' },
+											_react2.default.createElement(
+												'p',
+												{ className: 'p-price' },
+												'Price'
+											),
+											_react2.default.createElement(
+												'h3',
+												{ className: 'rate' },
+												'$ 45999'
+											),
+											_react2.default.createElement('div', { className: 'clearfix' })
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'condition' },
+											_react2.default.createElement(
+												'p',
+												{ className: 'p-price' },
+												'Condition'
+											),
+											_react2.default.createElement(
+												'h4',
+												null,
+												'Good'
+											),
+											_react2.default.createElement('div', { className: 'clearfix' })
+										),
+										_react2.default.createElement(
+											'div',
+											{ className: 'itemtype' },
+											_react2.default.createElement(
+												'p',
+												{ className: 'p-price' },
+												'Item Type'
+											),
+											_react2.default.createElement(
+												'h4',
+												null,
+												'Cars'
+											),
+											_react2.default.createElement('div', { className: 'clearfix' })
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'interested text-center' },
+										_react2.default.createElement(
+											'h4',
+											null,
+											'Interested in this Ad?',
+											_react2.default.createElement(
+												'small',
+												null,
+												' Contact the Seller!'
+											)
+										),
+										_react2.default.createElement(
+											'p',
+											null,
+											_react2.default.createElement('i', { className: 'glyphicon glyphicon-earphone' }),
+											'00-85-9875462655'
+										)
+									),
+									_react2.default.createElement(
+										'div',
+										{ className: 'tips' },
+										_react2.default.createElement(
+											'h4',
+											null,
+											'Safety Tips for Buyers'
+										),
+										_react2.default.createElement(
+											'ol',
+											null,
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											),
+											_react2.default.createElement(
+												'li',
+												null,
+												_react2.default.createElement(
+													'a',
+													{ href: '#' },
+													'Contrary to popular belief.'
+												)
+											)
+										)
+									)
+								),
+								_react2.default.createElement('div', { className: 'clearfix' })
+							)
+						)
+					)
+				);
+			}
+		}]);
+
+		return profile;
+	}(_react2.default.Component);
+
+	exports.default = profile;
+
+/***/ }),
+/* 368 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
 
@@ -60321,7 +60677,7 @@
 	exports.default = signin;
 
 /***/ }),
-/* 368 */
+/* 369 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -60388,6 +60744,9 @@
 
 	      this.setState(_defineProperty({}, name, value));
 	    }
+
+	    //handlesubmit
+
 	  }, {
 	    key: 'handleSubmit',
 	    value: function handleSubmit(event) {
@@ -60396,7 +60755,7 @@
 
 	      $.ajax({
 	        type: 'post',
-	        url: '/signup',
+	        url: '/users/signup',
 	        data: {
 	          '_token': $('input[name=_token]').val(),
 	          firstName: this.state.firstName,
@@ -60413,7 +60772,7 @@
 
 	        },
 	        success: function success(data) {
-	          alert('Form was submited: ' + this.state.lastName);
+	          alert('Form was submited:');
 	          location.reload();
 	        }
 	      });
@@ -60826,7 +61185,7 @@
 	exports.default = Signup;
 
 /***/ }),
-/* 369 */
+/* 370 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
