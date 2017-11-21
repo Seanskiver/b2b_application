@@ -5,7 +5,7 @@ var LocalStrategy = require('passport-local').Strategy;
 var User = require('../models/User');
 var dbUser = User.dbUser;
 var userSchema = User.userSchema;
-var Joi = require('Joi');
+var Joi = require('joi');
 var bcrypt = require('bcrypt');
 
 

@@ -55,7 +55,7 @@ app.use(function(err, req, res, next) {
 
 app.listen(process.env.PORT || 3000, process.env.IP || "0.0.0.0", function(){
   //var addr = server.address();
-  console.log('Server started on port '+process.env.PORT);
+  console.log('Server started on port ' + process.env.PORT);
 });
 
 module.exports = app;
