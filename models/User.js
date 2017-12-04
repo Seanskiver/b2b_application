@@ -8,11 +8,7 @@ var dynamo = require('dynamodb'),
 // AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
 
 
-AWS.config.update({
-  accessKeyId: 'AKIAIJXJW267L4IRFU6Q',
-  secretAccessKey: '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',
-  region: "us-east-1"
-});
+
 
 module.exports.userSchema = Joi.object().keys({
   email: Joi.string().email().required(),
