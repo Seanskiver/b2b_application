@@ -249,7 +249,21 @@ select {
     text-align:center;
 }
 
+/*********************************************************************************/
+/*Bottom slider*/
+#bottom-slider-img{
+    height: 300px;
+}
 
+#bottom-slider-right-img{
+    height: 230px;
+}
+
+
+
+#thumb-img{
+    width:100px;
+}
 
 /********************************************************************************/
 /*Sign Up Form CSS*/
@@ -301,3 +315,9 @@ select {
 }*/
 
 /*//Sign Up Form CSS*/
+
+
+
+
+
+

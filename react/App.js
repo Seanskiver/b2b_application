@@ -44,6 +44,7 @@ const App = () => (
           <Route path="/signup" component={Signup}/>
       </section>
     </div>
+    
   </Router>
 );
 
