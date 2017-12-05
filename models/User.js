@@ -7,6 +7,7 @@ var dynamo = require('dynamodb'),
 ;
 // AWS.config.loadFromPath(process.env.HOME + '/.aws/credentials.json');
 
+
 module.exports.userSchema = Joi.object().keys({
   email: Joi.string().email().required(),
   password: Joi.string().min(8).max(255).required(),
