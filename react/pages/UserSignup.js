@@ -81,7 +81,6 @@ class UserSignup extends React.Component {
                                       <label class="control-label">Confirm Password</label>
                                       <input type="password" required="required" class="form-control" id="password" name="password" placeholder="Confirm Password" onChange={this.handleChange}/>
                                   </div>
-                                    
                 
                                      <div class="form-group col-md-12">
                                       <button type="submit" class="btn btn-primary pull-right">Sign Up</button>

@@ -11,6 +11,7 @@ class Signup extends React.Component {
         email: '',
         businessName: '',
         businessType: '',
+        businessCategory: '',
         phone: '',
         address: '',
         country: 'Senegal',
@@ -45,6 +46,7 @@ class Signup extends React.Component {
                 ...this.email,
                 ...this.businessName,
                 ...this.businessType,
+                ...this.businessCategory,
                 ...this.phone,
                 ...this.address,
                 ...this.country,
@@ -96,6 +98,19 @@ class Signup extends React.Component {
                                         <option>Supplier</option>
                                         <option>Buyer</option>
                                         <option>Both</option>
+                                      </select>
+                                    </div>
+                                    
+                                      <div class="form-group col-md-12">
+                                      <label for="businessCategory">Business Category</label>
+                                      <select class="form-control" id="businessCategory" name="businessCategory" onChange={this.handleChange}>
+                                        <option>Electronics & Appliance</option>
+                                        <option>Sport</option>
+                                        <option>Fashion</option>
+                                        <option>Food & Beverage</option>
+                                        <option>Automotive</option>
+                                        <option>Home Appliance</option>
+                                        <option>Furniture</option>
                                       </select>
                                     </div>
                 
@@ -192,6 +207,19 @@ class Signup extends React.Component {
                                         <option>Supplier</option>
                                         <option>Buyer</option>
                                         <option>Both</option>
+                                      </select>
+                                    </div>
+                                    
+                                     <div class="form-group col-md-12">
+                                      <label for="businessCategory">Business Category</label>
+                                      <select class="form-control" id="businessCategory" name="businessCategory" onChange={this.handleChange}>
+                                        <option>Electronics & Appliance</option>
+                                        <option>Sport</option>
+                                        <option>Fashion</option>
+                                        <option>Food & Beverage</option>
+                                        <option>Automotive</option>
+                                        <option>Home Appliance</option>
+                                        <option>Furniture</option>
                                       </select>
                                     </div>
                 
