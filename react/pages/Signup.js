@@ -8,17 +8,13 @@ class Signup extends React.Component {
     constructor(props) {
     super(props);
     this.state = {
-      firstName: '',
-      lastName: '',
-      email: '',
-      password: '',
-      confirmPassword: '',
-      businessName: '',
-      businessType: '',
-      phone: '',
-      address: '',
-      country: 'Senegal',
-      city: '',
+        email: '',
+        businessName: '',
+        businessType: '',
+        phone: '',
+        address: '',
+        country: 'Senegal',
+        city: '',
     };
 
       this.handleChange = this.handleChange.bind(this);
@@ -43,25 +39,21 @@ class Signup extends React.Component {
       
        $.ajax({
             type: 'post',
-            url: '/users/signup',
+            url: '/signup',
             data: {
                 '_token': $('input[name=_token]').val(),
-                firstName: this.state.firstName,
-                lastName: this.state.lastName,
-                email: this.state.email,
-                password: this.state.password,
-                confirmPassword: this.state.confirmPassword,
-                businessName: this.state.businessName,
-                businessType: this.state.businessType,
-                phone: this.state.phone,
-                address: this.state.streetAddress,
-                country: this.state.country,
-                city: this.state.city,
-               
+                ...this.email,
+                ...this.businessName,
+                ...this.businessType,
+                ...this.phone,
+                ...this.address,
+                ...this.country,
+                ...this.city,
             },
-            success: function(data) {
-              alert('Form was submited:');
-              location.reload();
+            
+           success: function(data) {
+             alert('Form was submited: ' + this.state.lastName);
+             location.reload();
             }
         });
     }
@@ -76,71 +68,27 @@ class Signup extends React.Component {
        
               <Col xsHidden>
               <div class="container" style={style}>
-                      <div class="stepwizard">
-                          <div class="stepwizard-row setup-panel">
-                              <div class="stepwizard-step col-xs-3 col-md-6 col-sm-6"> 
-                                  <a href="#step-1" type="button" class="btn btn-success btn-sm btn-circle">Personal Info</a>
-                              </div>
-                              <div class="stepwizard-step col-xs-3 col-md-6 col-sm-6"> 
-                                  <a href="#step-2" type="button" class="btn btn-default btn-sm btn-circle" disabled="disabled">Business Info</a>
-                              </div>
-                              
-                          </div>
-                      </div>
-                      <br/>
                       
-                      <form onSubmit={this.handleSubmit}>
-                          <div class="panel panel-primary setup-content" id="step-1">
-                              <div class="panel-heading">
-                                   <h3 class="panel-title">Personal Info</h3>
-                              </div>
-                              <div class="panel-body">
+                      
+                      <div class="panel panel-default">
+                      <div class="panel-heading" align="center"><b>Business Information</b></div>
+                      <div class="panel-body">
+                        <form onSubmit={this.handleSubmit}>
                               
-                                  <div class="form-group col-md-12">
-                                      <label class="control-label">First Name</label>
-                                      <input type="text" required="required" class="form-control" id="firstName" name="firstName" placeholder="Enter First Name" value={this.state.firstName} onChange={this.handleChange} />
-                                  </div>
-                                  
-                                  <div class="form-group col-md-12">
-                                      <label class="control-label">Last Name</label>
-                                      <input type="text" required="required" class="form-control" id="lastName" name="lastName" placeholder="Enter Last Name"  onChange={this.handleChange} />
+                                 <div class="form-group col-md-12">
+                                      <label for="businessName">Business Name</label>
+                                      <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Business Name" onChange={this.handleChange}/>
+                                    </div>
+                                    
+                                    <div class="form-group col-md-12">
+                                      <label class="control-label">Email</label>
+                                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" onChange={this.handleChange}/>
                                   </div>
                                   
                                    <div class="form-group col-md-12">
                                       <label class="control-label">Phone</label>
                                       <input type="text" required="required" class="form-control" id="phone" name="phone" placeholder="Enter Phone" onChange={this.handleChange}/>
                                   </div>
-                                  
-                                  <div class="form-group col-md-12">
-                                      <label class="control-label">Email</label>
-                                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                    <div class="form-group col-md-6">
-                                     <label for="inputPassword4">Password</label>
-                                      <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Password" onChange={this.handleChange}/>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-6">
-                                      <label for="inputPassword4">Confirm Password</label>
-                                      <input type="password" class="form-control" id="inputPassword4" name="confirmPassword" placeholder="Confirm Password" onChange={this.handleChange}/>
-                                    </div>
-                                                    
-                                  <div class="form-group col-md-12">
-                                  <button class="btn btn-primary nextBtn pull-right" type="button">Next</button>
-                                  </div>
-                              </div>
-                          </div>
-                          
-                          <div class="panel panel-primary setup-content" id="step-2">
-                              <div class="panel-heading">
-                                   <h3 class="panel-title">Business Info</h3>
-                              </div>
-                              <div class="panel-body">
-                                    <div class="form-group col-md-12">
-                                      <label for="businessName">Business Name</label>
-                                      <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Business Name" onChange={this.handleChange}/>
-                                    </div>
                                     
                                     <div class="form-group col-md-12">
                                       <label for="businessType">Business Type</label>
@@ -208,12 +156,14 @@ class Signup extends React.Component {
                                         <option>Kanel</option>
                                       </select>
                                     </div>
+                                    
                                      <div class="form-group col-md-12">
                                       <button type="submit" class="btn btn-primary pull-right">Sign Up</button>
                                      </div>
-                              </div>
-                          </div>
                       </form>
+                      </div>
+                    </div>
+                      
                   </div>
                   </Col>
                   

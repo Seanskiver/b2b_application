@@ -58267,6 +58267,8 @@
 	  value: true
 	});
 
+	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
@@ -58298,11 +58300,7 @@
 	    var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this, props));
 
 	    _this.state = {
-	      firstName: '',
-	      lastName: '',
 	      email: '',
-	      password: '',
-	      confirmPassword: '',
 	      businessName: '',
 	      businessType: '',
 	      phone: '',
@@ -58336,24 +58334,13 @@
 
 	      $.ajax({
 	        type: 'post',
-	        url: '/users/signup',
-	        data: {
-	          '_token': $('input[name=_token]').val(),
-	          firstName: this.state.firstName,
-	          lastName: this.state.lastName,
-	          email: this.state.email,
-	          password: this.state.password,
-	          confirmPassword: this.state.confirmPassword,
-	          businessName: this.state.businessName,
-	          businessType: this.state.businessType,
-	          phone: this.state.phone,
-	          address: this.state.streetAddress,
-	          country: this.state.country,
-	          city: this.state.city
+	        url: '/signup',
+	        data: _extends({
+	          '_token': $('input[name=_token]').val()
+	        }, this.email, this.businessName, this.businessType, this.phone, this.address, this.country, this.city),
 
-	        },
 	        success: function success(data) {
-	          alert('Form was submited:');
+	          alert('Form was submited: ' + this.state.lastName);
 	          location.reload();
 	        }
 	      });
@@ -58376,78 +58363,31 @@
 	            { className: 'container', style: style },
 	            _react2.default.createElement(
 	              'div',
-	              { className: 'stepwizard' },
+	              { className: 'panel panel-default' },
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'stepwizard-row setup-panel' },
+	                { className: 'panel-heading', align: 'center' },
 	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stepwizard-step col-xs-3 col-md-6 col-sm-6' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: '#step-1', type: 'button', className: 'btn btn-success btn-sm btn-circle' },
-	                    'Personal Info'
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'stepwizard-step col-xs-3 col-md-6 col-sm-6' },
-	                  _react2.default.createElement(
-	                    'a',
-	                    { href: '#step-2', type: 'button', className: 'btn btn-default btn-sm btn-circle', disabled: 'disabled' },
-	                    'Business Info'
-	                  )
+	                  'b',
+	                  null,
+	                  'Business Information'
 	                )
-	              )
-	            ),
-	            _react2.default.createElement('br', null),
-	            _react2.default.createElement(
-	              'form',
-	              { onSubmit: this.handleSubmit },
+	              ),
 	              _react2.default.createElement(
 	                'div',
-	                { className: 'panel panel-primary setup-content', id: 'step-1' },
+	                { className: 'panel-body' },
 	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'panel-heading' },
-	                  _react2.default.createElement(
-	                    'h3',
-	                    { className: 'panel-title' },
-	                    'Personal Info'
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'panel-body' },
+	                  'form',
+	                  { onSubmit: this.handleSubmit },
 	                  _react2.default.createElement(
 	                    'div',
 	                    { className: 'form-group col-md-12' },
 	                    _react2.default.createElement(
 	                      'label',
-	                      { className: 'control-label' },
-	                      'First Name'
+	                      { htmlFor: 'businessName' },
+	                      'Business Name'
 	                    ),
-	                    _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'firstName', name: 'firstName', placeholder: 'Enter First Name', value: this.state.firstName, onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { className: 'control-label' },
-	                      'Last Name'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'lastName', name: 'lastName', placeholder: 'Enter Last Name', onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { className: 'control-label' },
-	                      'Phone'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Enter Phone', onChange: this.handleChange })
+	                    _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'businessName', name: 'businessName', placeholder: 'Business Name', onChange: this.handleChange })
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
@@ -58461,59 +58401,13 @@
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
-	                    { className: 'form-group col-md-6' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { htmlFor: 'inputPassword4' },
-	                      'Password'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword4', name: 'password', placeholder: 'Password', onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-6' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { htmlFor: 'inputPassword4' },
-	                      'Confirm Password'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'inputPassword4', name: 'confirmPassword', placeholder: 'Confirm Password', onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'button',
-	                      { className: 'btn btn-primary nextBtn pull-right', type: 'button' },
-	                      'Next'
-	                    )
-	                  )
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'panel panel-primary setup-content', id: 'step-2' },
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'panel-heading' },
-	                  _react2.default.createElement(
-	                    'h3',
-	                    { className: 'panel-title' },
-	                    'Business Info'
-	                  )
-	                ),
-	                _react2.default.createElement(
-	                  'div',
-	                  { className: 'panel-body' },
-	                  _react2.default.createElement(
-	                    'div',
 	                    { className: 'form-group col-md-12' },
 	                    _react2.default.createElement(
 	                      'label',
-	                      { htmlFor: 'businessName' },
-	                      'Business Name'
+	                      { className: 'control-label' },
+	                      'Phone'
 	                    ),
-	                    _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'businessName', name: 'businessName', placeholder: 'Business Name', onChange: this.handleChange })
+	                    _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Enter Phone', onChange: this.handleChange })
 	                  ),
 	                  _react2.default.createElement(
 	                    'div',
