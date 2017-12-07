@@ -22,6 +22,7 @@ import single from './pages/single';
 import profile from './pages/profile';
 import signin from './pages/signin';
 import Signup from './pages/Signup';
+import UserSignup from './pages/UserSignup';
 import Footer from './pages/Footer';
 
 // let unsubscribe = store.subscribe(() =>
@@ -42,6 +43,7 @@ const App = () => (
           <Route path="/profile" component={profile}/>
           <Route path="/signin" component={signin}/>
           <Route path="/signup" component={Signup}/>
+          <Route path="/usersignup" component={UserSignup}/>
       </section>
     </div>
     
