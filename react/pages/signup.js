@@ -4,7 +4,7 @@ import {Form, FormControl, FormGroup, ControlLabel, Button, Table, Carousel, Jum
 import { HashRouter as Router, Route, Link, Redirect } from 'react-router-dom';
 
 class Signup extends React.Component {
-    
+
     constructor(props) {
     super(props);
     this.state = {
@@ -24,7 +24,7 @@ class Signup extends React.Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
     }
-  
+
     handleChange(event) {
        const target = event.target;
        const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -33,44 +33,33 @@ class Signup extends React.Component {
     this.setState({
       [name]: value
     });
-   
+
     }
-  
+
     handleSubmit(event) {
-     
+
       event.preventDefault();
-      
+
        $.ajax({
             type: 'post',
             url: '/signup',
-            data: {
-                '_token': $('input[name=_token]').val(),
-                firstName: this.state.firstName,
-                lastName: this.state.lastName,
-                email: this.state.email,
-                password: this.state.password,
-                confirmPassword: this.state.confirmPassword,
-                businessName: this.state.businessName,
-                businessType: this.state.businessType,
-                phone: this.state.phone,
-                address: this.state.streetAddress,
-                country: this.state.country,
-                city: this.state.city,
-               
+            data ={
+              ‘_token’: $(‘input[name=_token]’).val(),
+              …this.state
             },
             success: function(data) {
                alert('Form was submited: ' + this.state.lastName);
               location.reload();
             }
         });
-      
+
     }
-    
-    
+
+
   render() {
     return (
        <div className="register"  id="custom-container">
-              
+
               <form onSubmit={this.handleSubmit}>
                <div class="form-row">
                   <div class="form-group col-md-6">
@@ -82,7 +71,7 @@ class Signup extends React.Component {
                     <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name"  onChange={this.handleChange} />
                   </div>
                 </div>
-                
+
                  <div class="form-row">
                    <div class="form-group col-md-6">
                     <label for="email">Email</label>
@@ -93,26 +82,26 @@ class Signup extends React.Component {
                     <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone" onChange={this.handleChange}/>
                   </div>
                 </div>
-                
+
                 <div class="form-row">
-                  
+
                   <div class="form-group col-md-6">
                    <label for="inputPassword4">Password</label>
                     <input type="password" class="form-control" id="inputPassword4" name="password" placeholder="Password" onChange={this.handleChange}/>
                   </div>
-                  
+
                   <div class="form-group col-md-6">
                     <label for="inputPassword4">Confirm Password</label>
                     <input type="password" class="form-control" id="inputPassword4" name="confirmPassword" placeholder="Confirm Password" onChange={this.handleChange}/>
                   </div>
                 </div>
-              
+
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="businessName">Business Name</label>
                     <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Business Name" onChange={this.handleChange}/>
                   </div>
-                  
+
                   <div class="form-group col-md-6">
                     <label for="businessType">Business Type</label>
                     <select class="form-control" id="businessType" name="businessType" onChange={this.handleChange}>
@@ -122,13 +111,13 @@ class Signup extends React.Component {
                     </select>
                   </div>
                 </div>
-                
+
                 <div class="form-row">
                   <div class="form-group col-md-6">
                     <label for="streetAddress">Street Address</label>
                     <input type="text" class="form-control" id="address" name="address" placeholder="Street Address" onChange={this.handleChange}/>
                   </div>
-                  
+
                   <div class="form-group col-md-6">
                     <label for="email">City</label>
                     <select class="form-control" id="exampleFormControlSelect1" name="city" onChange={this.handleChange}>
@@ -182,11 +171,11 @@ class Signup extends React.Component {
                     </select>
                   </div>
                 </div>
-                
+
                 <div class="form-group col-md-12">
                 <button type="submit" class="btn btn-primary">Sign Up</button>
                 </div>
-              
+
               </form>
               <br/><br/><br/>
       </div>
