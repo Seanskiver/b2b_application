@@ -2,10 +2,10 @@
 
 var dynamo = require('dynamodb'),
     Joi    = require('joi'),
-    AWS    = dynamo.AWS,
-    config = require('../config.json')
+    AWS    = dynamo.AWS
+ /*   config = require('../config.json')
 
-AWS.config.update(config.aws)
+AWS.config.update(config.aws)*/
 
 
 var User = dynamo.define('users', {

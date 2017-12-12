@@ -11,7 +11,7 @@ class HomePage extends React.Component {
             <Col xsHidden>
              
             
-                <Jumbotron class="top-banner" id="top-banner" style={{ height: 'auto'}}>
+                <Jumbotron class="top-banner"  id="top-banner" style={{ height: 'auto'}}>
                  <Row className="show-grid1" id="top-ban-grids">
              
                   <Col smHidden md={2} id="banner-side-grids">
@@ -40,7 +40,7 @@ class HomePage extends React.Component {
                        <div class="form-group col-md-3 col-sm-3 col-lg-3">
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <select id="inputState" class="form-control">
-                          <option selected>All Categories </option>
+                          <option>All Categories </option>
                           <option>category 1</option>
                           <option>category 2</option>
                         </select>
@@ -85,16 +85,6 @@ class HomePage extends React.Component {
                 <br/>
                   </Col> 
                 
-               
-               
-               
-               
-               
-               
-               
-               
-               
-               
                
                 
                 {/*Display categories on larger screen only*/}
@@ -302,7 +292,67 @@ class HomePage extends React.Component {
         			</Col>
         			
         			
-        			
+        			{/* <!-- bottom sliders -->	*/}	
+        			<Col xsHidden>
+              	
+                <Panel class="container1" id="custom-container">
+               {/* <span>TOP <b>PRODUCTS</b> 
+                <Col xsHidden>
+                <Link class="pull-right" id="panel-link" to="/browse"><small>MORE&nbsp;</small>
+                <span class="glyphicon glyphicon-align-justify"></span>
+                </Link>
+                 </Col>
+                </span>
+                <hr/>*/}
+              
+                <div class="col-sm-8 col-md-8 col-lg-8 col-xl-8">
+                <Carousel>
+                  <Carousel.Item>
+                    <img id="bottom-slider-img" height={200} src="https://www.coghlans.com/images/products/products-camp-kitchen-thumb.jpg"/>
+                    <Carousel.Caption>
+                      <h3>First slide label</h3>
+                      <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img id="bottom-slider-img" height={200} src="https://www.hayward-pool.com/assets/images/pools/content/espots/third-slide-product.png" />
+                    <Carousel.Caption>
+                      <h3>Second slide label</h3>
+                      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                  <Carousel.Item>
+                    <img id="bottom-slider-img" height={200} src="http://www.lg.com/us/images/cell-phones/MD05796989/md05795769-350x350.jpg" />
+                    <Carousel.Caption>
+                      <h3>Third slide label</h3>
+                      <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+                    </Carousel.Caption>
+                  </Carousel.Item>
+                </Carousel>
+                
+                </div>
+                
+        			{/*	<!-- slider -->*/}
+        				<div class="agile-trend-ads col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        					
+                    <div class="col-sm-6 col-md-12" id="bottom-slider-right">
+                      <div class="thumbnail">
+                        <img id="bottom-slider-right-img" src="https://www.coghlans.com/images/products/products-camp-kitchen-thumb.jpg" alt="..."/>
+                        <div class="caption">
+                          <h4 align="center">Product Name or Ads</h4>
+                        </div>
+                      </div>
+                    </div>
+                      					
+        				</div> 
+        					
+        			{/*<!-- //slider -->*/}		
+        		
+        			</Panel>
+        			<br/>
+        			</Col>
+        			{/* <!-- //bottom sliders -->	*/}	
+        				
         			
         	
         			
@@ -314,9 +364,7 @@ class HomePage extends React.Component {
                   			<li class="active">
                           <a  href="#1b" data-toggle="tab"><i class="fa fa-briefcase" aria-hidden="true"></i> TOP BUSINESSES </a>
                   			</li>
-                  			<li><a href="#2b" data-toggle="tab"><i class="fa fa-tags" aria-hidden="true"></i> TOP CATEGORIES</a>
-                  			</li>
-                  			<li><a href="#3b" data-toggle="tab"><i class="fa fa-align-justify" aria-hidden="true"></i> TOP PRODUCTS</a>
+                  			<li><a href="#2b" data-toggle="tab"><i class="fa fa-align-justify" aria-hidden="true"></i> TOP CATEGORIES</a>
                   			</li>
                   		</ul>
                   
@@ -405,11 +453,7 @@ class HomePage extends React.Component {
                   				{/*//TOP CATEGORIES TAB*/}
                   				
                   				
-                  				{/*TOP PRODUCTS TAB*/}
-                          <div class="tab-pane" id="3b">
-                            <p>Content goes here.</p>	
-                  				</div>
-                  				{/*//TOP PRODUCTS TAB*/}
+                  				
                            
                   			</div>
                     </div>
@@ -418,13 +462,14 @@ class HomePage extends React.Component {
         			</Col>
         				{/*//Display tabs on large screens only*/}
         				
-        				
-        				
+        			
+        			
+
         				
 {/************************************************************ MOBILE SECTION *******************************************************/
 /***********************************************************************************************************************************/}
               {/*Display banner on mobile only*/}
-        			<Col smHidden mdHidden lgHidden xlHidden>
+        			<Col smHidden mdHidden lgHidden>
                 <div class="container">
                  <form>
                       <div class="row">    
@@ -471,7 +516,7 @@ class HomePage extends React.Component {
                 
                 
                 {/*Display categories on mobile only*/}
-                <Col smHidden mdHidden lgHidden xlHidden>
+                <Col smHidden mdHidden lgHidden>
                 <Grid>
                   <Row>
                     <Col xs={3} class="m-category">
@@ -499,7 +544,7 @@ class HomePage extends React.Component {
                 
                    
                 {/*Display popular stores on mobile only*/}
-                <Col smHidden mdHidden lgHidden xlHidden class="container2">
+                <Col smHidden mdHidden lgHidden class="container2">
                 <Panel>
                 <span>POPULAR <b>STORES</b> 
                 
@@ -563,7 +608,7 @@ class HomePage extends React.Component {
                 
                 
                 {/*Display for you products on mobile only*/}
-                <Col smHidden mdHidden lgHidden xlHidden class="container1">
+                <Col smHidden mdHidden lgHidden class="container1">
                 <Panel>
                 <span>FOR <b>YOU</b></span>
                 <br/><br/>
@@ -612,7 +657,7 @@ class HomePage extends React.Component {
               
               
               {/*Display trending products on mobile only*/}
-        			 <Col smHidden mdHidden lgHidden xlHidden>
+        			 <Col smHidden mdHidden lgHidden>
         			 	{/* <!-- trending products for mobile -->	*/}	
                 <Panel class="container">
                 <span>TRENDING <b>PRODUCTS</b> 
@@ -725,7 +770,7 @@ class HomePage extends React.Component {
                 
                 
 {/************************************************************ //MOBILE SECTION *******************************************************/
-/***********************************************************************************************************************************/}
+/*************************************************************************************************************************************/}
 
         				
         				
