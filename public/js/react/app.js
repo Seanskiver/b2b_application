@@ -44911,7 +44911,7 @@
 	                            { id: 'inputState', className: 'form-control' },
 	                            _react2.default.createElement(
 	                              'option',
-	                              { selected: true },
+	                              null,
 	                              'All Categories '
 	                            ),
 	                            _react2.default.createElement(
@@ -46715,7 +46715,7 @@
 	                        _react2.default.createElement(
 	                            'h3',
 	                            null,
-	                            'Bootstrap Sidebar'
+	                            'Site Name'
 	                        )
 	                    ),
 	                    _react2.default.createElement(
@@ -46723,7 +46723,7 @@
 	                        { className: 'list-unstyled components' },
 	                        _react2.default.createElement(
 	                            'p',
-	                            { id: 'nav-header' },
+	                            null,
 	                            'Dummy Heading'
 	                        ),
 	                        _react2.default.createElement(
@@ -46731,7 +46731,7 @@
 	                            { className: 'active' },
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: '#homeSubmenu', 'data-toggle': 'collapse', 'aria-expanded': 'false' },
+	                                { href: '#homeSubmenu', 'data-toggle': 'collapse', 'aria-expanded': 'false', id: 'side-nav-dropdown' },
 	                                'Home'
 	                            ),
 	                            _react2.default.createElement(
@@ -46776,7 +46776,7 @@
 	                            ),
 	                            _react2.default.createElement(
 	                                'a',
-	                                { href: '#pageSubmenu', 'data-toggle': 'collapse', 'aria-expanded': 'false' },
+	                                { href: '#pageSubmenu', 'data-toggle': 'collapse', 'aria-expanded': 'false', id: 'side-nav-dropdown' },
 	                                'Pages'
 	                            ),
 	                            _react2.default.createElement(
@@ -46837,20 +46837,18 @@
 	                            'li',
 	                            null,
 	                            _react2.default.createElement(
-	                                _reactRouterDom.Link,
-	                                { to: '/signup' },
-	                                _react2.default.createElement('span', { className: 'glyphicon glyphicon-user' }),
-	                                ' Sign Up'
+	                                'a',
+	                                { href: '#', className: '' },
+	                                'Sign Up'
 	                            )
 	                        ),
 	                        _react2.default.createElement(
 	                            'li',
 	                            null,
 	                            _react2.default.createElement(
-	                                _reactRouterDom.Link,
-	                                { to: '/signin' },
-	                                _react2.default.createElement('span', { className: 'glyphicon glyphicon-log-in' }),
-	                                ' Login'
+	                                'a',
+	                                { href: '#', className: '' },
+	                                'Sign In'
 	                            )
 	                        )
 	                    )

@@ -40,23 +40,22 @@ class NavBar extends React.Component {
                     </div>
                   </div>
                 </nav>
-                
             
             
             {/*Side nav for mobile*/}
-           <nav id="sidebar">
+            <nav id="sidebar">
                 <div id="dismiss">
                     <i class="glyphicon glyphicon-arrow-left"></i>
                 </div>
 
                 <div class="sidebar-header">
-                    <h3>Bootstrap Sidebar</h3>
+                    <h3>Site Name</h3>
                 </div>
 
                 <ul class="list-unstyled components">
-                    <p id="nav-header">Dummy Heading</p>
+                    <p>Dummy Heading</p>
                     <li class="active">
-                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Home</a>
+                        <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" id="side-nav-dropdown">Home</a>
                         <ul class="collapse list-unstyled" id="homeSubmenu">
                             <li><a href="#">Home 1</a></li>
                             <li><a href="#">Home 2</a></li>
@@ -65,7 +64,7 @@ class NavBar extends React.Component {
                     </li>
                     <li>
                         <a href="#">About</a>
-                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false">Pages</a>
+                        <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" id="side-nav-dropdown">Pages</a>
                         <ul class="collapse list-unstyled" id="pageSubmenu">
                             <li><a href="#">Page 1</a></li>
                             <li><a href="#">Page 2</a></li>
@@ -81,8 +80,8 @@ class NavBar extends React.Component {
                 </ul>
 
                 <ul class="list-unstyled CTAs">
-                     <li><Link to="/signup"><span class="glyphicon glyphicon-user"></span> Sign Up</Link></li>
-                     <li><Link to="/signin"><span class="glyphicon glyphicon-log-in"></span> Login</Link></li>
+                    <li><a href="#" class="">Sign Up</a></li>
+                    <li><a href="#" class="">Sign In</a></li>
                 </ul>
             </nav>
             

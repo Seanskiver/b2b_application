@@ -11,7 +11,7 @@ class HomePage extends React.Component {
             <Col xsHidden>
              
             
-                <Jumbotron class="top-banner" id="top-banner" style={{ height: 'auto'}}>
+                <Jumbotron class="top-banner"  id="top-banner" style={{ height: 'auto'}}>
                  <Row className="show-grid1" id="top-ban-grids">
              
                   <Col smHidden md={2} id="banner-side-grids">
@@ -40,7 +40,7 @@ class HomePage extends React.Component {
                        <div class="form-group col-md-3 col-sm-3 col-lg-3">
                         <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                         <select id="inputState" class="form-control">
-                          <option selected>All Categories </option>
+                          <option>All Categories </option>
                           <option>category 1</option>
                           <option>category 2</option>
                         </select>
