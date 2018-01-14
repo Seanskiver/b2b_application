@@ -1,70 +1,25 @@
-import React, { Component } from 'react';
-import Address from "../components/Business/Address";
-import BusinessName from "../components/Business/BusinessName";
-import BusinessCategory from "../components/Business/BusinessCategory";
-import BusinessType from "../components/Business/BusinessType";
-import Email from "../components/Business/Email";
-import Phone from "../components/Business/Phone";
+import React from 'react';
 //import { Table } from 'react-bootstrap';
-//import {Form, FormControl, Button, Table, Carousel, Jumbotron} from 'react-bootstrap';
+import {Form, FormControl, Button, Table, Carousel, Jumbotron} from 'react-bootstrap';
 
-class profile extends React.Component {
-    
-    constructor() {
-    super();
-    this.state = {
-      businessName: "Tec Group",
-      email: "info@example.com",
-      phone: "555-555-5555",
-      businessType: "Seller",
-      businessCategory: "Electronics & Appliances",
-      address: "123 Street Address",
-    };
-  }
-
-    changeBusinessName(businessName) {
-	    this.setState({businessName});
-	  }
-    
-    changeEmail(email) {
-	    this.setState({email});
-	  }
-	  
-	 changePhone(phone) {
-	    this.setState({phone});
-	  }
-	  
-	 changeBusinessType(businessType) {
-	    this.setState({businessType});
-	 }
-	 
-	 changeBusinessCategory(businessCategory) {
-	    this.setState({businessCategory});
-	 }
-	 
-	 changeAddress(address) {
-	    this.setState({address});
-	 }
-
+class Seller extends React.Component {
     render() {
         return (
             <div>
+            
             <div class="w3layouts-breadcrumbs text-center">
 				<div class="container">
 					<span class="agile-breadcrumbs">
 					<a href="#"><i class="fa fa-home home_1"></i></a> / 
-					<a href="#profile">Account</a>
+					<a href="#seller">John Smith</a>
 					</span>
 				</div>
 			</div>
-            
-            <div class="submit-ad main-grid-border">
-		<div class="container">
-		
-		<h2 class="w3-head">Account</h2>
-		
-		
-		<div class="ads-grid">
+			
+			<div class="submit-ad main-grid-border">
+		        <div class="container">
+		        <h2 class="w3-head">4 listings by <strong>John Smith</strong></h2>
+			<div class="ads-grid">
 			
 			<div class="side-bar col-md-3">
 					
@@ -76,7 +31,7 @@ class profile extends React.Component {
 								<img src="https://www.godaddy.com/garage/wp-content/uploads/2014/06/create-a-gravatar-beard.png" title="ad image" alt="" />
 							</div>
 							<div class="w3-featured-ad-right">
-								<h2 class="sear-head fer">{this.state.businessName}</h2>
+								<h2 class="sear-head fer">John Smith</h2>
 							</div>
 							<div class="clearfix"></div>
 						
@@ -84,40 +39,10 @@ class profile extends React.Component {
 					
 					<div class="w3l-featured-ad">
 							<div class="w3-featured-ad-left">
-								<i class="fa fa-envelope" aria-hidden="true"></i>
-							</div>
-							<div class="w3-featured-ad-right">
-								{this.state.email}
-							</div>
-							<div class="clearfix"></div>
-					</div>
-					
-					<div class="w3l-featured-ad">
-							<div class="w3-featured-ad-left">
 								<i class="glyphicon glyphicon-earphone"></i>
 							</div>
 							<div class="w3-featured-ad-right">
-								{this.state.phone}
-							</div>
-							<div class="clearfix"></div>
-					</div>
-					
-					<div class="w3l-featured-ad">
-							<div class="w3-featured-ad-left">
-								Business Type:
-							</div>
-							<div class="w3-featured-ad-right">
-								{this.state.businessType}
-							</div>
-							<div class="clearfix"></div>
-					</div>
-					
-					<div class="w3l-featured-ad">
-							<div class="w3-featured-ad-left">
-								Business Category:
-							</div>
-							<div class="w3-featured-ad-right">
-								{this.state.businessCategory}
+								555-555-5555
 							</div>
 							<div class="clearfix"></div>
 					</div>
@@ -127,7 +52,17 @@ class profile extends React.Component {
 								<i class="glyphicon glyphicon-road"></i>
 							</div>
 							<div class="w3-featured-ad-right">
-								{this.state.address}
+								123 Street Address
+							</div>
+							<div class="clearfix"></div>
+					</div>
+					
+					<div class="w3l-featured-ad">
+							<div class="w3-featured-ad-left">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+							</div>
+							<div class="w3-featured-ad-right">
+								info@example.com
 							</div>
 							<div class="clearfix"></div>
 					</div>
@@ -135,8 +70,9 @@ class profile extends React.Component {
 				</div>
 				</div>
 				</div>
-			
-		
+            
+            <div class="submit-ad main-grid-border">
+		<div class="container">
 			<div class="agileinfo-ads-display col-md-9">
 					<div class="wrapper">					
 					<div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
@@ -147,18 +83,13 @@ class profile extends React.Component {
 						  </a>
 						</li>
 						<li role="presentation" class="next">
-						  <a href="#reviews" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
+						  <a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
 							<span class="text">Reviews</span>
 						  </a>
 						</li>
 						<li role="presentation" class="next">
-						  <a href="#profile" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
-							<span class="text">Profile</span>
-						  </a>
-						</li>
-						<li role="presentation">
-						  <a href="#samsa" role="tab" id="samsa-tab" data-toggle="tab" aria-controls="samsa">
-							<span class="text">Password</span>
+						  <a href="#following" role="tab" id="profile-tab" data-toggle="tab" aria-controls="profile">
+							<span class="text">Following</span>
 						  </a>
 						</li>
 					  </ul>
@@ -192,9 +123,6 @@ class profile extends React.Component {
 									<p class="catpath">Mobile Phones » Brand</p>
 									</section>
 									<section class="list-right">
-									<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-times" aria-hidden="true"></i>
 									<span class="date">Today, 17:55</span>
 									<span class="cityname">City name</span>
 									</section>
@@ -210,9 +138,6 @@ class profile extends React.Component {
 									<p class="catpath">Mobile Phones » Brand</p>
 									</section>
 									<section class="list-right">
-									<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-times" aria-hidden="true"></i>
 									<span class="date">Today, 17:45</span>
 									<span class="cityname">City name</span>
 									</section>
@@ -228,9 +153,6 @@ class profile extends React.Component {
 									<p class="catpath">Mobile Phones » Brand</p>
 									</section>
 									<section class="list-right">
-									<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-times" aria-hidden="true"></i>
 									<span class="date">Today, 17:30</span>
 									<span class="cityname">City name</span>
 									</section>
@@ -246,9 +168,6 @@ class profile extends React.Component {
 									<p class="catpath">Mobile Phones » Brand</p>
 									</section>
 									<section class="list-right">
-									<i class="fa fa-pencil" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-eye" aria-hidden="true"></i>&nbsp;&nbsp;
-									<i class="fa fa-times" aria-hidden="true"></i>
 									<span class="date">Today, 17:25</span>
 									<span class="cityname">City name</span>
 									</section>
@@ -271,13 +190,14 @@ class profile extends React.Component {
 							<li><a href="#">Next</a></li>
 						</ul>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="reviews" aria-labelledby="profile-tab">
+						<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
 						 <div>
 												<div id="container">
 								<div class="view-controls-list" id="viewcontrols">
-									<label>view :</label>
+									{/*<label>view :</label>
 									<a class="gridview"><i class="glyphicon glyphicon-th"></i></a>
-									<a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>
+									<a class="listview active"><i class="glyphicon glyphicon-th-list"></i></a>*/}
+									<a href="/review-form">Leave a review</a>
 								</div>
 								<div class="sort">
 								   <div class="sort-by">
@@ -340,48 +260,71 @@ class profile extends React.Component {
 									</li> 
 								</a>
 							</ul>
+							<a href="/reviews">View all</a>
 						</div>
 							</div>
 						</div>
-						<div role="tabpanel" class="tab-pane fade" id="profile" aria-labelledby="profile-tab">
+						
+						<div role="tabpanel" class="tab-pane fade" id="following" aria-labelledby="profile-tab">
 						 <div>
-						<div id="container">
-							<div class="post-ad-form">
+												<div id="container">
+								<div class="sort">
+								   <div class="sort-by">
+										<label>Sort By : </label>
+										<select>
+														<option value="">View all</option>
+														<option value="">Positive</option>
+														<option value="">Negative</option>
+										</select>
+									   </div>
+									 </div>
+								<div class="clearfix"></div>
+							<ul class="list">
+								<a href="#seller">
+									<li>
+									<img src="http://rsassociates.itsupportnepal.com/rs/wp-content/uploads/2017/09/gravatar_1.jpg" title="" alt="" />
+									<section class="list-left">
+									<h5 class="title">Mike Jones</h5>
 
-				<form>
-					<label>Business Name</label>
-					<BusinessName changeBusinessName={this.changeBusinessName.bind(this)} businessName={this.state.businessName} />
-					
-					<div class="clearfix"></div>
-					
-					<label>Email</label>
-					<Email changeEmail={this.changeEmail.bind(this)} email={this.state.email} />
-					<div class="clearfix"></div>
-					
-					<label>Phone</label>
-					<Phone changePhone={this.changePhone.bind(this)} phone={this.state.phone} />
-					<div class="clearfix"></div>
-					
-					<label>Business Type</label>
-					<BusinessType changeBusinessType={this.changeBusinessType.bind(this)} businessType={this.state.businessType} />
-					<div class="clearfix"></div>
-					
-					<label>Business Category</label>
-					<BusinessCategory changeBusinessCategory={this.changeBusinessCategory.bind(this)} businessCategory={this.state.businessCategory} />
-					<div class="clearfix"></div>
-					
-					<label>Address</label>
-					<Address changeAddress={this.changeAddress.bind(this)} address={this.state.address} />
-					<div class="clearfix"></div>
-					
-					<input type="submit" value="Update Changes"/>
-					<div class="clearfix"></div>
-					
-				</form>
-			</div>
+									</section>
+									<section class="list-right">
+									<span class="cityname">City name</span>
+									</section>
+									<div class="clearfix"></div>
+									</li> 
+								</a>
+								<a href="#seller">
+									<li>
+									<img src="http://atleticafranciacorta.com/assets/images/members/profile/2_3_1_avatar.jpg" title="" alt="" />
+									<section class="list-left">
+									<h5 class="title">Mike Jones</h5>
+
+									</section>
+									<section class="list-right">
+									<span class="cityname">City name</span>
+									</section>
+									<div class="clearfix"></div>
+									</li> 
+								</a>
+								<a href="#seller">
+									<li>
+									<img src="http://www.creazo.fr/wp-content/uploads/2016/03/1458916347_ninja-background.png" title="" alt="" />
+									<section class="list-left">
+									<h5 class="title">Mike Jones</h5>
+
+									</section>
+									<section class="list-right">
+									<span class="cityname">City name</span>
+									</section>
+									<div class="clearfix"></div>
+									</li> 
+								</a>
+							</ul>
 						</div>
 							</div>
 						</div>
+						
+						
 						<div role="tabpanel" class="tab-pane fade" id="samsa" aria-labelledby="samsa-tab">
 						  <div>
 												<div id="container">
@@ -418,14 +361,13 @@ class profile extends React.Component {
 					</div>
 				</div>
 				</div>
-				
-				
-				
 		</div>	
+	</div>
+	</div>
 	</div>
 	</div>
         )
     }
 }
 
-export default profile;
+export default Seller;

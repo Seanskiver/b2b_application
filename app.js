@@ -8,7 +8,6 @@ var passport = require('passport');
 var session = require('express-session');
 const DynamoStore = require('connect-dynamodb-session')(session);
 
-
 var app = express();
 
 var index = require('./routes/index');

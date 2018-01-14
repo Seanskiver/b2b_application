@@ -91,7 +91,7 @@ class HomePage extends React.Component {
                 <Col xsHidden>
                 <Panel class="container1"  id="custom-container">
                 <span>BROWSE BY <b>CATEGORY</b> 
-                <Link class="pull-right" id="panel-link" to="/browse"><small>MORE&nbsp;</small>
+                <Link class="pull-right" id="panel-link" to="/categories"><small>MORE&nbsp;</small>
                 <span class="glyphicon glyphicon-align-justify"></span>
                 </Link>
                 </span>
@@ -99,7 +99,7 @@ class HomePage extends React.Component {
                 <div class="b2bapp-categories">
                    <div class="col-md-2">
           						<div class="focus-grid">
-          							<a class="btn-8" href="categories.html">
+          							<a class="btn-8" href="#category">
           								<div class="focus-border">
           									<div class="focus-layout">
           										<div class="focus-image"><i class="fa fa-mobile"></i></div>
@@ -111,7 +111,7 @@ class HomePage extends React.Component {
           					</div>
           					<div class="col-md-2">
           						<div class="focus-grid">	
-          						<a class="btn-8" href="categories.html#parentVerticalTab2">
+          						<a class="btn-8" href="#category">
           							<div class="focus-border">
           								<div class="focus-layout">
           									<div class="focus-image"><i class="fa fa-laptop"></i></div>
@@ -123,7 +123,7 @@ class HomePage extends React.Component {
           					</div>
           					<div class="col-md-2">
           					<div class="focus-grid">
-          						<a class="btn-8" href="categories.html#parentVerticalTab3">
+          						<a class="btn-8" href="#category">
           							<div class="focus-border">
           								<div class="focus-layout">
           									<div class="focus-image"><i class="fa fa-car"></i></div>
@@ -136,7 +136,7 @@ class HomePage extends React.Component {
           				
           					<div class="col-md-2">
           					<div class="focus-grid">
-          						<a class="btn-8" href="categories.html#parentVerticalTab5">
+          						<a class="btn-8" href="#category">
           							<div class="focus-border">
           								<div class="focus-layout">
           									<div class="focus-image"><i class="fa fa-wheelchair"></i></div>
@@ -148,7 +148,7 @@ class HomePage extends React.Component {
           					</div>
           					<div class="col-md-2">
           					<div class="focus-grid">
-          						<a class="btn-8" href="categories.html#parentVerticalTab7">
+          						<a class="btn-8" href="#category">
           							<div class="focus-border">
           								<div class="focus-layout">
           									<div class="focus-image"><i class="fa fa-book"></i></div>
@@ -160,7 +160,7 @@ class HomePage extends React.Component {
           					</div>
           					<div class="col-md-2">
           					<div class="focus-grid">
-          						<a class="btn-8" href="categories.html#parentVerticalTab8">
+          						<a class="btn-8" href="#category">
           							<div class="focus-border">
           								<div class="focus-layout">
           									<div class="focus-image"><i class="fa fa-asterisk"></i></div>
@@ -186,7 +186,7 @@ class HomePage extends React.Component {
                 <Panel class="container1" id="custom-container">
                 <span>TRENDING <b>PRODUCTS</b> 
                 <Col xsHidden>
-                <Link class="pull-right" id="panel-link" to="/browse"><small>MORE&nbsp;</small>
+                <Link class="pull-right" id="panel-link" to="/categories"><small>MORE&nbsp;</small>
                 <span class="glyphicon glyphicon-align-justify"></span>
                 </Link>
                  </Col>
@@ -197,7 +197,7 @@ class HomePage extends React.Component {
         							<ul id="felexiselSlider">
         								<li>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://stat.homeshop18.com/homeshop18/images/productImages/338/samsung-guru-e1200-mobile-phone-large_a68c67293ae8ecba99b8395694101cce.jpg" alt="" />
         											<span class="price">&#36; 450</span>
         										</a> 
@@ -207,7 +207,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://www.lg.com/us/images/cell-phones/MD05796989/md05795769-350x350.jpg" alt="" />
         											<span class="price">&#36; 399</span>
         										</a> 
@@ -217,7 +217,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://image.priceprice.k-img.com/global/images/product/mobilephones/Cherry_Mobile_Flare_P1/Cherry_Mobile_Flare_P1_L_1.jpg" alt="" />
         											<span class="price">&#36; 199</span>
         										</a> 
@@ -227,7 +227,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://teja10.kuikr.com/o1/20161227/ak_1754001356-1482799919.jpg" alt="" />
         											<span class="price">&#36; 159</span>
         										</a> 
@@ -240,7 +240,7 @@ class HomePage extends React.Component {
         								</li>
         								<li>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://www.slickwraps.com/media/catalog/category/s5_3.jpg" alt="" />
         											<span class="price">&#36; 1599</span>
         										</a> 
@@ -250,7 +250,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://img.c.huaweistatic.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/y6-2017/y6-2017-listimage-black.png" alt="" />
         											<span class="price">&#36; 1099</span>
         										</a> 
@@ -260,7 +260,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://5.imimg.com/data5/OH/VT/MY-37954860/1110-nokia-mobile-phone-500x500.jpg" alt="" />
         											<span class="price">&#36; 109</span>
         										</a> 
@@ -270,7 +270,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://www.t-mobile.com/content/dam/t-mobile/en-p/cell-phones/others/alcactel-go-flip/alcactel-go-flip-midnight-blue-open-1-2x.jpg" alt="" />
         											<span class="price">&#36; 189</span>
         										</a> 
@@ -298,7 +298,7 @@ class HomePage extends React.Component {
                 <Panel class="container1" id="custom-container">
                {/* <span>TOP <b>PRODUCTS</b> 
                 <Col xsHidden>
-                <Link class="pull-right" id="panel-link" to="/browse"><small>MORE&nbsp;</small>
+                <Link class="pull-right" id="panel-link" to="/categories"><small>MORE&nbsp;</small>
                 <span class="glyphicon glyphicon-align-justify"></span>
                 </Link>
                  </Col>
@@ -596,7 +596,7 @@ class HomePage extends React.Component {
                    
         					<div class="clearfix"></div>
         					<hr/>
-        				<Link id="link" to="/browse">	
+        				<Link id="link" to="/categories">	
         				<span>View More
                 <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </span>
@@ -645,7 +645,7 @@ class HomePage extends React.Component {
                     
         					<div class="clearfix"></div>
         					<hr/>
-        				<Link id="link" to="/browse">	
+        				<Link id="link" to="/categories">	
         				<span>View More
                 <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </span>
@@ -653,7 +653,6 @@ class HomePage extends React.Component {
                 </Panel>
                 </Col>
                 {/*//Display for you products on mobile only*/}
-                
               
               
               {/*Display trending products on mobile only*/}
@@ -668,7 +667,7 @@ class HomePage extends React.Component {
         							<ul id="felexiselSlider-mobile">
         								<li>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://stat.homeshop18.com/homeshop18/images/productImages/338/samsung-guru-e1200-mobile-phone-large_a68c67293ae8ecba99b8395694101cce.jpg" alt="" />
         											<span class="price">&#36; 450</span>
         										</a> 
@@ -678,7 +677,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://www.lg.com/us/images/cell-phones/MD05796989/md05795769-350x350.jpg" alt="" />
         											<span class="price">&#36; 399</span>
         										</a> 
@@ -688,7 +687,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://image.priceprice.k-img.com/global/images/product/mobilephones/Cherry_Mobile_Flare_P1/Cherry_Mobile_Flare_P1_L_1.jpg" alt="" />
         											<span class="price">&#36; 199</span>
         										</a> 
@@ -698,7 +697,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://teja10.kuikr.com/o1/20161227/ak_1754001356-1482799919.jpg" alt="" />
         											<span class="price">&#36; 159</span>
         										</a> 
@@ -710,7 +709,7 @@ class HomePage extends React.Component {
         								</li>
         								<li>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://www.slickwraps.com/media/catalog/category/s5_3.jpg" alt="" />
         											<span class="price">&#36; 1599</span>
         										</a> 
@@ -720,7 +719,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="http://img.c.huaweistatic.com/content/dam/huawei-cbg-site/common/mkt/list-image/phones/y6-2017/y6-2017-listimage-black.png" alt="" />
         											<span class="price">&#36; 1099</span>
         										</a> 
@@ -730,7 +729,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://5.imimg.com/data5/OH/VT/MY-37954860/1110-nokia-mobile-phone-500x500.jpg" alt="" />
         											<span class="price">&#36; 109</span>
         										</a> 
@@ -740,7 +739,7 @@ class HomePage extends React.Component {
         										</div>
         									</div>
         									<div class="col-md-3 biseller-column">
-        										<a href="single.html">
+        										<a href="#single">
         											<img id="felexiselSlider-img" src="https://www.t-mobile.com/content/dam/t-mobile/en-p/cell-phones/others/alcactel-go-flip/alcactel-go-flip-midnight-blue-open-1-2x.jpg" alt="" />
         											<span class="price">&#36; 189</span>
         										</a> 
@@ -758,7 +757,7 @@ class HomePage extends React.Component {
         		
         				<div class="clearfix"></div>
         					<hr/>
-        				<Link id="link" to="/browse">	
+        				<Link id="link" to="/categories">	
         				<span>View More
                 <span class="glyphicon glyphicon-chevron-right pull-right"></span>
                 </span>
@@ -771,12 +770,6 @@ class HomePage extends React.Component {
                 
 {/************************************************************ //MOBILE SECTION *******************************************************/
 /*************************************************************************************************************************************/}
-
-        				
-        				
-        				
-        				
-        				
         				
         			
             </div>

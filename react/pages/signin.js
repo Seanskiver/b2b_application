@@ -18,25 +18,53 @@ class signin extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('A name was submitted: ' + this.state.value);
+    alert('The email ' + this.state.value + 'was submitted');
     event.preventDefault();
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
-          Username:
-          <input type="text" value={this.state.value} onChange={this.handleChange} />
-        </label>
-        <br />
-        <label>
-          Password:
-          <input type="password" />
-        </label>
-        <br />
-        <input type="submit" value="Submit" />
-      </form>
+      <div>
+        <section>
+		<div id="agileits-sign-in-page" class="sign-in-wrapper">
+			<div class="agileinfo_signin">
+			<h3>Sign In</h3>
+				<form action="#" method="post" onSubmit={this.handleSubmit}>
+					<input type="email" name="Your Email" placeholder="Your Email" required="" value={this.state.value} onChange={this.handleChange}/> 
+					<input type="password" name="Password" placeholder="Password" required=""/> 
+					<input type="submit" value="Sign In"/>
+					<div class="forgot-grid">
+						<label class="checkbox"><input type="checkbox" name="checkbox"/>Remember me</label>
+						<div class="forgot">
+							<a href="#" data-toggle="modal" data-target="#myModal2">Forgot Password?</a>
+						</div>
+
+						<div class="modal fade" id="myModal2" role="dialog">
+							<div class="modal-dialog">
+
+							<div class="modal-dialog modal-lg">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal">&times;</button>
+										<h3 class="w3ls-password">Get Password</h3>		
+										<p class="get-pw">Enter your email address below and we'll send you an email with instructions.</p>
+										<form action="#" method="post">
+											<input type="text" class="user" name="email" placeholder="Email" required=""/>
+											<input type="submit" value="Submit"/>
+										</form>
+									</div>
+								</div>
+							</div>
+							</div>
+						</div>
+						<div class="clearfix"> </div>
+					</div>
+				</form>
+				<h6> Not a Member Yet? <a href="#signup">Sign Up Now</a> </h6>
+			</div>
+		</div>
+	</section>
+      </div>
     );
   }
 }

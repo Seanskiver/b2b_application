@@ -22,7 +22,9 @@ router.route('/')
 
     .post(function(req, res) {
         Business.create(req.body, function (err, business) {
-            if (err) { return res.json({ message: err }) }
+            if (err)
+            
+            res.json({ message: err }) 
 
             res.json({business})
         });

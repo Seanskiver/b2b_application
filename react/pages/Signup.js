@@ -69,40 +69,22 @@ class Signup extends React.Component {
        <div className="register"  id="custom-container">
        
               <Col xsHidden>
-              <div class="container" style={style}>
-                      
-                      
-                      <div class="panel panel-default">
-                      <div class="panel-heading" align="center"><b>Business Information</b></div>
-                      <div class="panel-body">
-                        <form onSubmit={this.handleSubmit}>
-                              
-                                 <div class="form-group col-md-12">
-                                      <label for="businessName">Business Name</label>
-                                      <input type="text" class="form-control" id="businessName" name="businessName" placeholder="Business Name" onChange={this.handleChange}/>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-12">
-                                      <label class="control-label">Email</label>
-                                      <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                   <div class="form-group col-md-12">
-                                      <label class="control-label">Phone</label>
-                                      <input type="text" required="required" class="form-control" id="phone" name="phone" placeholder="Enter Phone" onChange={this.handleChange}/>
-                                  </div>
-                                    
-                                    <div class="form-group col-md-12">
-                                      <label for="businessType">Business Type</label>
+              <section>
+		<div id="agileits-sign-in-page" class="sign-in-wrapper">
+			<div class="agileinfo_signin">
+			<h3>Sign Up</h3>
+				<form onSubmit={this.handleSubmit}>
+					<input type="text" class="form-control" id="businessName" name="businessName" placeholder="Business Name" onChange={this.handleChange}/>
+					<input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" onChange={this.handleChange}/>
+					<input type="text" required="required" class="form-control" id="phone" name="phone" placeholder="Enter Phone" onChange={this.handleChange}/>
+					<label for="businessType">Business Type</label>
                                       <select class="form-control" id="businessType" name="businessType" onChange={this.handleChange}>
                                         <option>Supplier</option>
                                         <option>Buyer</option>
                                         <option>Both</option>
                                       </select>
-                                    </div>
-                                    
-                                      <div class="form-group col-md-12">
-                                      <label for="businessCategory">Business Category</label>
+
+                    <label for="businessCategory">Business Category</label>
                                       <select class="form-control" id="businessCategory" name="businessCategory" onChange={this.handleChange}>
                                         <option>Electronics & Appliance</option>
                                         <option>Sport</option>
@@ -112,15 +94,9 @@ class Signup extends React.Component {
                                         <option>Home Appliance</option>
                                         <option>Furniture</option>
                                       </select>
-                                    </div>
-                
-                                    <div class="form-group col-md-12">
-                                      <label for="streetAddress">Street Address</label>
-                                      <input type="text" class="form-control" id="address" name="address" placeholder="Street Address" onChange={this.handleChange}/>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-12">
-                                      <label for="city">City</label>
+					<br />
+					<input type="text" class="form-control" name="Name" placeholder="Street Address" required=""/> 
+					<label for="city">City</label>
                                       <select class="form-control" id="exampleFormControlSelect1" name="city" onChange={this.handleChange}>
                                         <option>Dakar</option>
                                         <option>Touba</option>
@@ -170,16 +146,19 @@ class Signup extends React.Component {
                                         <option>Gossas</option>
                                         <option>Kanel</option>
                                       </select>
-                                    </div>
-                                    
-                                     <div class="form-group col-md-12">
-                                      <button type="submit" class="btn btn-primary pull-right">Continue</button>
-                                     </div>
-                      </form>
-                      </div>
-                    </div>
-                      
-                  </div>
+					<br />
+					<input type="password" class="form-control" name="Password" placeholder="Password" required=""/> 
+					<input type="password" class="form-control" name="Password" placeholder="Confirm Password" required=""/> 
+					<div class="signin-rit">
+						<span class="agree-checkbox">
+							<label class="checkbox"><input type="checkbox" name="checkbox"/>I agree to your <a class="w3layouts-t" href="#terms" target="_blank">Terms of Use</a> and <a class="w3layouts-t" href="#privacy" target="_blank">Privacy Policy</a></label>
+						</span>
+					</div>
+					<input type="submit" value="Sign Up"/>
+				</form>
+			</div>
+		</div>
+	</section>
                   </Col>
                   
                    {/*Mobile Form*/}

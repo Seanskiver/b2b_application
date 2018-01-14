@@ -2,7 +2,10 @@ import React from 'react';
 //import { Table } from 'react-bootstrap';
 import {Form, FormControl, Button, Table, Carousel, Jumbotron} from 'react-bootstrap';
 
-class browse extends React.Component {
+
+
+class Categories extends React.Component {
+    
     render() {
         return (
             <div class="main-content">
@@ -11,7 +14,7 @@ class browse extends React.Component {
 				<div class="container">
 					<div class="col-md-3">
 						<div class="focus-grid w3layouts-boder1">
-							<a class="btn-8" href="categories.html">
+							<a class="btn-8" href="#category">
 								<div class="focus-border">
 									<div class="focus-layout">
 										<div class="focus-image"><i class="fa fa-mobile"></i></div>
@@ -23,7 +26,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 						<div class="focus-grid w3layouts-boder2">	
-						<a class="btn-8" href="categories.html#parentVerticalTab2">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-laptop"></i></div>
@@ -35,7 +38,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder3">
-						<a class="btn-8" href="categories.html#parentVerticalTab3">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-car"></i></div>
@@ -47,7 +50,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder4">
-						<a class="btn-8" href="categories.html#parentVerticalTab4">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-motorcycle"></i></div>
@@ -59,7 +62,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder5">
-						<a class="btn-8" href="categories.html#parentVerticalTab5">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-wheelchair"></i></div>
@@ -71,7 +74,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder6">
-						<a class="btn-8" href="categories.html#parentVerticalTab6">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-paw"></i></div>
@@ -83,7 +86,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder7">
-						<a class="btn-8" href="categories.html#parentVerticalTab7">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-book"></i></div>
@@ -95,7 +98,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder8">
-						<a class="btn-8" href="categories.html#parentVerticalTab8">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-asterisk"></i></div>
@@ -107,7 +110,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder9">
-						<a class="btn-8" href="categories.html#parentVerticalTab9">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-gamepad"></i></div>
@@ -119,7 +122,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder10">
-						<a class="btn-8" href="categories.html#parentVerticalTab10">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-shield"></i></div>
@@ -131,7 +134,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder11">
-						<a class="btn-8" href="categories.html#parentVerticalTab11">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-at"></i></div>
@@ -143,7 +146,7 @@ class browse extends React.Component {
 					</div>
 					<div class="col-md-3">
 					<div class="focus-grid w3layouts-boder12">
-						<a class="btn-8" href="categories.html#parentVerticalTab12">
+						<a class="btn-8" href="#category">
 							<div class="focus-border">
 								<div class="focus-layout">
 									<div class="focus-image"><i class="fa fa-home"></i></div>
@@ -161,4 +164,4 @@ class browse extends React.Component {
     }
 }
 
-export default browse;
+export default Categories;
