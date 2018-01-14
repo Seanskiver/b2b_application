@@ -121,7 +121,7 @@ class UserRegisterForm extends Component {
         let password = this.state.password.trim();
         
     
-        if (!email || !name || !email) {
+        if (!email || !name || !password) {
           return;
         }
         this.props.onUserSubmit({ 

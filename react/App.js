@@ -30,13 +30,13 @@ import Privacy from './pages/Privacy';
 import Reviews from './pages/Reviews';
 import Seller from './pages/Seller';
 import single from './pages/single';
-import profile from './pages/profile';
 import signin from './pages/signin';
 import Signup from './pages/Signup';
 import Terms from './pages/Terms';
-import UserSignup from './pages/UserSignup';
+//import UserSignup from './pages/UserSignup';
 import Footer from './pages/Footer';
-import UserRegister from './components/auth/register/UserRegisterBox';
+import UserRegister from './pages/Signup';
+import BusinessCreate from './pages/BusinessRegister';
 
 // let unsubscribe = store.subscribe(() =>
 //   console.log(store.getState())
@@ -63,11 +63,10 @@ const App = () => (
           <Route path="/reviews" component={Reviews}/>
           <Route path="/seller" component={Seller}/>
           <Route path="/single" component={single}/>
-          <Route path="/profile" component={profile}/>
           <Route path="/signin" component={signin}/>
-          <Route path="/signup" component={Signup}/>
           <Route path="/terms" component={Terms}/>
-          <Route path="/usersignup" component={UserRegister}/>
+          <Route path="/signup" component={UserRegister}/>
+          <Route path="/business-create" component={BusinessCreate}/>
       </section>
     </div>
     

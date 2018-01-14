@@ -126,10 +126,6 @@
 
 	var _single2 = _interopRequireDefault(_single);
 
-	var _profile = __webpack_require__(376);
-
-	var _profile2 = _interopRequireDefault(_profile);
-
 	var _signin = __webpack_require__(383);
 
 	var _signin2 = _interopRequireDefault(_signin);
@@ -142,17 +138,13 @@
 
 	var _Terms2 = _interopRequireDefault(_Terms);
 
-	var _UserSignup = __webpack_require__(386);
-
-	var _UserSignup2 = _interopRequireDefault(_UserSignup);
-
-	var _Footer = __webpack_require__(387);
+	var _Footer = __webpack_require__(386);
 
 	var _Footer2 = _interopRequireDefault(_Footer);
 
-	var _UserRegisterBox = __webpack_require__(388);
+	var _BusinessRegister = __webpack_require__(415);
 
-	var _UserRegisterBox2 = _interopRequireDefault(_UserRegisterBox);
+	var _BusinessRegister2 = _interopRequireDefault(_BusinessRegister);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -160,6 +152,11 @@
 	//   console.log(store.getState())
 	// )
 
+	// import store from './Store.js'
+
+	// // Components
+
+	// Pages
 	var App = function App() {
 	  return _react2.default.createElement(
 	    _reactRouterDom.HashRouter,
@@ -187,21 +184,15 @@
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/reviews', component: _Reviews2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/seller', component: _Seller2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/single', component: _single2.default }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: '/profile', component: _profile2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signin', component: _signin2.default }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _Signup2.default }),
 	        _react2.default.createElement(_reactRouterDom.Route, { path: '/terms', component: _Terms2.default }),
-	        _react2.default.createElement(_reactRouterDom.Route, { path: '/usersignup', component: _UserRegisterBox2.default })
+	        _react2.default.createElement(_reactRouterDom.Route, { path: '/signup', component: _Signup2.default }),
+	        _react2.default.createElement(_reactRouterDom.Route, { path: '/business-create', component: _BusinessRegister2.default })
 	      )
 	    )
 	  );
 	};
-
-	// import store from './Store.js'
-
-	// // Components
-
-	// Pages
+	//import UserSignup from './pages/UserSignup';
 
 
 	_reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('react-app'));
@@ -54381,1400 +54372,13 @@
 	exports.default = single;
 
 /***/ }),
-/* 376 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-		value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _Address = __webpack_require__(377);
-
-	var _Address2 = _interopRequireDefault(_Address);
-
-	var _BusinessName = __webpack_require__(378);
-
-	var _BusinessName2 = _interopRequireDefault(_BusinessName);
-
-	var _BusinessCategory = __webpack_require__(379);
-
-	var _BusinessCategory2 = _interopRequireDefault(_BusinessCategory);
-
-	var _BusinessType = __webpack_require__(380);
-
-	var _BusinessType2 = _interopRequireDefault(_BusinessType);
-
-	var _Email = __webpack_require__(381);
-
-	var _Email2 = _interopRequireDefault(_Email);
-
-	var _Phone = __webpack_require__(382);
-
-	var _Phone2 = _interopRequireDefault(_Phone);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	//import { Table } from 'react-bootstrap';
-	//import {Form, FormControl, Button, Table, Carousel, Jumbotron} from 'react-bootstrap';
-
-	var profile = function (_React$Component) {
-		_inherits(profile, _React$Component);
-
-		function profile() {
-			_classCallCheck(this, profile);
-
-			var _this = _possibleConstructorReturn(this, (profile.__proto__ || Object.getPrototypeOf(profile)).call(this));
-
-			_this.state = {
-				businessName: "Tec Group",
-				email: "info@example.com",
-				phone: "555-555-5555",
-				businessType: "Seller",
-				businessCategory: "Electronics & Appliances",
-				address: "123 Street Address"
-			};
-			return _this;
-		}
-
-		_createClass(profile, [{
-			key: "changeBusinessName",
-			value: function changeBusinessName(businessName) {
-				this.setState({ businessName: businessName });
-			}
-		}, {
-			key: "changeEmail",
-			value: function changeEmail(email) {
-				this.setState({ email: email });
-			}
-		}, {
-			key: "changePhone",
-			value: function changePhone(phone) {
-				this.setState({ phone: phone });
-			}
-		}, {
-			key: "changeBusinessType",
-			value: function changeBusinessType(businessType) {
-				this.setState({ businessType: businessType });
-			}
-		}, {
-			key: "changeBusinessCategory",
-			value: function changeBusinessCategory(businessCategory) {
-				this.setState({ businessCategory: businessCategory });
-			}
-		}, {
-			key: "changeAddress",
-			value: function changeAddress(address) {
-				this.setState({ address: address });
-			}
-		}, {
-			key: "render",
-			value: function render() {
-				return _react2.default.createElement(
-					"div",
-					null,
-					_react2.default.createElement(
-						"div",
-						{ className: "w3layouts-breadcrumbs text-center" },
-						_react2.default.createElement(
-							"div",
-							{ className: "container" },
-							_react2.default.createElement(
-								"span",
-								{ className: "agile-breadcrumbs" },
-								_react2.default.createElement(
-									"a",
-									{ href: "#" },
-									_react2.default.createElement("i", { className: "fa fa-home home_1" })
-								),
-								" /",
-								_react2.default.createElement(
-									"a",
-									{ href: "#profile" },
-									"Account"
-								)
-							)
-						)
-					),
-					_react2.default.createElement(
-						"div",
-						{ className: "submit-ad main-grid-border" },
-						_react2.default.createElement(
-							"div",
-							{ className: "container" },
-							_react2.default.createElement(
-								"h2",
-								{ className: "w3-head" },
-								"Account"
-							),
-							_react2.default.createElement(
-								"div",
-								{ className: "ads-grid" },
-								_react2.default.createElement(
-									"div",
-									{ className: "side-bar col-md-3" },
-									_react2.default.createElement(
-										"div",
-										{ className: "w3ls-featured-ads" },
-										_react2.default.createElement(
-											"div",
-											{ className: "w3l-featured-ad" },
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-left" },
-												_react2.default.createElement("img", { src: "https://www.godaddy.com/garage/wp-content/uploads/2014/06/create-a-gravatar-beard.png", title: "ad image", alt: "" })
-											),
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-right" },
-												_react2.default.createElement(
-													"h2",
-													{ className: "sear-head fer" },
-													this.state.businessName
-												)
-											),
-											_react2.default.createElement("div", { className: "clearfix" })
-										),
-										_react2.default.createElement(
-											"div",
-											{ className: "w3l-featured-ad" },
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-left" },
-												_react2.default.createElement("i", { className: "fa fa-envelope", "aria-hidden": "true" })
-											),
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-right" },
-												this.state.email
-											),
-											_react2.default.createElement("div", { className: "clearfix" })
-										),
-										_react2.default.createElement(
-											"div",
-											{ className: "w3l-featured-ad" },
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-left" },
-												_react2.default.createElement("i", { className: "glyphicon glyphicon-earphone" })
-											),
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-right" },
-												this.state.phone
-											),
-											_react2.default.createElement("div", { className: "clearfix" })
-										),
-										_react2.default.createElement(
-											"div",
-											{ className: "w3l-featured-ad" },
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-left" },
-												"Business Type:"
-											),
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-right" },
-												this.state.businessType
-											),
-											_react2.default.createElement("div", { className: "clearfix" })
-										),
-										_react2.default.createElement(
-											"div",
-											{ className: "w3l-featured-ad" },
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-left" },
-												"Business Category:"
-											),
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-right" },
-												this.state.businessCategory
-											),
-											_react2.default.createElement("div", { className: "clearfix" })
-										),
-										_react2.default.createElement(
-											"div",
-											{ className: "w3l-featured-ad" },
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-left" },
-												_react2.default.createElement("i", { className: "glyphicon glyphicon-road" })
-											),
-											_react2.default.createElement(
-												"div",
-												{ className: "w3-featured-ad-right" },
-												this.state.address
-											),
-											_react2.default.createElement("div", { className: "clearfix" })
-										)
-									)
-								)
-							),
-							_react2.default.createElement(
-								"div",
-								{ className: "agileinfo-ads-display col-md-9" },
-								_react2.default.createElement(
-									"div",
-									{ className: "wrapper" },
-									_react2.default.createElement(
-										"div",
-										{ className: "bs-example bs-example-tabs", role: "tabpanel", "data-example-id": "togglable-tabs" },
-										_react2.default.createElement(
-											"ul",
-											{ id: "myTab", className: "nav nav-tabs nav-tabs-responsive", role: "tablist" },
-											_react2.default.createElement(
-												"li",
-												{ role: "presentation", className: "active" },
-												_react2.default.createElement(
-													"a",
-													{ href: "#home", id: "home-tab", role: "tab", "data-toggle": "tab", "aria-controls": "home", "aria-expanded": "true" },
-													_react2.default.createElement(
-														"span",
-														{ className: "text" },
-														"Listings"
-													)
-												)
-											),
-											_react2.default.createElement(
-												"li",
-												{ role: "presentation", className: "next" },
-												_react2.default.createElement(
-													"a",
-													{ href: "#reviews", role: "tab", id: "profile-tab", "data-toggle": "tab", "aria-controls": "profile" },
-													_react2.default.createElement(
-														"span",
-														{ className: "text" },
-														"Reviews"
-													)
-												)
-											),
-											_react2.default.createElement(
-												"li",
-												{ role: "presentation", className: "next" },
-												_react2.default.createElement(
-													"a",
-													{ href: "#profile", role: "tab", id: "profile-tab", "data-toggle": "tab", "aria-controls": "profile" },
-													_react2.default.createElement(
-														"span",
-														{ className: "text" },
-														"Profile"
-													)
-												)
-											),
-											_react2.default.createElement(
-												"li",
-												{ role: "presentation" },
-												_react2.default.createElement(
-													"a",
-													{ href: "#samsa", role: "tab", id: "samsa-tab", "data-toggle": "tab", "aria-controls": "samsa" },
-													_react2.default.createElement(
-														"span",
-														{ className: "text" },
-														"Password"
-													)
-												)
-											)
-										),
-										_react2.default.createElement(
-											"div",
-											{ id: "myTabContent", className: "tab-content" },
-											_react2.default.createElement(
-												"div",
-												{ role: "tabpanel", className: "tab-pane fade in active", id: "home", "aria-labelledby": "home-tab" },
-												_react2.default.createElement(
-													"div",
-													null,
-													_react2.default.createElement(
-														"div",
-														{ id: "container" },
-														_react2.default.createElement(
-															"div",
-															{ className: "view-controls-list", id: "viewcontrols" },
-															_react2.default.createElement(
-																"label",
-																null,
-																"view :"
-															),
-															_react2.default.createElement(
-																"a",
-																{ className: "gridview" },
-																_react2.default.createElement("i", { className: "glyphicon glyphicon-th" })
-															),
-															_react2.default.createElement(
-																"a",
-																{ className: "listview active" },
-																_react2.default.createElement("i", { className: "glyphicon glyphicon-th-list" })
-															)
-														),
-														_react2.default.createElement(
-															"div",
-															{ className: "sort" },
-															_react2.default.createElement(
-																"div",
-																{ className: "sort-by" },
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Sort By : "
-																),
-																_react2.default.createElement(
-																	"select",
-																	null,
-																	_react2.default.createElement(
-																		"option",
-																		{ value: "" },
-																		"Most recent"
-																	),
-																	_react2.default.createElement(
-																		"option",
-																		{ value: "" },
-																		"Price: Rs Low to High"
-																	),
-																	_react2.default.createElement(
-																		"option",
-																		{ value: "" },
-																		"Price: Rs High to Low"
-																	)
-																)
-															)
-														),
-														_react2.default.createElement("div", { className: "clearfix" }),
-														_react2.default.createElement(
-															"ul",
-															{ className: "list" },
-															_react2.default.createElement(
-																"a",
-																{ href: "#single" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "http://stat.homeshop18.com/homeshop18/images/productImages/338/samsung-guru-e1200-mobile-phone-large_a68c67293ae8ecba99b8395694101cce.jpg", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"There are many variations of passages of Lorem Ipsum"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"$290"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Brand"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement("i", { className: "fa fa-pencil", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-eye", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-times", "aria-hidden": "true" }),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:55"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															),
-															_react2.default.createElement(
-																"a",
-																{ href: "#single" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "http://image.priceprice.k-img.com/global/images/product/mobilephones/Cherry_Mobile_Flare_P1/Cherry_Mobile_Flare_P1_L_1.jpg", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"It is a long established fact that a reader long established"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"$310"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Brand"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement("i", { className: "fa fa-pencil", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-eye", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-times", "aria-hidden": "true" }),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:45"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															),
-															_react2.default.createElement(
-																"a",
-																{ href: "#single" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "https://teja10.kuikr.com/o1/20161227/ak_1754001356-1482799919.jpg", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"Contrary to popular belief, Lorem Ipsum is not"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"$190"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Brand"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement("i", { className: "fa fa-pencil", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-eye", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-times", "aria-hidden": "true" }),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:30"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															),
-															_react2.default.createElement(
-																"a",
-																{ href: "#single" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "https://www.slickwraps.com/media/catalog/category/s5_3.jpg", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"The standard chunk of Lorem Ipsum used since the"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"$480"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Brand"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement("i", { className: "fa fa-pencil", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-eye", "aria-hidden": "true" }),
-																		"\xA0\xA0",
-																		_react2.default.createElement("i", { className: "fa fa-times", "aria-hidden": "true" }),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:25"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															)
-														)
-													)
-												),
-												_react2.default.createElement(
-													"ul",
-													{ className: "pagination pagination-sm" },
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"Prev"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"1"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"2"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"3"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"4"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"5"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"6"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"7"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"8"
-														)
-													),
-													_react2.default.createElement(
-														"li",
-														null,
-														_react2.default.createElement(
-															"a",
-															{ href: "#" },
-															"Next"
-														)
-													)
-												)
-											),
-											_react2.default.createElement(
-												"div",
-												{ role: "tabpanel", className: "tab-pane fade", id: "reviews", "aria-labelledby": "profile-tab" },
-												_react2.default.createElement(
-													"div",
-													null,
-													_react2.default.createElement(
-														"div",
-														{ id: "container" },
-														_react2.default.createElement(
-															"div",
-															{ className: "view-controls-list", id: "viewcontrols" },
-															_react2.default.createElement(
-																"label",
-																null,
-																"view :"
-															),
-															_react2.default.createElement(
-																"a",
-																{ className: "gridview" },
-																_react2.default.createElement("i", { className: "glyphicon glyphicon-th" })
-															),
-															_react2.default.createElement(
-																"a",
-																{ className: "listview active" },
-																_react2.default.createElement("i", { className: "glyphicon glyphicon-th-list" })
-															)
-														),
-														_react2.default.createElement(
-															"div",
-															{ className: "sort" },
-															_react2.default.createElement(
-																"div",
-																{ className: "sort-by" },
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Sort By : "
-																),
-																_react2.default.createElement(
-																	"select",
-																	null,
-																	_react2.default.createElement(
-																		"option",
-																		{ value: "" },
-																		"View all"
-																	),
-																	_react2.default.createElement(
-																		"option",
-																		{ value: "" },
-																		"Positive"
-																	),
-																	_react2.default.createElement(
-																		"option",
-																		{ value: "" },
-																		"Negative"
-																	)
-																)
-															)
-														),
-														_react2.default.createElement("div", { className: "clearfix" }),
-														_react2.default.createElement(
-															"ul",
-															{ className: "list" },
-															_react2.default.createElement(
-																"a",
-																{ href: "#seller" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "http://rsassociates.itsupportnepal.com/rs/wp-content/uploads/2017/09/gravatar_1.jpg", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"Mike Jones"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"(+) 6 hours ago"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Phone Name"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"There are many variations of passages of Lorem Ipsum"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:55"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															),
-															_react2.default.createElement(
-																"a",
-																{ href: "#seller" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "http://atleticafranciacorta.com/assets/images/members/profile/2_3_1_avatar.jpg", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"Ms. Jackson"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"(-) 17 hours ago"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Phone Name"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"There are many variations of passages of Lorem Ipsum"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:45"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															),
-															_react2.default.createElement(
-																"a",
-																{ href: "#seller" },
-																_react2.default.createElement(
-																	"li",
-																	null,
-																	_react2.default.createElement("img", { src: "http://www.creazo.fr/wp-content/uploads/2016/03/1458916347_ninja-background.png", title: "", alt: "" }),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-left" },
-																		_react2.default.createElement(
-																			"h5",
-																			{ className: "title" },
-																			"Arnold"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "adprice" },
-																			"(+) 11 days ago"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"Mobile Phones \xBB Phone Name"
-																		),
-																		_react2.default.createElement(
-																			"p",
-																			{ className: "catpath" },
-																			"There are many variations of passages of Lorem Ipsum"
-																		)
-																	),
-																	_react2.default.createElement(
-																		"section",
-																		{ className: "list-right" },
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "date" },
-																			"Today, 17:30"
-																		),
-																		_react2.default.createElement(
-																			"span",
-																			{ className: "cityname" },
-																			"City name"
-																		)
-																	),
-																	_react2.default.createElement("div", { className: "clearfix" })
-																)
-															)
-														)
-													)
-												)
-											),
-											_react2.default.createElement(
-												"div",
-												{ role: "tabpanel", className: "tab-pane fade", id: "profile", "aria-labelledby": "profile-tab" },
-												_react2.default.createElement(
-													"div",
-													null,
-													_react2.default.createElement(
-														"div",
-														{ id: "container" },
-														_react2.default.createElement(
-															"div",
-															{ className: "post-ad-form" },
-															_react2.default.createElement(
-																"form",
-																null,
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Business Name"
-																),
-																_react2.default.createElement(_BusinessName2.default, { changeBusinessName: this.changeBusinessName.bind(this), businessName: this.state.businessName }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Email"
-																),
-																_react2.default.createElement(_Email2.default, { changeEmail: this.changeEmail.bind(this), email: this.state.email }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Phone"
-																),
-																_react2.default.createElement(_Phone2.default, { changePhone: this.changePhone.bind(this), phone: this.state.phone }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Business Type"
-																),
-																_react2.default.createElement(_BusinessType2.default, { changeBusinessType: this.changeBusinessType.bind(this), businessType: this.state.businessType }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Business Category"
-																),
-																_react2.default.createElement(_BusinessCategory2.default, { changeBusinessCategory: this.changeBusinessCategory.bind(this), businessCategory: this.state.businessCategory }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Address"
-																),
-																_react2.default.createElement(_Address2.default, { changeAddress: this.changeAddress.bind(this), address: this.state.address }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement("input", { type: "submit", value: "Update Changes" }),
-																_react2.default.createElement("div", { className: "clearfix" })
-															)
-														)
-													)
-												)
-											),
-											_react2.default.createElement(
-												"div",
-												{ role: "tabpanel", className: "tab-pane fade", id: "samsa", "aria-labelledby": "samsa-tab" },
-												_react2.default.createElement(
-													"div",
-													null,
-													_react2.default.createElement(
-														"div",
-														{ id: "container" },
-														_react2.default.createElement(
-															"div",
-															{ className: "post-ad-form" },
-															_react2.default.createElement(
-																"form",
-																null,
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Old Password"
-																),
-																_react2.default.createElement("input", { type: "text", className: "phone", placeholder: "" }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"New Password"
-																),
-																_react2.default.createElement("input", { type: "text", className: "phone", placeholder: "" }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement(
-																	"label",
-																	null,
-																	"Retype New Password"
-																),
-																_react2.default.createElement("input", { type: "text", className: "phone", placeholder: "" }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement("div", { className: "clearfix" }),
-																_react2.default.createElement("input", { type: "submit", value: "Update Changes" }),
-																_react2.default.createElement("div", { className: "clearfix" })
-															)
-														)
-													)
-												)
-											)
-										)
-									)
-								)
-							)
-						)
-					)
-				);
-			}
-		}]);
-
-		return profile;
-	}(_react2.default.Component);
-
-	exports.default = profile;
-
-/***/ }),
-/* 377 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Address = function (_React$Component) {
-	  _inherits(Address, _React$Component);
-
-	  function Address() {
-	    _classCallCheck(this, Address);
-
-	    return _possibleConstructorReturn(this, (Address.__proto__ || Object.getPrototypeOf(Address)).apply(this, arguments));
-	  }
-
-	  _createClass(Address, [{
-	    key: "handleAddressChange",
-	    value: function handleAddressChange(e) {
-	      var address = e.target.value;
-	      this.props.changeAddress(address);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement("input", { type: "text", className: "phone", value: this.props.address, onChange: this.handleAddressChange.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return Address;
-	}(_react2.default.Component);
-
-	exports.default = Address;
-
-/***/ }),
-/* 378 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var BusinessName = function (_React$Component) {
-	  _inherits(BusinessName, _React$Component);
-
-	  function BusinessName() {
-	    _classCallCheck(this, BusinessName);
-
-	    return _possibleConstructorReturn(this, (BusinessName.__proto__ || Object.getPrototypeOf(BusinessName)).apply(this, arguments));
-	  }
-
-	  _createClass(BusinessName, [{
-	    key: "handleChange",
-	    value: function handleChange(e) {
-	      var businessName = e.target.value;
-	      this.props.changeBusinessName(businessName);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement("input", { type: "text", className: "phone", value: this.props.businessName, onChange: this.handleChange.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return BusinessName;
-	}(_react2.default.Component);
-
-	exports.default = BusinessName;
-
-/***/ }),
-/* 379 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var BusinessCategory = function (_React$Component) {
-	  _inherits(BusinessCategory, _React$Component);
-
-	  function BusinessCategory() {
-	    _classCallCheck(this, BusinessCategory);
-
-	    return _possibleConstructorReturn(this, (BusinessCategory.__proto__ || Object.getPrototypeOf(BusinessCategory)).apply(this, arguments));
-	  }
-
-	  _createClass(BusinessCategory, [{
-	    key: "handleChange",
-	    value: function handleChange(e) {
-	      var businessCategory = e.target.value;
-	      this.props.changeBusinessCategory(businessCategory);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "select",
-	          { className: "", onChange: this.handleChange.bind(this) },
-	          _react2.default.createElement(
-	            "option",
-	            { selected: true },
-	            this.props.businessCategory
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Electronics & Appliance"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Sport"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Fashion"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Food & Beverage"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Automotive"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Home Appliance"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Furniture"
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return BusinessCategory;
-	}(_react2.default.Component);
-
-	exports.default = BusinessCategory;
-
-/***/ }),
-/* 380 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var BusinessType = function (_React$Component) {
-	  _inherits(BusinessType, _React$Component);
-
-	  function BusinessType() {
-	    _classCallCheck(this, BusinessType);
-
-	    return _possibleConstructorReturn(this, (BusinessType.__proto__ || Object.getPrototypeOf(BusinessType)).apply(this, arguments));
-	  }
-
-	  _createClass(BusinessType, [{
-	    key: "handleChange",
-	    value: function handleChange(e) {
-	      var businessType = e.target.value;
-	      this.props.changeBusinessType(businessType);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement(
-	          "select",
-	          { className: "", onChange: this.handleChange.bind(this) },
-	          _react2.default.createElement(
-	            "option",
-	            { selected: true },
-	            this.props.businessType
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Buyer"
-	          ),
-	          _react2.default.createElement(
-	            "option",
-	            null,
-	            "Both"
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return BusinessType;
-	}(_react2.default.Component);
-
-	exports.default = BusinessType;
-
-/***/ }),
-/* 381 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Email = function (_React$Component) {
-	  _inherits(Email, _React$Component);
-
-	  function Email() {
-	    _classCallCheck(this, Email);
-
-	    return _possibleConstructorReturn(this, (Email.__proto__ || Object.getPrototypeOf(Email)).apply(this, arguments));
-	  }
-
-	  _createClass(Email, [{
-	    key: "handleEmailChange",
-	    value: function handleEmailChange(e) {
-	      var email = e.target.value;
-	      this.props.changeEmail(email);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement("input", { type: "text", className: "phone", value: this.props.email, onChange: this.handleEmailChange.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return Email;
-	}(_react2.default.Component);
-
-	exports.default = Email;
-
-/***/ }),
-/* 382 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	"use strict";
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var Phone = function (_React$Component) {
-	  _inherits(Phone, _React$Component);
-
-	  function Phone() {
-	    _classCallCheck(this, Phone);
-
-	    return _possibleConstructorReturn(this, (Phone.__proto__ || Object.getPrototypeOf(Phone)).apply(this, arguments));
-	  }
-
-	  _createClass(Phone, [{
-	    key: "handlePhoneChange",
-	    value: function handlePhoneChange(e) {
-	      var phone = e.target.value;
-	      this.props.changePhone(phone);
-	    }
-	  }, {
-	    key: "render",
-	    value: function render() {
-	      return _react2.default.createElement(
-	        "div",
-	        null,
-	        _react2.default.createElement("input", { type: "text", className: "phone", value: this.props.phone, onChange: this.handlePhoneChange.bind(this) })
-	      );
-	    }
-	  }]);
-
-	  return Phone;
-	}(_react2.default.Component);
-
-	exports.default = Phone;
-
-/***/ }),
+/* 376 */,
+/* 377 */,
+/* 378 */,
+/* 379 */,
+/* 380 */,
+/* 381 */,
+/* 382 */,
 /* 383 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -55955,856 +54559,74 @@
 	  value: true
 	});
 
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 	var _react = __webpack_require__(1);
 
 	var _react2 = _interopRequireDefault(_react);
 
-	var _reactBootstrap = __webpack_require__(104);
+	var _axios = __webpack_require__(388);
 
-	var _reactRouterDom = __webpack_require__(27);
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _UserRegisterForm = __webpack_require__(414);
+
+	var _UserRegisterForm2 = _interopRequireDefault(_UserRegisterForm);
 
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
 
 	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import { Table } from 'react-bootstrap';
 
+	var UserRegisterBox = function (_Component) {
+	  _inherits(UserRegisterBox, _Component);
 
-	var Signup = function (_React$Component) {
-	  _inherits(Signup, _React$Component);
+	  function UserRegisterBox(props) {
+	    _classCallCheck(this, UserRegisterBox);
 
-	  function Signup(props) {
-	    _classCallCheck(this, Signup);
+	    var _this = _possibleConstructorReturn(this, (UserRegisterBox.__proto__ || Object.getPrototypeOf(UserRegisterBox)).call(this, props));
 
-	    var _this = _possibleConstructorReturn(this, (Signup.__proto__ || Object.getPrototypeOf(Signup)).call(this, props));
-
-	    _this.state = {
-	      email: '',
-	      businessName: '',
-	      businessType: '',
-	      businessCategory: '',
-	      phone: '',
-	      address: '',
-	      country: 'Senegal',
-	      city: ''
-	    };
-
-	    _this.handleChange = _this.handleChange.bind(_this);
-	    _this.handleSubmit = _this.handleSubmit.bind(_this);
+	    _this.state = { data: [] };
+	    _this.handleRegisterSubmit = _this.handleRegisterSubmit.bind(_this);
 	    return _this;
 	  }
 
-	  _createClass(Signup, [{
-	    key: 'handleChange',
-	    value: function handleChange(event) {
-	      var target = event.target;
-	      var value = target.type === 'checkbox' ? target.checked : target.value;
-	      var name = target.name;
+	  //handle form submit 
 
-	      this.setState(_defineProperty({}, name, value));
-	    }
 
-	    //handlesubmit
+	  _createClass(UserRegisterBox, [{
+	    key: 'handleRegisterSubmit',
+	    value: function handleRegisterSubmit(user) {
+	      var _this2 = this;
 
-	  }, {
-	    key: 'handleSubmit',
-	    value: function handleSubmit(event) {
+	      var users = this.state.data;
+	      user.id = Date.now();
 
-	      event.preventDefault();
-
-	      $.ajax({
-	        type: 'post',
-	        url: '/signup',
-	        data: _extends({
-	          '_token': $('input[name=_token]').val()
-	        }, this.email, this.businessName, this.businessType, this.businessCategory, this.phone, this.address, this.country, this.city),
-
-	        success: function success(data) {
-	          alert('Form was submited');
-	          location.reload();
-	        }
+	      var newUsers = users.concat([user]);
+	      this.setState({ data: newUsers });
+	      _axios2.default.post('https://vgu2b4kbxc.execute-api.us-east-1.amazonaws.com/dev/auth/register', user).catch(function (err) {
+	        console.error(err);
+	        _this2.setState({ data: users });
 	      });
 	    }
 	  }, {
 	    key: 'render',
 	    value: function render() {
-	      var style = {
-	        width: '450px'
-	      };
-
 	      return _react2.default.createElement(
 	        'div',
-	        { className: 'register', id: 'custom-container' },
-	        _react2.default.createElement(
-	          _reactBootstrap.Col,
-	          { xsHidden: true },
-	          _react2.default.createElement(
-	            'section',
-	            null,
-	            _react2.default.createElement(
-	              'div',
-	              { id: 'agileits-sign-in-page', className: 'sign-in-wrapper' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'agileinfo_signin' },
-	                _react2.default.createElement(
-	                  'h3',
-	                  null,
-	                  'Sign Up'
-	                ),
-	                _react2.default.createElement(
-	                  'form',
-	                  { onSubmit: this.handleSubmit },
-	                  _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'businessName', name: 'businessName', placeholder: 'Business Name', onChange: this.handleChange }),
-	                  _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'email', name: 'email', placeholder: 'name@example.com', onChange: this.handleChange }),
-	                  _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Enter Phone', onChange: this.handleChange }),
-	                  _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'businessType' },
-	                    'Business Type'
-	                  ),
-	                  _react2.default.createElement(
-	                    'select',
-	                    { className: 'form-control', id: 'businessType', name: 'businessType', onChange: this.handleChange },
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Supplier'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Buyer'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Both'
-	                    )
-	                  ),
-	                  _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'businessCategory' },
-	                    'Business Category'
-	                  ),
-	                  _react2.default.createElement(
-	                    'select',
-	                    { className: 'form-control', id: 'businessCategory', name: 'businessCategory', onChange: this.handleChange },
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Electronics & Appliance'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Sport'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Fashion'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Food & Beverage'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Automotive'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Home Appliance'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Furniture'
-	                    )
-	                  ),
-	                  _react2.default.createElement('br', null),
-	                  _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'Name', placeholder: 'Street Address', required: '' }),
-	                  _react2.default.createElement(
-	                    'label',
-	                    { htmlFor: 'city' },
-	                    'City'
-	                  ),
-	                  _react2.default.createElement(
-	                    'select',
-	                    { className: 'form-control', id: 'exampleFormControlSelect1', name: 'city', onChange: this.handleChange },
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Dakar'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Touba'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Thi\xE8s'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Rufisque'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Kaolack'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'M\'Bour'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Ziguinchor'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Saint-Louis'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Diourbel'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Louga'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Tambacounda'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Richard Toll'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Kolda'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Mback\xE9'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Tivaouane'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Joal-Fadiouth'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Kaffrine'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Dahra'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Bignona'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Fatick'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Dagana'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Bambey'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'V\xE9lingara'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'S\xE9dhiou'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'S\xE9bikhotane'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'K\xE9dougou'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Ngu\xE9khokh'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Kayar'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Pout'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'M\xE9kh\xE9'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Matam'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Ouro Sogui'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Nioro du Rip'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'K\xE9b\xE9mer'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Koungheul'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Guinguin\xE9o'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Bakel'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Mboro'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Lingu\xE8re'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Sokone'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Goudomp'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Thiadiaye'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Ndioum'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Damniadio'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Khombole'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Gossas'
-	                    ),
-	                    _react2.default.createElement(
-	                      'option',
-	                      null,
-	                      'Kanel'
-	                    )
-	                  ),
-	                  _react2.default.createElement('br', null),
-	                  _react2.default.createElement('input', { type: 'password', className: 'form-control', name: 'Password', placeholder: 'Password', required: '' }),
-	                  _react2.default.createElement('input', { type: 'password', className: 'form-control', name: 'Password', placeholder: 'Confirm Password', required: '' }),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'signin-rit' },
-	                    _react2.default.createElement(
-	                      'span',
-	                      { className: 'agree-checkbox' },
-	                      _react2.default.createElement(
-	                        'label',
-	                        { className: 'checkbox' },
-	                        _react2.default.createElement('input', { type: 'checkbox', name: 'checkbox' }),
-	                        'I agree to your ',
-	                        _react2.default.createElement(
-	                          'a',
-	                          { className: 'w3layouts-t', href: '#terms', target: '_blank' },
-	                          'Terms of Use'
-	                        ),
-	                        ' and ',
-	                        _react2.default.createElement(
-	                          'a',
-	                          { className: 'w3layouts-t', href: '#privacy', target: '_blank' },
-	                          'Privacy Policy'
-	                        )
-	                      )
-	                    )
-	                  ),
-	                  _react2.default.createElement('input', { type: 'submit', value: 'Sign Up' })
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true },
-	          _react2.default.createElement(
-	            'form',
-	            { onSubmit: this.handleSubmit },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { htmlFor: 'businessName' },
-	                'Business Name'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'businessName', name: 'businessName', placeholder: 'Business Name', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { className: 'control-label' },
-	                'Email'
-	              ),
-	              _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'email', name: 'email', placeholder: 'name@example.com', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { className: 'control-label' },
-	                'Phone'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Enter Phone', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { htmlFor: 'businessType' },
-	                'Business Type'
-	              ),
-	              _react2.default.createElement(
-	                'select',
-	                { className: 'form-control', id: 'businessType', name: 'businessType', onChange: this.handleChange },
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Supplier'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Buyer'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Both'
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { htmlFor: 'businessCategory' },
-	                'Business Category'
-	              ),
-	              _react2.default.createElement(
-	                'select',
-	                { className: 'form-control', id: 'businessCategory', name: 'businessCategory', onChange: this.handleChange },
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Electronics & Appliance'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Sport'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Fashion'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Food & Beverage'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Automotive'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Home Appliance'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Furniture'
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { htmlFor: 'streetAddress' },
-	                'Street Address'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'address', name: 'address', placeholder: 'Street Address', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { htmlFor: 'city' },
-	                'City'
-	              ),
-	              _react2.default.createElement(
-	                'select',
-	                { className: 'form-control', id: 'exampleFormControlSelect1', name: 'city', onChange: this.handleChange },
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Dakar'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Touba'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Thi\xE8s'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Rufisque'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Kaolack'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'M\'Bour'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Ziguinchor'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Saint-Louis'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Diourbel'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Louga'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Tambacounda'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Richard Toll'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Kolda'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Mback\xE9'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Tivaouane'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Joal-Fadiouth'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Kaffrine'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Dahra'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Bignona'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Fatick'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Dagana'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Bambey'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'V\xE9lingara'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'S\xE9dhiou'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'S\xE9bikhotane'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'K\xE9dougou'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Ngu\xE9khokh'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Kayar'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Pout'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'M\xE9kh\xE9'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Matam'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Ouro Sogui'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Nioro du Rip'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'K\xE9b\xE9mer'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Koungheul'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Guinguin\xE9o'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Bakel'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Mboro'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Lingu\xE8re'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Sokone'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Goudomp'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Thiadiaye'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Ndioum'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Damniadio'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Khombole'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Gossas'
-	                ),
-	                _react2.default.createElement(
-	                  'option',
-	                  null,
-	                  'Kanel'
-	                )
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'button',
-	                { type: 'submit', className: 'btn btn-primary pull-right' },
-	                'Continue'
-	              )
-	            )
-	          ),
-	          _react2.default.createElement('br', null)
-	        )
+	        { className: 'container' },
+	        _react2.default.createElement(_UserRegisterForm2.default, { onUserSubmit: this.handleRegisterSubmit })
 	      );
 	    }
 	  }]);
 
-	  return Signup;
-	}(_react2.default.Component);
+	  return UserRegisterBox;
+	}(_react.Component);
 
-	exports.default = Signup;
+	exports.default = UserRegisterBox;
 
 /***/ }),
 /* 385 */
@@ -57419,224 +55241,6 @@
 	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _reactBootstrap = __webpack_require__(104);
-
-	var _reactRouterDom = __webpack_require__(27);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-	//import { Table } from 'react-bootstrap';
-
-
-	var UserSignup = function (_React$Component) {
-	  _inherits(UserSignup, _React$Component);
-
-	  function UserSignup(props) {
-	    _classCallCheck(this, UserSignup);
-
-	    var _this = _possibleConstructorReturn(this, (UserSignup.__proto__ || Object.getPrototypeOf(UserSignup)).call(this, props));
-
-	    _this.state = {
-	      userName: '',
-	      password: '',
-	      confirmPassword: ''
-	    };
-
-	    _this.handleChange = _this.handleChange.bind(_this);
-	    _this.handleSubmit = _this.handleSubmit.bind(_this);
-	    return _this;
-	  }
-
-	  _createClass(UserSignup, [{
-	    key: 'handleChange',
-	    value: function handleChange(event) {
-	      var target = event.target;
-	      var value = target.type === 'checkbox' ? target.checked : target.value;
-	      var name = target.name;
-
-	      this.setState(_defineProperty({}, name, value));
-	    }
-
-	    //handlesubmit
-
-	  }, {
-	    key: 'handleSubmit',
-	    value: function handleSubmit(event) {
-
-	      event.preventDefault();
-
-	      $.ajax({
-	        type: 'post',
-	        url: '/signup',
-	        data: _extends({
-	          '_token': $('input[name=_token]').val()
-	        }, this.userName, this.password, this.confirmPassword),
-
-	        success: function success(data) {
-	          alert('Form was submited');
-	          location.reload();
-	        }
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      var style = {
-	        width: '450px'
-	      };
-
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'user-register', id: 'custom-container' },
-	        _react2.default.createElement(
-	          _reactBootstrap.Col,
-	          { xsHidden: true },
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'container', style: style },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'panel panel-default' },
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'panel-heading', align: 'center' },
-	                _react2.default.createElement(
-	                  'b',
-	                  null,
-	                  'User Information'
-	                )
-	              ),
-	              _react2.default.createElement(
-	                'div',
-	                { className: 'panel-body' },
-	                _react2.default.createElement(
-	                  'form',
-	                  { onSubmit: this.handleSubmit },
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { htmlFor: 'userName' },
-	                      'User Name'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'userName', name: 'userName', placeholder: 'User Name', onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { className: 'control-label' },
-	                      'Password'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'password', name: 'password', placeholder: 'Password', onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'label',
-	                      { className: 'control-label' },
-	                      'Confirm Password'
-	                    ),
-	                    _react2.default.createElement('input', { type: 'password', required: 'required', className: 'form-control', id: 'password', name: 'password', placeholder: 'Confirm Password', onChange: this.handleChange })
-	                  ),
-	                  _react2.default.createElement(
-	                    'div',
-	                    { className: 'form-group col-md-12' },
-	                    _react2.default.createElement(
-	                      'button',
-	                      { type: 'submit', className: 'btn btn-primary pull-right' },
-	                      'Sign Up'
-	                    )
-	                  )
-	                )
-	              )
-	            )
-	          )
-	        ),
-	        _react2.default.createElement(
-	          _reactBootstrap.Col,
-	          { smHidden: true, mdHidden: true, lgHidden: true },
-	          _react2.default.createElement(
-	            'form',
-	            { onSubmit: this.handleSubmit },
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { htmlFor: 'userName' },
-	                'User Name'
-	              ),
-	              _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'userName', name: 'userName', placeholder: 'User Name', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { className: 'control-label' },
-	                'Password'
-	              ),
-	              _react2.default.createElement('input', { type: 'password', className: 'form-control', id: 'password', name: 'password', placeholder: 'Password', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'label',
-	                { className: 'control-label' },
-	                'Confirm Password'
-	              ),
-	              _react2.default.createElement('input', { type: 'password', required: 'required', className: 'form-control', id: 'password', name: 'password', placeholder: 'Confirm Password', onChange: this.handleChange })
-	            ),
-	            _react2.default.createElement(
-	              'div',
-	              { className: 'form-group col-md-12' },
-	              _react2.default.createElement(
-	                'button',
-	                { type: 'submit', className: 'btn btn-primary pull-right' },
-	                'Sign Up'
-	              )
-	            )
-	          )
-	        )
-	      );
-	    }
-	  }]);
-
-	  return UserSignup;
-	}(_react2.default.Component);
-
-	exports.default = UserSignup;
-
-/***/ }),
-/* 387 */
-/***/ (function(module, exports, __webpack_require__) {
-
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
 		value: true
 	});
 
@@ -57939,105 +55543,22 @@
 	exports.default = Footer;
 
 /***/ }),
+/* 387 */,
 /* 388 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	'use strict';
-
-	Object.defineProperty(exports, "__esModule", {
-	  value: true
-	});
-
-	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-	var _react = __webpack_require__(1);
-
-	var _react2 = _interopRequireDefault(_react);
-
-	var _axios = __webpack_require__(389);
-
-	var _axios2 = _interopRequireDefault(_axios);
-
-	var _UserRegisterForm = __webpack_require__(415);
-
-	var _UserRegisterForm2 = _interopRequireDefault(_UserRegisterForm);
-
-	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-	var UserRegisterBox = function (_Component) {
-	  _inherits(UserRegisterBox, _Component);
-
-	  function UserRegisterBox(props) {
-	    _classCallCheck(this, UserRegisterBox);
-
-	    var _this = _possibleConstructorReturn(this, (UserRegisterBox.__proto__ || Object.getPrototypeOf(UserRegisterBox)).call(this, props));
-
-	    _this.state = { data: [] };
-	    _this.handleRegisterSubmit = _this.handleRegisterSubmit.bind(_this);
-	    return _this;
-	  }
-
-	  //handle form submit 
-
-
-	  _createClass(UserRegisterBox, [{
-	    key: 'handleRegisterSubmit',
-	    value: function handleRegisterSubmit(user) {
-	      var _this2 = this;
-
-	      var users = this.state.data;
-	      user.id = Date.now();
-
-	      var newUsers = users.concat([user]);
-	      this.setState({ data: newUsers });
-	      _axios2.default.post('https://vgu2b4kbxc.execute-api.us-east-1.amazonaws.com/dev/auth/register', user).catch(function (err) {
-	        console.error(err);
-	        _this2.setState({ data: users });
-	      });
-	    }
-	  }, {
-	    key: 'render',
-	    value: function render() {
-	      return _react2.default.createElement(
-	        'div',
-	        { className: 'container' },
-	        _react2.default.createElement(
-	          'h3',
-	          { className: '', align: 'center', id: 'projects' },
-	          'FILL OUT USER INFO'
-	        ),
-	        _react2.default.createElement(_UserRegisterForm2.default, { onProjectSubmit: this.handleRegisterSubmit })
-	      );
-	    }
-	  }]);
-
-	  return UserRegisterBox;
-	}(_react.Component);
-
-	exports.default = UserRegisterBox;
+	module.exports = __webpack_require__(389);
 
 /***/ }),
 /* 389 */
 /***/ (function(module, exports, __webpack_require__) {
 
-	module.exports = __webpack_require__(390);
-
-/***/ }),
-/* 390 */
-/***/ (function(module, exports, __webpack_require__) {
-
 	'use strict';
 
-	var utils = __webpack_require__(391);
-	var bind = __webpack_require__(392);
-	var Axios = __webpack_require__(394);
-	var defaults = __webpack_require__(395);
+	var utils = __webpack_require__(390);
+	var bind = __webpack_require__(391);
+	var Axios = __webpack_require__(393);
+	var defaults = __webpack_require__(394);
 
 	/**
 	 * Create an instance of Axios
@@ -58070,15 +55591,15 @@
 	};
 
 	// Expose Cancel & CancelToken
-	axios.Cancel = __webpack_require__(412);
-	axios.CancelToken = __webpack_require__(413);
-	axios.isCancel = __webpack_require__(409);
+	axios.Cancel = __webpack_require__(411);
+	axios.CancelToken = __webpack_require__(412);
+	axios.isCancel = __webpack_require__(408);
 
 	// Expose all/spread
 	axios.all = function all(promises) {
 	  return Promise.all(promises);
 	};
-	axios.spread = __webpack_require__(414);
+	axios.spread = __webpack_require__(413);
 
 	module.exports = axios;
 
@@ -58087,13 +55608,13 @@
 
 
 /***/ }),
-/* 391 */
+/* 390 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var bind = __webpack_require__(392);
-	var isBuffer = __webpack_require__(393);
+	var bind = __webpack_require__(391);
+	var isBuffer = __webpack_require__(392);
 
 	/*global toString:true*/
 
@@ -58396,7 +55917,7 @@
 
 
 /***/ }),
-/* 392 */
+/* 391 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -58413,7 +55934,7 @@
 
 
 /***/ }),
-/* 393 */
+/* 392 */
 /***/ (function(module, exports) {
 
 	/*!
@@ -58440,15 +55961,15 @@
 
 
 /***/ }),
-/* 394 */
+/* 393 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var defaults = __webpack_require__(395);
-	var utils = __webpack_require__(391);
-	var InterceptorManager = __webpack_require__(406);
-	var dispatchRequest = __webpack_require__(407);
+	var defaults = __webpack_require__(394);
+	var utils = __webpack_require__(390);
+	var InterceptorManager = __webpack_require__(405);
+	var dispatchRequest = __webpack_require__(406);
 
 	/**
 	 * Create a new instance of Axios
@@ -58525,13 +56046,13 @@
 
 
 /***/ }),
-/* 395 */
+/* 394 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(391);
-	var normalizeHeaderName = __webpack_require__(396);
+	var utils = __webpack_require__(390);
+	var normalizeHeaderName = __webpack_require__(395);
 
 	var DEFAULT_CONTENT_TYPE = {
 	  'Content-Type': 'application/x-www-form-urlencoded'
@@ -58547,10 +56068,10 @@
 	  var adapter;
 	  if (typeof XMLHttpRequest !== 'undefined') {
 	    // For browsers use XHR adapter
-	    adapter = __webpack_require__(397);
+	    adapter = __webpack_require__(396);
 	  } else if (typeof process !== 'undefined') {
 	    // For node use HTTP adapter
-	    adapter = __webpack_require__(397);
+	    adapter = __webpack_require__(396);
 	  }
 	  return adapter;
 	}
@@ -58624,12 +56145,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 396 */
+/* 395 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	module.exports = function normalizeHeaderName(headers, normalizedName) {
 	  utils.forEach(headers, function processHeader(value, name) {
@@ -58642,18 +56163,18 @@
 
 
 /***/ }),
-/* 397 */
+/* 396 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	/* WEBPACK VAR INJECTION */(function(process) {'use strict';
 
-	var utils = __webpack_require__(391);
-	var settle = __webpack_require__(398);
-	var buildURL = __webpack_require__(401);
-	var parseHeaders = __webpack_require__(402);
-	var isURLSameOrigin = __webpack_require__(403);
-	var createError = __webpack_require__(399);
-	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(404);
+	var utils = __webpack_require__(390);
+	var settle = __webpack_require__(397);
+	var buildURL = __webpack_require__(400);
+	var parseHeaders = __webpack_require__(401);
+	var isURLSameOrigin = __webpack_require__(402);
+	var createError = __webpack_require__(398);
+	var btoa = (typeof window !== 'undefined' && window.btoa && window.btoa.bind(window)) || __webpack_require__(403);
 
 	module.exports = function xhrAdapter(config) {
 	  return new Promise(function dispatchXhrRequest(resolve, reject) {
@@ -58750,7 +56271,7 @@
 	    // This is only done if running in a standard browser environment.
 	    // Specifically not if we're in a web worker, or react-native.
 	    if (utils.isStandardBrowserEnv()) {
-	      var cookies = __webpack_require__(405);
+	      var cookies = __webpack_require__(404);
 
 	      // Add xsrf header
 	      var xsrfValue = (config.withCredentials || isURLSameOrigin(config.url)) && config.xsrfCookieName ?
@@ -58829,12 +56350,12 @@
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
 /***/ }),
-/* 398 */
+/* 397 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var createError = __webpack_require__(399);
+	var createError = __webpack_require__(398);
 
 	/**
 	 * Resolve or reject a Promise based on response status.
@@ -58861,12 +56382,12 @@
 
 
 /***/ }),
-/* 399 */
+/* 398 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var enhanceError = __webpack_require__(400);
+	var enhanceError = __webpack_require__(399);
 
 	/**
 	 * Create an Error with the specified message, config, error code, request and response.
@@ -58885,7 +56406,7 @@
 
 
 /***/ }),
-/* 400 */
+/* 399 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -58912,12 +56433,12 @@
 
 
 /***/ }),
-/* 401 */
+/* 400 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	function encode(val) {
 	  return encodeURIComponent(val).
@@ -58986,12 +56507,12 @@
 
 
 /***/ }),
-/* 402 */
+/* 401 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	// Headers whose duplicates are ignored by node
 	// c.f. https://nodejs.org/api/http.html#http_message_headers
@@ -59045,12 +56566,12 @@
 
 
 /***/ }),
-/* 403 */
+/* 402 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -59119,7 +56640,7 @@
 
 
 /***/ }),
-/* 404 */
+/* 403 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -59161,12 +56682,12 @@
 
 
 /***/ }),
-/* 405 */
+/* 404 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	module.exports = (
 	  utils.isStandardBrowserEnv() ?
@@ -59220,12 +56741,12 @@
 
 
 /***/ }),
-/* 406 */
+/* 405 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	function InterceptorManager() {
 	  this.handlers = [];
@@ -59278,17 +56799,17 @@
 
 
 /***/ }),
-/* 407 */
+/* 406 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
-	var transformData = __webpack_require__(408);
-	var isCancel = __webpack_require__(409);
-	var defaults = __webpack_require__(395);
-	var isAbsoluteURL = __webpack_require__(410);
-	var combineURLs = __webpack_require__(411);
+	var utils = __webpack_require__(390);
+	var transformData = __webpack_require__(407);
+	var isCancel = __webpack_require__(408);
+	var defaults = __webpack_require__(394);
+	var isAbsoluteURL = __webpack_require__(409);
+	var combineURLs = __webpack_require__(410);
 
 	/**
 	 * Throws a `Cancel` if cancellation has been requested.
@@ -59370,12 +56891,12 @@
 
 
 /***/ }),
-/* 408 */
+/* 407 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var utils = __webpack_require__(391);
+	var utils = __webpack_require__(390);
 
 	/**
 	 * Transform the data for a request or a response
@@ -59396,7 +56917,7 @@
 
 
 /***/ }),
-/* 409 */
+/* 408 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -59407,7 +56928,7 @@
 
 
 /***/ }),
-/* 410 */
+/* 409 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -59427,7 +56948,7 @@
 
 
 /***/ }),
-/* 411 */
+/* 410 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -59447,7 +56968,7 @@
 
 
 /***/ }),
-/* 412 */
+/* 411 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -59472,12 +56993,12 @@
 
 
 /***/ }),
-/* 413 */
+/* 412 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
 
-	var Cancel = __webpack_require__(412);
+	var Cancel = __webpack_require__(411);
 
 	/**
 	 * A `CancelToken` is an object that can be used to request cancellation of an operation.
@@ -59535,7 +57056,7 @@
 
 
 /***/ }),
-/* 414 */
+/* 413 */
 /***/ (function(module, exports) {
 
 	'use strict';
@@ -59568,7 +57089,7 @@
 
 
 /***/ }),
-/* 415 */
+/* 414 */
 /***/ (function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -59807,7 +57328,7 @@
 	      var name = this.state.name.trim();
 	      var password = this.state.password.trim();
 
-	      if (!email || !name || !email) {
+	      if (!email || !name || !password) {
 	        return;
 	      }
 	      this.props.onUserSubmit({
@@ -59838,6 +57359,961 @@
 	}(_react.Component);
 
 	exports.default = UserRegisterForm;
+
+/***/ }),
+/* 415 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _axios = __webpack_require__(388);
+
+	var _axios2 = _interopRequireDefault(_axios);
+
+	var _businessRegisterForm = __webpack_require__(416);
+
+	var _businessRegisterForm2 = _interopRequireDefault(_businessRegisterForm);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var BusinessRegister = function (_Component) {
+	  _inherits(BusinessRegister, _Component);
+
+	  function BusinessRegister(props) {
+	    _classCallCheck(this, BusinessRegister);
+
+	    var _this = _possibleConstructorReturn(this, (BusinessRegister.__proto__ || Object.getPrototypeOf(BusinessRegister)).call(this, props));
+
+	    _this.state = { data: [] };
+	    _this.handleRegisterSubmit = _this.handleRegisterSubmit.bind(_this);
+	    return _this;
+	  }
+
+	  //handle form submit 
+
+
+	  _createClass(BusinessRegister, [{
+	    key: 'handleRegisterSubmit',
+	    value: function handleRegisterSubmit(business) {
+	      var _this2 = this;
+
+	      var businesses = this.state.data;
+	      business.id = Date.now();
+
+	      var newBusinesses = businesses.concat([business]);
+	      this.setState({ data: newBusinesses });
+	      _axios2.default.post('https://vgu2b4kbxc.execute-api.us-east-1.amazonaws.com/dev/auth/register', business).catch(function (err) {
+	        console.error(err);
+	        _this2.setState({ data: businesses });
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'container' },
+	        _react2.default.createElement(_businessRegisterForm2.default, { onBusinessSubmit: this.handleRegisterSubmit })
+	      );
+	    }
+	  }]);
+
+	  return BusinessRegister;
+	}(_react.Component);
+
+	exports.default = BusinessRegister;
+
+/***/ }),
+/* 416 */
+/***/ (function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	var _reactBootstrap = __webpack_require__(104);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var DeskTopForm = function (_Component) {
+	  _inherits(DeskTopForm, _Component);
+
+	  function DeskTopForm() {
+	    _classCallCheck(this, DeskTopForm);
+
+	    return _possibleConstructorReturn(this, (DeskTopForm.__proto__ || Object.getPrototypeOf(DeskTopForm)).apply(this, arguments));
+	  }
+
+	  _createClass(DeskTopForm, [{
+	    key: 'render',
+	    value: function render() {
+	      var style = {
+	        width: '450px'
+	      };
+
+	      return _react2.default.createElement(
+	        _reactBootstrap.Col,
+	        { xsHidden: true },
+	        _react2.default.createElement(
+	          'section',
+	          null,
+	          _react2.default.createElement(
+	            'div',
+	            { id: 'agileits-sign-in-page', className: 'sign-in-wrapper' },
+	            _react2.default.createElement(
+	              'div',
+	              { className: 'agileinfo_signin' },
+	              _react2.default.createElement(
+	                'h3',
+	                null,
+	                'BUSINESS INFORMATION'
+	              ),
+	              _react2.default.createElement(
+	                'form',
+	                { onSubmit: this.handleSubmit },
+	                _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'businessName', name: 'businessName', placeholder: 'Business Name', onChange: this.handleChange }),
+	                _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'email', name: 'email', placeholder: 'name@example.com', onChange: this.handleChange }),
+	                _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Enter Phone', onChange: this.handleChange }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { htmlFor: 'businessType' },
+	                  'Business Type'
+	                ),
+	                _react2.default.createElement(
+	                  'select',
+	                  { className: 'form-control', id: 'businessType', name: 'businessType', onChange: this.handleChange },
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Supplier'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Buyer'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Both'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'label',
+	                  { htmlFor: 'businessCategory' },
+	                  'Business Category'
+	                ),
+	                _react2.default.createElement(
+	                  'select',
+	                  { className: 'form-control', id: 'businessCategory', name: 'businessCategory', onChange: this.handleChange },
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Electronics & Appliance'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Sport'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Fashion'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Food & Beverage'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Automotive'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Home Appliance'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Furniture'
+	                  )
+	                ),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'Name', placeholder: 'Street Address', required: '' }),
+	                _react2.default.createElement(
+	                  'label',
+	                  { htmlFor: 'city' },
+	                  'City'
+	                ),
+	                _react2.default.createElement(
+	                  'select',
+	                  { className: 'form-control', id: 'exampleFormControlSelect1', name: 'city', onChange: this.handleChange },
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Dakar'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Touba'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Thi\xE8s'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Rufisque'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Kaolack'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'M\'Bour'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Ziguinchor'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Saint-Louis'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Diourbel'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Louga'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Tambacounda'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Richard Toll'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Kolda'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Mback\xE9'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Tivaouane'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Joal-Fadiouth'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Kaffrine'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Dahra'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Bignona'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Fatick'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Dagana'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Bambey'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'V\xE9lingara'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'S\xE9dhiou'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'S\xE9bikhotane'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'K\xE9dougou'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Ngu\xE9khokh'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Kayar'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Pout'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'M\xE9kh\xE9'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Matam'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Ouro Sogui'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Nioro du Rip'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'K\xE9b\xE9mer'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Koungheul'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Guinguin\xE9o'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Bakel'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Mboro'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Lingu\xE8re'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Sokone'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Goudomp'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Thiadiaye'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Ndioum'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Damniadio'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Khombole'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Gossas'
+	                  ),
+	                  _react2.default.createElement(
+	                    'option',
+	                    null,
+	                    'Kanel'
+	                  )
+	                ),
+	                _react2.default.createElement('br', null),
+	                _react2.default.createElement(
+	                  'div',
+	                  { className: 'signin-rit' },
+	                  _react2.default.createElement(
+	                    'span',
+	                    { className: 'agree-checkbox' },
+	                    _react2.default.createElement(
+	                      'label',
+	                      { className: 'checkbox' },
+	                      _react2.default.createElement('input', { type: 'checkbox', name: 'checkbox' }),
+	                      'I agree to your ',
+	                      _react2.default.createElement(
+	                        'a',
+	                        { className: 'w3layouts-t', href: '#terms', target: '_blank' },
+	                        'Terms of Use'
+	                      ),
+	                      ' and ',
+	                      _react2.default.createElement(
+	                        'a',
+	                        { className: 'w3layouts-t', href: '#privacy', target: '_blank' },
+	                        'Privacy Policy'
+	                      )
+	                    )
+	                  )
+	                ),
+	                _react2.default.createElement('input', { type: 'submit', value: 'Sign Up' })
+	              )
+	            )
+	          )
+	        )
+	      );
+	    }
+	  }]);
+
+	  return DeskTopForm;
+	}(_react.Component);
+
+	var MobileForm = function (_Component2) {
+	  _inherits(MobileForm, _Component2);
+
+	  function MobileForm() {
+	    _classCallCheck(this, MobileForm);
+
+	    return _possibleConstructorReturn(this, (MobileForm.__proto__ || Object.getPrototypeOf(MobileForm)).apply(this, arguments));
+	  }
+
+	  _createClass(MobileForm, [{
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        _reactBootstrap.Col,
+	        { smHidden: true, mdHidden: true, lgHidden: true },
+	        _react2.default.createElement(
+	          'form',
+	          { onSubmit: this.handleSubmit },
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', id: 'businessName', name: 'businessName', placeholder: 'Business Name', onChange: this.handleChange }),
+	          _react2.default.createElement('input', { type: 'email', className: 'form-control', id: 'email', name: 'email', placeholder: 'name@example.com', onChange: this.handleChange }),
+	          _react2.default.createElement('input', { type: 'text', required: 'required', className: 'form-control', id: 'phone', name: 'phone', placeholder: 'Enter Phone', onChange: this.handleChange }),
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'businessType' },
+	            'Business Type'
+	          ),
+	          _react2.default.createElement(
+	            'select',
+	            { className: 'form-control', id: 'businessType', name: 'businessType', onChange: this.handleChange },
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Supplier'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Buyer'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Both'
+	            )
+	          ),
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'businessCategory' },
+	            'Business Category'
+	          ),
+	          _react2.default.createElement(
+	            'select',
+	            { className: 'form-control', id: 'businessCategory', name: 'businessCategory', onChange: this.handleChange },
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Electronics & Appliance'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Sport'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Fashion'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Food & Beverage'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Automotive'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Home Appliance'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Furniture'
+	            )
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement('input', { type: 'text', className: 'form-control', name: 'Name', placeholder: 'Street Address', required: '' }),
+	          _react2.default.createElement(
+	            'label',
+	            { htmlFor: 'city' },
+	            'City'
+	          ),
+	          _react2.default.createElement(
+	            'select',
+	            { className: 'form-control', id: 'exampleFormControlSelect1', name: 'city', onChange: this.handleChange },
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Dakar'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Touba'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Thi\xE8s'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Rufisque'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Kaolack'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'M\'Bour'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Ziguinchor'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Saint-Louis'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Diourbel'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Louga'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Tambacounda'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Richard Toll'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Kolda'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Mback\xE9'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Tivaouane'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Joal-Fadiouth'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Kaffrine'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Dahra'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Bignona'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Fatick'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Dagana'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Bambey'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'V\xE9lingara'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'S\xE9dhiou'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'S\xE9bikhotane'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'K\xE9dougou'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Ngu\xE9khokh'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Kayar'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Pout'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'M\xE9kh\xE9'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Matam'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Ouro Sogui'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Nioro du Rip'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'K\xE9b\xE9mer'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Koungheul'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Guinguin\xE9o'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Bakel'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Mboro'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Lingu\xE8re'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Sokone'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Goudomp'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Thiadiaye'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Ndioum'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Damniadio'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Khombole'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Gossas'
+	            ),
+	            _react2.default.createElement(
+	              'option',
+	              null,
+	              'Kanel'
+	            )
+	          ),
+	          _react2.default.createElement('br', null),
+	          _react2.default.createElement(
+	            'div',
+	            { className: 'signin-rit' },
+	            _react2.default.createElement(
+	              'span',
+	              { className: 'agree-checkbox' },
+	              _react2.default.createElement(
+	                'label',
+	                { className: 'checkbox' },
+	                _react2.default.createElement('input', { type: 'checkbox', name: 'checkbox' }),
+	                'I agree to your ',
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'w3layouts-t', href: '#terms', target: '_blank' },
+	                  'Terms of Use'
+	                ),
+	                ' and ',
+	                _react2.default.createElement(
+	                  'a',
+	                  { className: 'w3layouts-t', href: '#privacy', target: '_blank' },
+	                  'Privacy Policy'
+	                )
+	              )
+	            )
+	          ),
+	          _react2.default.createElement('input', { type: 'submit', value: 'Sign Up' })
+	        ),
+	        _react2.default.createElement('br', null)
+	      );
+	    }
+	  }]);
+
+	  return MobileForm;
+	}(_react.Component);
+
+	var BusinessRegisterForm = function (_Component3) {
+	  _inherits(BusinessRegisterForm, _Component3);
+
+	  function BusinessRegisterForm(props) {
+	    _classCallCheck(this, BusinessRegisterForm);
+
+	    var _this3 = _possibleConstructorReturn(this, (BusinessRegisterForm.__proto__ || Object.getPrototypeOf(BusinessRegisterForm)).call(this, props));
+
+	    _this3.state = {
+	      email: '',
+	      businessName: '',
+	      businessType: '',
+	      businessCategory: '',
+	      phone: '',
+	      address: '',
+	      country: 'Senegal',
+	      city: ''
+	    };
+
+	    _this3.handleChange = _this3.handleChange.bind(_this3);
+	    _this3.handleSubmit = _this3.handleSubmit.bind(_this3);
+	    return _this3;
+	  }
+
+	  _createClass(BusinessRegisterForm, [{
+	    key: 'handleChange',
+	    value: function handleChange(event) {
+	      var target = event.target;
+	      var value = target.type === 'checkbox' ? target.checked : target.value;
+	      var name = target.name;
+
+	      this.setState(_defineProperty({}, name, value));
+	    }
+	  }, {
+	    key: 'handleSubmit',
+	    value: function handleSubmit(e) {
+	      e.preventDefault();
+	      var email = this.state.email.trim();
+	      var businessName = this.state.businessName.trim();
+	      var businessType = this.state.businessType.trim();
+	      var businessCategory = this.state.businessCategory.trim();
+	      var phone = this.state.phone.trim();
+	      var country = this.state.country.trim();
+	      var city = this.state.city.trim();
+
+	      if (!email || !businessName || !businessType) {
+	        return;
+	      }
+	      this.props.onBusinessSubmit({
+	        email: email,
+	        businessName: businessName,
+	        businessType: businessType,
+	        businessCategory: businessCategory,
+	        phone: phone,
+	        country: country,
+	        city: city
+
+	      });
+	      this.setState({
+	        email: '',
+	        businessName: '',
+	        businessType: '',
+	        businessCategory: '',
+	        phone: '',
+	        address: '',
+	        country: 'Senegal',
+	        city: ''
+	      });
+	    }
+	  }, {
+	    key: 'render',
+	    value: function render() {
+	      return _react2.default.createElement(
+	        'div',
+	        { className: 'register', id: 'custom-container' },
+	        _react2.default.createElement(DeskTopForm, null),
+	        _react2.default.createElement(MobileForm, null)
+	      );
+	    }
+	  }]);
+
+	  return BusinessRegisterForm;
+	}(_react.Component);
+
+	exports.default = BusinessRegisterForm;
 
 /***/ })
 /******/ ]);
