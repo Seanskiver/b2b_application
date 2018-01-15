@@ -30,10 +30,8 @@ import Privacy from './pages/Privacy';
 import Reviews from './pages/Reviews';
 import Seller from './pages/Seller';
 import single from './pages/single';
-import signin from './pages/signin';
-import Signup from './pages/Signup';
+import UserLogin from './pages/Login';
 import Terms from './pages/Terms';
-//import UserSignup from './pages/UserSignup';
 import Footer from './pages/Footer';
 import UserRegister from './pages/Signup';
 import BusinessCreate from './pages/BusinessRegister';
@@ -63,7 +61,7 @@ const App = () => (
           <Route path="/reviews" component={Reviews}/>
           <Route path="/seller" component={Seller}/>
           <Route path="/single" component={single}/>
-          <Route path="/signin" component={signin}/>
+          <Route path="/signin" component={UserLogin}/>
           <Route path="/terms" component={Terms}/>
           <Route path="/signup" component={UserRegister}/>
           <Route path="/business-create" component={BusinessCreate}/>

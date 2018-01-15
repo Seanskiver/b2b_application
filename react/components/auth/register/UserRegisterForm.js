@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Col} from 'react-bootstrap';
 
-class DeskTopForm extends Component {
+class Form extends Component {
     
   render() {
       const style = {
@@ -9,84 +9,20 @@ class DeskTopForm extends Component {
      };
       
     return (
-   <Col xsHidden>
-              <div class="container" style={style}>
-                      
-                      <div class="panel panel-default">
-                      <div class="panel-heading" align="center"><b>User Information</b></div>
-                      <div class="panel-body">
-                        <form onSubmit={this.handleSubmit}>
-                              
-                                  <div class="form-group col-md-12">
-                                      <label for="Name">Full Name</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" onChange={this.handleChange}/>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-12">
-                                      <label class="control-label">Email</label>
-                                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                  <div class="form-group col-md-12">
-                                      <label class="control-label">Password</label>
-                                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                   <div class="form-group col-md-12">
-                                      <label class="control-label">Confirm Password</label>
-                                      <input type="password" required="required" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                     <div class="form-group col-md-12">
-                                      <button type="submit" class="btn btn-primary pull-right">Sign Up</button>
-                                     </div>
-                      </form>
-                      </div>
-                    </div>
-                      
-                  </div>
-                  </Col>
+               
+                				<form onSubmit={this.handleSubmit}>
+                					<input type="text" class="form-control" id="name" name="name" placeholder="Full Name" onChange={this.handleChange}/>
+                					<input type="email" class="form-control" id="email" name="email" placeholder="Email" onChange={this.handleChange}/>
+                					<input type="password" required="required" class="form-control" id="password" name="password" placeholder="Enter Password" onChange={this.handleChange}/>
+                					<input type="password" required="required" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onChange={this.handleChange}/>
+                					
+                					<input type="submit" value="Sign Up"/>
+                				</form>
+                			
     )
   }
 }
 
-class MobileForm extends Component {
-    
-  render() {
-    return (
-  
-                   <Col smHidden mdHidden lgHidden>
-                     <form onSubmit={this.handleSubmit}>
-                              
-                                 <div class="form-group col-md-12">
-                                      <label for="Name">Full Name</label>
-                                      <input type="text" class="form-control" id="name" name="name" placeholder="Full Name" onChange={this.handleChange}/>
-                                    </div>
-                                    
-                                    <div class="form-group col-md-12">
-                                      <label class="control-label">Email</label>
-                                      <input type="email" class="form-control" id="email" name="email" placeholder="Email" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                  <div class="form-group col-md-12">
-                                      <label class="control-label">Password</label>
-                                      <input type="password" class="form-control" id="password" name="password" placeholder="Password" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                   <div class="form-group col-md-12">
-                                      <label class="control-label">Confirm Password</label>
-                                      <input type="password" required="required" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm Password" onChange={this.handleChange}/>
-                                  </div>
-                                  
-                                     <div class="form-group col-md-12">
-                                      <button type="submit" class="btn btn-primary pull-right">Sign Up</button>
-                                     </div>
-                      </form>
-                  </Col>
-                
-    )
-  }
-}
 
 class UserRegisterForm extends Component {
     
@@ -140,9 +76,17 @@ class UserRegisterForm extends Component {
   render() {
     return (
          <div className="register"  id="custom-container">
-            <DeskTopForm />
-            <MobileForm />
-          </div>
+            <section>
+              <div id="agileits-sign-in-page" class="sign-in-wrapper">
+                <div class="agileinfo_signin">
+                <h3>USER INFORMATION</h3>
+                
+                  <Form />
+                  
+              </div>
+            </div>
+          </section>
+        </div>
     )
   }
 }
